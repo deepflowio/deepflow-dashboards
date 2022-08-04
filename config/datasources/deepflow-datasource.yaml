@@ -3,19 +3,19 @@ datasources:
 - access: proxy
   isDefault: true
   jsonData:
-    requestUrl: http://deepflow-server:20416
-    traceUrl: http://deepflow-app:20418
+    requestUrl: ${DEEPFLOW_REQUEST_URL}
+    traceUrl: ${DEEPFLOW_TRACEURL}
   name: DeepFlow
   type: deepflow-querier-datasource
   uid: DeepFlow
   url: null
 - jsonData:
     port: 9000
-    server: 'deepflow-clickhouse'
-    username: default
+    server: ${CLICKHOUSE_SERVER}
+    username: ${CLICKHOUSE_USER}
   name: DeepFlow ClickHouse
   secureJsonData:
-    password: ""
+    password: ${CLICKHOUSE_PASSWORD}
   type: grafana-clickhouse-datasource
   uid: DeepFlow ClickHouse
 - database: deepflow
@@ -24,10 +24,9 @@ datasources:
     maxIdleConns: 5
     maxOpenConns: 5
   name: DeepFlow MySQL
-  password: deepflow
   secureJsonData:
-    password: 'deepflow'
+    password: ${MYSQL_PASSWORD}
   type: mysql
   uid: DeepFlow MySQL
-  url: 'deepflow-mysql:30130'
-  user: root
+  url: ${MYSQL_URL}
+  user: ${MYSQL_USER}
