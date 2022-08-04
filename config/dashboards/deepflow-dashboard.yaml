@@ -1,0 +1,22 @@
+apiVersion: 1
+providers:
+- allowUiUpdates: false
+  disableDeletion: false
+  folder: DeepFlow System
+  name: deepflow-system
+  options:
+    foldersFromFilesStructure: false
+    path: /tmp/dashboards/DeepFlow-System
+  orgId: 1
+  type: file
+  updateIntervalSeconds: 30
+- allowUiUpdates: false
+  disableDeletion: false
+  folder: DeepFlow Templates
+  name: deepflow-templates
+  options:
+    foldersFromFilesStructure: false
+    path: /tmp/dashboards/DeepFlow-Templates
+  orgId: 1
+  type: file
+  updateIntervalSeconds: 30
