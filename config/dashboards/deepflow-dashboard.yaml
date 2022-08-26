@@ -19,4 +19,12 @@ providers:
     path: /tmp/dashboards/DeepFlow-Templates
   orgId: 1
   type: file
+- allowUiUpdates: false
+  disableDeletion: false
+  folder: ClickHouse
+  name: ClickHouse
+  options:
+    foldersFromFilesStructure: false
+    path: /tmp/dashboards/ClickHouse
+  type: file
   updateIntervalSeconds: 30
