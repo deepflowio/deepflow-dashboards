@@ -19,4 +19,5 @@ providers:
     path: /tmp/dashboards/DeepFlow-Templates
   orgId: 1
   type: file
+  updateIntervalSeconds: 30
 
