@@ -20,3 +20,4 @@ providers:
   orgId: 1
   type: file
   updateIntervalSeconds: 30
+
