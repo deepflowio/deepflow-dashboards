@@ -2203,8 +2203,8 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "ClickHouse - Data Analysis",
-    "uid": "-B3tt7a7z",
+    "title": "ClickHouse Data Analysis",
+    "uid": "ClickHouse_Data_Analysis",
     "version": 1,
     "weekStart": ""
   }

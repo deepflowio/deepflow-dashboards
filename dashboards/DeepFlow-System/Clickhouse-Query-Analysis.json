@@ -1478,8 +1478,8 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "ClickHouse - Query Analysis",
-    "uid": "w5Q2Otank",
+    "title": "ClickHouse Query Analysis",
+    "uid": "ClickHouse_Query_Analysis",
     "version": 1,
     "weekStart": ""
   }
