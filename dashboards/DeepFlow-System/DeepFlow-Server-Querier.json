@@ -121,8 +121,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Server Querier",
-  "uid": "Server_Querier",
+  "title": "DeepFlow Server - Querier",
+  "uid": "DeepFlow_Server_Querier",
   "version": 6,
   "weekStart": ""
 }
