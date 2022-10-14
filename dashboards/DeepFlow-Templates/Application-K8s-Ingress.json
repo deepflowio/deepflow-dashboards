@@ -1540,6 +1540,94 @@
           "x": 0,
           "y": 53
         },
+        "id": 69,
+        "panels": [
+          {
+            "datasource": {
+              "type": "deepflow-querier-datasource",
+              "uid": "DeepFlow"
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 24,
+              "x": 0,
+              "y": 54
+            },
+            "id": 71,
+            "pluginVersion": "9.1.6",
+            "targets": [
+              {
+                "datasource": {
+                  "type": "deepflow-querier-datasource",
+                  "uid": "DeepFlow"
+                },
+                "queryText": "{\"appType\":\"appTracing\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d9a887ba-6246-8d88-3e13-c9e6e51e7f6c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"ip_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"576a8fbe-2109-1044-9472-ca48197e812c\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":false,\"isIpType\":true},{\"type\":\"tag\",\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6da39f0d-f799-17d3-52ce-6dd666b7ba86\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"ip_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e8a477de-3e0e-4fc0-f316-893e0512c50b\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":false,\"isIpType\":true},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a8cb34e2-40f3-11da-5525-65f251f36693\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"37b935fd-603d-bc57-6ec0-356a0831eae2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7446e1e1-d8e9-3957-fb13-7a27c1e4d46b\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_domain\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"200bc310-1810-b2c4-397e-e935676154ee\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7e40b7b8-03ae-42da-d474-95296e7462b6\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_status\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"95ac0b7a-c27f-9ab9-a2af-f7110d345942\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_code\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a4fd93ad-9dac-3e7b-1288-787cb9583796\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"03a1ca7b-0c32-29a2-c84f-47a9f2dfe967\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"request_length\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"fdc25097-9110-0818-3db9-352c2b939161\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_length\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"74f0401b-f910-8cdf-c902-ebd206011006\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"type\":\"tag\",\"key\":\"pod_cluster_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"45839708-cfff-1977-f422-e0c0855f7f44\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_group_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$ingress_workload\",\"value\":\"ingress_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"f201f004-c57a-bca8-65e6-cf14a6384ae3\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_port_type\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"eBPF\",\"value\":7},{\"label\":\"OTel\",\"value\":8}],\"as\":\"\",\"params\":[],\"uuid\":\"c79a41db-ab10-6a0e-f289-3e16b220330b\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect03a1ca7b-0c32-29a2-c84f-47a9f2dfe967\",\"func\":\"\",\"op\":\">=\",\"val\":\"500000\",\"as\":\"\",\"params\":[],\"uuid\":\"326e1dcf-6b79-880a-77e5-e792de300e1c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"03a1ca7b-0c32-29a2-c84f-47a9f2dfe967\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6df4813d-e8ce-4551-02f5-541a46998880\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"fromSelect03a1ca7b-0c32-29a2-c84f-47a9f2dfe967\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c1bee184-3abb-aa48-e968-f1987652bfc1\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"03a1ca7b-0c32-29a2-c84f-47a9f2dfe967\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"interval\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\"}",
+                "refId": "A"
+              }
+            ],
+            "title": "Distributed Tracing (>=500ms)",
+            "transformations": [
+              {
+                "id": "extractFields",
+                "options": {}
+              },
+              {
+                "id": "organize",
+                "options": {
+                  "excludeByName": {
+                    "_id": false,
+                    "resource_gl0_id_0": true,
+                    "resource_gl0_id_1": true
+                  },
+                  "indexByName": {
+                    "_id": 14,
+                    "ip_0": 2,
+                    "ip_1": 4,
+                    "l7_protocol": 6,
+                    "request_domain": 8,
+                    "request_resource": 9,
+                    "request_type": 7,
+                    "resource_gl0_0": 1,
+                    "resource_gl0_1": 3,
+                    "resource_gl0_id_0": 15,
+                    "resource_gl0_id_1": 16,
+                    "response_code": 11,
+                    "response_status": 10,
+                    "tap_side": 5,
+                    "响应时延": 0,
+                    "响应长度": 13,
+                    "请求长度": 12
+                  },
+                  "renameByName": {
+                    "ip_0": "client_ip",
+                    "ip_1": "server_ip",
+                    "request_domain": "",
+                    "resource_gl0_0": "client",
+                    "resource_gl0_1": "server",
+                    "resource_gl0_id_0": "",
+                    "response_status": "",
+                    "tap_side": "",
+                    "响应时延": "delay",
+                    "响应长度": "response_len",
+                    "请求长度": "request_len"
+                  }
+                }
+              }
+            ],
+            "type": "deepflow-apptracing-panel"
+          }
+        ],
+        "title": "Distributed Tracing",
+        "type": "row"
+      },
+      {
+        "collapsed": true,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 54
+        },
         "id": 49,
         "panels": [
           {
@@ -2133,7 +2221,7 @@
           "h": 1,
           "w": 24,
           "x": 0,
-          "y": 54
+          "y": 55
         },
         "id": 47,
         "panels": [
@@ -3362,7 +3450,7 @@
         },
         {
           "current": {
-            "selected": false,
+            "selected": true,
             "text": "nginx-ingress-nginx-ingress",
             "value": "60"
           },
@@ -3396,6 +3484,6 @@
     "timezone": "",
     "title": "Application - K8s Ingress",
     "uid": "Application_K8s_Ingress",
-    "version": 21,
+    "version": 22,
     "weekStart": ""
   }
