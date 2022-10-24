@@ -811,8 +811,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -922,8 +921,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1432,7 +1430,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 53
+            "y": 36
           },
           "id": 62,
           "options": {
@@ -1522,7 +1520,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 53
+            "y": 36
           },
           "id": 63,
           "options": {
@@ -1582,7 +1580,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 61
+            "y": 44
           },
           "id": 54,
           "options": {
@@ -1645,7 +1643,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 61
+            "y": 44
           },
           "id": 61,
           "options": {
@@ -2472,6 +2470,59 @@
           ],
           "title": "TOP SQL Error",
           "type": "bargauge"
+        },
+        {
+          "datasource": {
+            "type": "deepflow-querier-datasource",
+            "uid": "DeepFlow"
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 79
+          },
+          "id": 78,
+          "targets": [
+            {
+              "datasource": {
+                "type": "deepflow-querier-datasource",
+                "uid": "DeepFlow"
+              },
+              "queryText": "{\"appType\":\"appTracing\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b03920f-68bf-84e6-989a-023c0a983546\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"ip_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Client IP\",\"params\":[],\"uuid\":\"1dbc0fd5-6b9e-60f4-9807-3cf614a7badc\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":false,\"isIpType\":true},{\"type\":\"tag\",\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"295380d3-c64d-9305-ac84-57c50c39e74a\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"ip_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Service IP\",\"params\":[],\"uuid\":\"8acdd662-266c-5f88-7a44-4843d2c582f5\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":false,\"isIpType\":true},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Tap Side\",\"params\":[],\"uuid\":\"e520efef-cc99-1bcc-ff98-3e57c520c075\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Command\",\"params\":[],\"uuid\":\"98f579bd-ac4d-8f3e-15a4-4a2d62dcc1d1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"cbb6c14d-6766-3900-519d-f35d303c3b6c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"type\":\"tag\",\"key\":\"tap_port_type\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"eBPF\",\"value\":7},{\"label\":\"OTel\",\"value\":8}],\"as\":\"\",\"params\":[],\"uuid\":\"1e9bce7f-5590-cc71-65ad-c779e3127d60\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b79356a7-5ba7-12d0-6c6c-f4fca2bc307b\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3cce1372-7eae-7c8c-a380-eb179ec65bf6\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"chost_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_chost\",\"value\":\"db_chost\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d521fbd4-3775-4334-b97b-35e3f4eb094c\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"ip_1\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$db_ip\",\"value\":\"db_ip\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"36f3aea8-4b36-9d1e-1329-3737206539d7\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":false,\"isIpType\":true},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1a688fcf-35a6-0b46-13ae-86f1d1f339e7\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"REGEXP\",\"val\":\"[\\\\s\\\\S]+\",\"as\":\"\",\"params\":[],\"uuid\":\"8c2b87cb-992d-fe59-4ef4-735f018ae408\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelectcc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"func\":\"\",\"op\":\">=\",\"val\":\"10000\",\"as\":\"\",\"params\":[],\"uuid\":\"da18d4b6-9bc6-4019-e684-08ea89d3fcdc\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d04b2ee1-c8a2-6348-cb7e-59f179cc4011\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"fromSelectcc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"477e97ad-c61c-46ed-c321-f94c72e0fd7e\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\"}",
+              "refId": "A"
+            }
+          ],
+          "title": "Distributed Tracing (>=10ms)",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "resource_gl0_id_0": true,
+                  "resource_gl0_id_1": true
+                },
+                "indexByName": {},
+                "renameByName": {
+                  "resource_gl0_0": "Client",
+                  "resource_gl0_1": "Service"
+                }
+              }
+            },
+            {
+              "id": "sortBy",
+              "options": {
+                "fields": {},
+                "sort": [
+                  {
+                    "desc": true,
+                    "field": "响应时延"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "deepflow-apptracing-panel"
         }
       ],
       "title": "SQL Analysis (client: ${client_for_SQL_Analysis})",
