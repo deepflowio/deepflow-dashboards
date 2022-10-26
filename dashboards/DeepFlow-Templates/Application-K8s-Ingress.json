@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 48,
+  "id": 66,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -934,8 +934,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1045,8 +1044,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1138,8 +1136,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1231,8 +1228,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1300,8 +1296,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1335,8 +1330,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -1593,8 +1587,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1769,8 +1762,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2030,8 +2022,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2065,8 +2056,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "green",
-                          "value": null
+                          "color": "green"
                         },
                         {
                           "color": "red",
@@ -2123,8 +2113,7 @@
                       "mode": "absolute",
                       "steps": [
                         {
-                          "color": "red",
-                          "value": null
+                          "color": "red"
                         }
                       ]
                     }
@@ -2367,8 +2356,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3556,7 +3544,7 @@
           "type": "deepflow-querier-datasource",
           "uid": "DeepFlow"
         },
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_group values from vtap_flow_port where display_name like  '$like'\"}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_group values from vtap_flow_port where display_name like  '$ingress_wildcard'\"}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -3564,7 +3552,7 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "show tag pod_group values from vtap_flow_port where display_name like  '$like'"
+          "sql": "show tag pod_group values from vtap_flow_port where display_name like  '$ingress_wildcard'"
         },
         "refresh": 1,
         "regex": "",
@@ -3598,7 +3586,7 @@
           "value": "*ingress*"
         },
         "hide": 0,
-        "name": "like",
+        "name": "ingress_wildcard",
         "options": [
           {
             "selected": true,
@@ -3620,6 +3608,6 @@
   "timezone": "",
   "title": "Application - K8s Ingress",
   "uid": "Application_K8s_Ingress",
-  "version": 11,
+  "version": 12,
   "weekStart": ""
 }
