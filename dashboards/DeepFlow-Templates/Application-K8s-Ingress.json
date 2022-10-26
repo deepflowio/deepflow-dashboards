@@ -3556,7 +3556,7 @@
           "type": "deepflow-querier-datasource",
           "uid": "DeepFlow"
         },
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_group values from vtap_flow_port where display_name like '*ingress*'\"}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_group values from vtap_flow_port where display_name like  '$like'\"}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -3564,7 +3564,7 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "show tag pod_group values from vtap_flow_port where display_name like '*ingress*'"
+          "sql": "show tag pod_group values from vtap_flow_port where display_name like  '$like'"
         },
         "refresh": 1,
         "regex": "",
@@ -3575,19 +3575,38 @@
       {
         "current": {
           "selected": false,
-          "text": "7158745287318749691",
-          "value": "7158745287318749691"
+          "text": "",
+          "value": ""
         },
         "hide": 2,
         "name": "deepflow_tracing_id",
         "options": [
           {
-            "selected": false,
+            "selected": true,
             "text": "",
             "value": ""
           }
         ],
-        "query": "7158745287318749691",
+        "query": "",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "*ingress*",
+          "value": "*ingress*"
+        },
+        "hide": 0,
+        "name": "like",
+        "options": [
+          {
+            "selected": true,
+            "text": "*ingress*",
+            "value": "*ingress*"
+          }
+        ],
+        "query": "*ingress*",
         "skipUrlSync": false,
         "type": "textbox"
       }
@@ -3601,6 +3620,6 @@
   "timezone": "",
   "title": "Application - K8s Ingress",
   "uid": "Application_K8s_Ingress",
-  "version": 1,
+  "version": 11,
   "weekStart": ""
 }
