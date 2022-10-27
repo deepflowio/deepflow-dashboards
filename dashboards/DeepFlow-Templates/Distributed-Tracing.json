@@ -24,8 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 133,
-  "iteration": 1658716470666,
+  "id": 14,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -72,7 +71,7 @@
           "links": [
             {
               "title": "Open in current dashboard",
-              "url": "/d/Distributed_Tracing/distributed-tracing?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}"
+              "url": "/d/Distributed_Tracing/distributed-tracing?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}&${cluster:queryparam}&${namespace:queryparam}&${workload:queryparam}&${vm:queryparam}&${trace_id:queryparam}&${span_id:queryparam}&${request_resource:queryparam}&from=${__from}&to=${__to}"
             }
           ],
           "mappings": [],
@@ -148,7 +147,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 80
+                "value": 86
               }
             ]
           },
@@ -199,6 +198,90 @@
                 "value": 149
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Latency"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "µs"
+              },
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 500000
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Request domain"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 139
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Server"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 165
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Status"
+            },
+            "properties": [
+              {
+                "id": "custom.displayMode",
+                "value": "color-background"
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 1
+                    }
+                  ]
+                }
+              }
+            ]
           }
         ]
       },
@@ -218,7 +301,12 @@
           "show": false
         },
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Latency"
+          }
+        ]
       },
       "pluginVersion": "9.2.0",
       "targets": [
@@ -289,7 +377,8 @@
               "response_status": "Request status",
               "start_time": "Start time",
               "tap_port_type": "",
-              "响应时延": "latency"
+              "trace_id": "Trace ID",
+              "响应时延": "Latency"
             }
           }
         }
@@ -321,6 +410,7 @@
       "type": "deepflow-apptracing-panel"
     }
   ],
+  "refresh": false,
   "schemaVersion": 37,
   "style": "dark",
   "tags": [],
@@ -426,10 +516,10 @@
         "current": {
           "selected": true,
           "text": [
-            "Disabled"
+            "Any"
           ],
           "value": [
-            "__disabled"
+            "__any"
           ]
         },
         "datasource": {
@@ -514,32 +604,32 @@
       {
         "current": {
           "selected": false,
-          "text": "7156737703639943815",
-          "value": "7156737703639943815"
+          "text": "7159123364699473097",
+          "value": "7159123364699473097"
         },
         "hide": 2,
         "name": "deepflow_tracing_id",
         "options": [
           {
-            "selected": true,
+            "selected": false,
             "text": "",
             "value": ""
           }
         ],
-        "query": "7156737703639943815",
+        "query": "7159123364699473097",
         "skipUrlSync": false,
         "type": "textbox"
       }
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Distributed Tracing",
   "uid": "Distributed_Tracing",
-  "version": 1,
+  "version": 7,
   "weekStart": ""
 }
