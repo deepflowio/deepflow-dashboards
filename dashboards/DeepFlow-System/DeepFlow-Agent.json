@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 46,
+  "id": 69,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -80,7 +80,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -215,7 +215,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -345,7 +345,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -480,7 +480,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -563,7 +563,6 @@
               "$$hashKey": "object:512",
               "format": "ns",
               "logBase": 1,
-              "min": "0",
               "show": true
             },
             {
@@ -616,7 +615,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -780,7 +779,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -928,7 +927,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 1,
           "points": true,
           "renderer": "flot",
@@ -1071,7 +1070,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.2",
           "pointradius": 1,
           "points": true,
           "renderer": "flot",
