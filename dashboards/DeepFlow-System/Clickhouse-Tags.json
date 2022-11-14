@@ -32,7 +32,7 @@
       {
         "datasource": {
           "type": "grafana-clickhouse-datasource",
-          "uid": "DeepFlow ClickHouse"
+          "uid": "${datasource}"
         },
         "fieldConfig": {
           "defaults": {
@@ -95,7 +95,7 @@
             },
             "datasource": {
               "type": "grafana-clickhouse-datasource",
-              "uid": "DeepFlow ClickHouse"
+              "uid": "${datasource}"
             },
             "format": 1,
             "queryType": "builder",
@@ -115,14 +115,29 @@
       "list": [
         {
           "current": {
-            "isNone": true,
-            "selected": false,
-            "text": "None",
-            "value": ""
+            "selected": true,
+            "value": "1"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "label": "Data Source",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "query": "grafana-clickhouse-datasource",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "type": "datasource"
+        },
+        {
+          "current": {
+            "selected": true,
+            "value": "1"
           },
           "datasource": {
             "type": "grafana-clickhouse-datasource",
-            "uid": "DeepFlow ClickHouse"
+            "uid": "${datasource}"
           },
           "definition": "show tables from flow_tag",
           "hide": 0,
