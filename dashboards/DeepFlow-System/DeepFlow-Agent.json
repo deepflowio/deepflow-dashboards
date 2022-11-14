@@ -32,7 +32,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -49,7 +49,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -184,7 +184,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -450,7 +450,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -583,7 +583,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -718,7 +718,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -730,7 +730,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -747,7 +747,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -894,7 +894,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1037,7 +1037,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1178,7 +1178,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -1190,7 +1190,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -1207,7 +1207,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1358,7 +1358,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1515,7 +1515,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1670,7 +1670,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -1682,7 +1682,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -1699,7 +1699,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -1849,7 +1849,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -2143,7 +2143,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -2155,7 +2155,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -2762,7 +2762,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -2774,7 +2774,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -2791,7 +2791,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -3232,7 +3232,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -3244,7 +3244,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -3261,7 +3261,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -3407,7 +3407,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -3553,7 +3553,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -3565,7 +3565,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -3582,7 +3582,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -3743,7 +3743,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -3904,7 +3904,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -3916,7 +3916,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -3933,7 +3933,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -4096,7 +4096,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -4257,7 +4257,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -4269,7 +4269,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -4762,7 +4762,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -4774,7 +4774,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -5627,7 +5627,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -5675,7 +5675,7 @@
               "alias": "$tag_host $tag_id Before",
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "groupBy": [
                 {
@@ -5740,7 +5740,7 @@
               "alias": "$tag_host $tag_id After",
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "groupBy": [
                 {
@@ -5841,7 +5841,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -5889,7 +5889,7 @@
               "alias": "$tag_host $tag_id 时间戳小于窗口",
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "groupBy": [
                 {
@@ -5948,7 +5948,7 @@
               "alias": "$tag_host $tag_id 非活跃主机",
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "groupBy": [
                 {
@@ -6041,7 +6041,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -6053,7 +6053,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -6070,7 +6070,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -6284,7 +6284,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -6653,7 +6653,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -6776,7 +6776,7 @@
             {
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"17f6b718-5dba-5a48-5287-446486d53549\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\"}",
@@ -6820,7 +6820,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7047,7 +7047,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7276,7 +7276,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -7288,7 +7288,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -7305,7 +7305,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7360,7 +7360,7 @@
             {
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_flow_aggr\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3a9126d4-fb0a-7c16-3e6b-c209afd28e36\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}\"}",
@@ -7404,7 +7404,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7566,7 +7566,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7729,7 +7729,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -7892,7 +7892,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -8367,7 +8367,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -8379,7 +8379,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -8396,7 +8396,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "description": "msg3: 遥测数据\nmsg4: l4流日志\nmsg5: l7-http-dns流日志",
           "fieldConfig": {
@@ -8875,7 +8875,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -8887,7 +8887,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -9032,7 +9032,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -9044,7 +9044,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -9061,7 +9061,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -9209,7 +9209,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -9350,7 +9350,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -9489,7 +9489,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -9501,7 +9501,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -9518,7 +9518,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -9963,7 +9963,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -10112,7 +10112,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -10262,7 +10262,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -10399,7 +10399,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -10411,7 +10411,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -10433,7 +10433,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -10604,7 +10604,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fill": 1,
           "fillGradient": 0,
@@ -10661,7 +10661,7 @@
             {
               "datasource": {
                 "type": "deepflow-querier-datasource",
-                "uid": "DeepFlow"
+                "uid": "${datasource}"
               },
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_queue\",\"select\":[{\"key\":\"metrics.overwritten\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"overwritten\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}},{\"type\":\"metric\",\"key\":\"metrics.pending\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"pending\",\"params\":[],\"uuid\":\"4a90bfe9-5b6a-c907-87e3-bd77279ecbf6\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.module\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$module\",\"value\":\"module\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"e329a1a3-e3c3-3739-585e-3bb5a9406aaf\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5c41c544-9b05-496f-11a0-3d6ea5871f97\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}\"}",
@@ -10707,7 +10707,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -10719,7 +10719,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -11519,7 +11519,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -11531,7 +11531,7 @@
       "collapsed": true,
       "datasource": {
         "type": "deepflow-querier-datasource",
-        "uid": "DeepFlow"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -11548,7 +11548,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -11705,7 +11705,7 @@
           "dashes": false,
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -12008,7 +12008,7 @@
         {
           "datasource": {
             "type": "deepflow-querier-datasource",
-            "uid": "DeepFlow"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -12026,6 +12026,23 @@
       {
         "current": {
           "selected": true,
+          "value": "1"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Data Source",
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "deepflow-querier-datasource",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "selected": true,
           "text": [
             "All"
           ],
@@ -12035,7 +12052,7 @@
         },
         "datasource": {
           "type": "deepflow-querier-datasource",
-          "uid": "DeepFlow"
+          "uid": "${datasource}"
         },
         "definition": "{\"0\":\"S\",\"1\":\"H\",\"2\":\"O\",\"3\":\"W\",\"4\":\" \",\"5\":\"T\",\"6\":\"A\",\"7\":\"G\",\"8\":\" \",\"9\":\"V\",\"10\":\"A\",\"11\":\"L\",\"12\":\"U\",\"13\":\"E\",\"14\":\"S\",\"15\":\" \",\"16\":\"F\",\"17\":\"R\",\"18\":\"O\",\"19\":\"M\",\"20\":\" \",\"21\":\"t\",\"22\":\"r\",\"23\":\"i\",\"24\":\"d\",\"25\":\"e\",\"26\":\"n\",\"27\":\"t\",\"28\":\"_\",\"29\":\"d\",\"30\":\"i\",\"31\":\"s\",\"32\":\"p\",\"33\":\"a\",\"34\":\"t\",\"35\":\"c\",\"36\":\"h\",\"37\":\"e\",\"38\":\"r\",\"39\":\"_\",\"40\":\"r\",\"41\":\"x\",\"42\":\" \",\"43\":\"W\",\"44\":\"I\",\"45\":\"T\",\"46\":\"H\",\"47\":\" \",\"48\":\"K\",\"49\":\"E\",\"50\":\"Y\",\"51\":\"=\",\"52\":\"h\",\"53\":\"o\",\"54\":\"s\",\"55\":\"t\",\"database\":\"deepflow_system\",\"sql\":\"show tag tag.host values from deepflow_agent_dispatcher\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
@@ -12214,7 +12231,7 @@
         },
         "datasource": {
           "type": "deepflow-querier-datasource",
-          "uid": "DeepFlow"
+          "uid": "${datasource}"
         },
         "definition": "{\"0\":\"S\",\"1\":\"H\",\"2\":\"O\",\"3\":\"W\",\"4\":\" \",\"5\":\"T\",\"6\":\"A\",\"7\":\"G\",\"8\":\" \",\"9\":\"V\",\"10\":\"A\",\"11\":\"L\",\"12\":\"U\",\"13\":\"E\",\"14\":\"S\",\"15\":\" \",\"16\":\"F\",\"17\":\"R\",\"18\":\"O\",\"19\":\"M\",\"20\":\" \",\"21\":\"t\",\"22\":\"r\",\"23\":\"i\",\"24\":\"d\",\"25\":\"e\",\"26\":\"n\",\"27\":\"t\",\"28\":\"_\",\"29\":\"q\",\"30\":\"u\",\"31\":\"e\",\"32\":\"u\",\"33\":\"e\",\"34\":\"_\",\"35\":\"i\",\"36\":\"n\",\"37\":\" \",\"38\":\"W\",\"39\":\"I\",\"40\":\"T\",\"41\":\"H\",\"42\":\" \",\"43\":\"K\",\"44\":\"E\",\"45\":\"Y\",\"46\":\"=\",\"47\":\"m\",\"48\":\"o\",\"49\":\"d\",\"50\":\"u\",\"51\":\"l\",\"52\":\"e\",\"database\":\"deepflow_system\",\"sql\":\"show tag tag.module values from deepflow_agent_queue\"}",
         "hide": 0,
