@@ -117,7 +117,7 @@
                   "value": {
                     "legend": false,
                     "tooltip": false,
-                    "viz": true
+                    "viz": false
                   }
                 }
               ]
