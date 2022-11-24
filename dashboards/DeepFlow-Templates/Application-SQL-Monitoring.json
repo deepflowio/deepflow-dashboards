@@ -2792,8 +2792,8 @@
       {
         "current": {
           "selected": false,
-          "text": "7159168758208567189",
-          "value": "7159168758208567189"
+          "text": "*",
+          "value": "*"
         },
         "hide": 2,
         "name": "deepflow_tracing_id",
