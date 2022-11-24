@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 14,
+  "id": 24,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -49,7 +49,7 @@
         "content": "[English doc](https://deepflow.yunshan.net/docs/auto-tracing/tracing-without-instrumentation/?from=deepflow_grafana) | [中文文档](https://deepflow.yunshan.net/docs/zh/auto-tracing/tracing-without-instrumentation/?from=deepflow_grafana) \n",
         "mode": "markdown"
       },
-      "pluginVersion": "9.2.0",
+      "pluginVersion": "9.2.5",
       "title": "Help doc",
       "type": "text"
     },
@@ -202,7 +202,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Latency"
+              "options": "Response Delay"
             },
             "properties": [
               {
@@ -308,7 +308,7 @@
           }
         ]
       },
-      "pluginVersion": "9.2.0",
+      "pluginVersion": "9.2.5",
       "targets": [
         {
           "datasource": {
@@ -621,19 +621,19 @@
       {
         "current": {
           "selected": false,
-          "text": "7159123364699473097",
-          "value": "7159123364699473097"
+          "text": "*",
+          "value": "*"
         },
         "hide": 2,
         "name": "deepflow_tracing_id",
         "options": [
           {
-            "selected": false,
-            "text": "",
-            "value": ""
+            "selected": true,
+            "text": "*",
+            "value": "*"
           }
         ],
-        "query": "7159123364699473097",
+        "query": "*",
         "skipUrlSync": false,
         "type": "textbox"
       }
@@ -647,6 +647,6 @@
   "timezone": "",
   "title": "Distributed Tracing",
   "uid": "Distributed_Tracing",
-  "version": 7,
+  "version": 6,
   "weekStart": ""
 }
