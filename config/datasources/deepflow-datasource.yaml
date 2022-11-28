@@ -30,3 +30,9 @@ datasources:
   uid: DeepFlow MySQL
   url: ${MYSQL_URL}
   user: ${MYSQL_USER}
+- name: DeepFlow-Tempo
+  uid: DeepFlow-Tempo
+  type: tempo
+  access: proxy
+  url: ${DEEPFLOW_REQUEST_URL}
+  jsonData: {}
