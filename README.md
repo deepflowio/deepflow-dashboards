@@ -2,8 +2,6 @@
 
 An automated observability platform for cloud-native developers.
 
-#deepflow-dashboards
-
 ## Dashboard specification
 
 Add the datasource variable to the dashboard and manually change it to `"selected": true,"value": "1"`:
