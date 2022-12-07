@@ -23,8 +23,8 @@
   },
   "editable": true,
   "fiscalYearStartMonth": 0,
-  "graphTooltip": 1,
-  "id": 88,
+  "graphTooltip": 2,
+  "id": 519,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -57,7 +57,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 1
+            "y": 25
           },
           "hiddenSeries": false,
           "id": 1,
@@ -192,7 +192,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 1
+            "y": 25
           },
           "hiddenSeries": false,
           "id": 2,
@@ -323,7 +323,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 8
+            "y": 32
           },
           "hiddenSeries": false,
           "id": 20,
@@ -458,7 +458,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 8
+            "y": 32
           },
           "hiddenSeries": false,
           "id": 31,
@@ -591,7 +591,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 15
+            "y": 39
           },
           "hiddenSeries": false,
           "id": 198,
@@ -755,7 +755,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 2
+            "y": 26
           },
           "hiddenSeries": false,
           "id": 7,
@@ -902,7 +902,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 9
+            "y": 33
           },
           "hiddenSeries": false,
           "id": 8,
@@ -1045,7 +1045,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 9
+            "y": 33
           },
           "hiddenSeries": false,
           "id": 16,
@@ -1215,7 +1215,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 27
           },
           "hiddenSeries": false,
           "id": 32,
@@ -1366,7 +1366,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 10
+            "y": 34
           },
           "hiddenSeries": false,
           "id": 29,
@@ -1523,7 +1523,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 10
+            "y": 34
           },
           "hiddenSeries": false,
           "id": 30,
@@ -1707,7 +1707,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 4
+            "y": 28
           },
           "hiddenSeries": false,
           "id": 33,
@@ -1857,7 +1857,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 4
+            "y": 28
           },
           "hiddenSeries": false,
           "id": 199,
@@ -2005,7 +2005,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 11
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 34,
@@ -2177,7 +2177,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 5
+            "y": 29
           },
           "hiddenSeries": false,
           "id": 191,
@@ -2326,7 +2326,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 5
+            "y": 29
           },
           "hiddenSeries": false,
           "id": 193,
@@ -2478,7 +2478,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 195,
@@ -2627,7 +2627,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 197,
@@ -2799,7 +2799,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 6
+            "y": 30
           },
           "hiddenSeries": false,
           "id": 55,
@@ -2946,7 +2946,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 6
+            "y": 30
           },
           "hiddenSeries": false,
           "id": 200,
@@ -3094,7 +3094,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 56,
@@ -3269,7 +3269,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 7
+            "y": 31
           },
           "hiddenSeries": false,
           "id": 4,
@@ -3415,7 +3415,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 7
+            "y": 31
           },
           "hiddenSeries": false,
           "id": 5,
@@ -3590,7 +3590,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 8
+            "y": 32
           },
           "hiddenSeries": false,
           "id": 13,
@@ -3751,7 +3751,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 15
+            "y": 39
           },
           "hiddenSeries": false,
           "id": 9,
@@ -3941,7 +3941,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 9
+            "y": 33
           },
           "hiddenSeries": false,
           "id": 14,
@@ -4104,7 +4104,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 16
+            "y": 40
           },
           "hiddenSeries": false,
           "id": 15,
@@ -4294,7 +4294,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 10
+            "y": 34
           },
           "hiddenSeries": false,
           "id": 17,
@@ -4574,7 +4574,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 17
+            "y": 41
           },
           "hiddenSeries": false,
           "id": 19,
@@ -4805,7 +4805,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 11
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 46,
@@ -4964,7 +4964,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 11
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 49,
@@ -5123,7 +5123,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 11
+            "y": 35
           },
           "hiddenSeries": false,
           "id": 21,
@@ -5276,7 +5276,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 18
+            "y": 42
           },
           "hiddenSeries": false,
           "id": 47,
@@ -5429,7 +5429,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 18
+            "y": 42
           },
           "hiddenSeries": false,
           "id": 48,
@@ -5641,7 +5641,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 25
+            "y": 49
           },
           "hiddenSeries": false,
           "id": 130,
@@ -5855,7 +5855,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 25
+            "y": 49
           },
           "hiddenSeries": false,
           "id": 131,
@@ -6084,7 +6084,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 12
+            "y": 36
           },
           "hiddenSeries": false,
           "id": 50,
@@ -6298,7 +6298,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 12
+            "y": 36
           },
           "hiddenSeries": false,
           "id": 71,
@@ -6512,7 +6512,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 12
+            "y": 36
           },
           "hiddenSeries": false,
           "id": 54,
@@ -6667,7 +6667,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 19
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 52,
@@ -6834,7 +6834,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 19
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 53,
@@ -7061,7 +7061,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 19
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 51,
@@ -7319,7 +7319,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 109,
@@ -7421,7 +7421,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 110,
@@ -7586,7 +7586,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 13
+            "y": 37
           },
           "hiddenSeries": false,
           "id": 233,
@@ -7749,7 +7749,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 20
+            "y": 44
           },
           "hiddenSeries": false,
           "id": 229,
@@ -7912,7 +7912,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 20
+            "y": 44
           },
           "hiddenSeries": false,
           "id": 230,
@@ -8072,7 +8072,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 27
+            "y": 51
           },
           "hiddenSeries": false,
           "id": 227,
@@ -8226,7 +8226,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 27
+            "y": 51
           },
           "hiddenSeries": false,
           "id": 228,
@@ -8417,7 +8417,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 14
+            "y": 38
           },
           "hiddenSeries": false,
           "id": 22,
@@ -8580,7 +8580,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 14
+            "y": 38
           },
           "hiddenSeries": false,
           "id": 57,
@@ -8737,7 +8737,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 21
+            "y": 45
           },
           "hiddenSeries": false,
           "id": 58,
@@ -8915,7 +8915,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 15
+            "y": 39
           },
           "hiddenSeries": false,
           "id": 23,
@@ -9075,7 +9075,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 16
+            "y": 40
           },
           "hiddenSeries": false,
           "id": 24,
@@ -9223,7 +9223,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 23
+            "y": 47
           },
           "hiddenSeries": false,
           "id": 25,
@@ -9364,7 +9364,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 23
+            "y": 47
           },
           "hiddenSeries": false,
           "id": 26,
@@ -9532,7 +9532,7 @@
             "h": 7,
             "w": 8,
             "x": 0,
-            "y": 17
+            "y": 41
           },
           "hiddenSeries": false,
           "id": 35,
@@ -9684,7 +9684,7 @@
             "h": 7,
             "w": 8,
             "x": 8,
-            "y": 17
+            "y": 41
           },
           "hiddenSeries": false,
           "id": 36,
@@ -9866,8 +9866,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -9882,7 +9881,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 17
+            "y": 41
           },
           "id": 263,
           "options": {
@@ -9957,7 +9956,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 18
+            "y": 42
           },
           "hiddenSeries": false,
           "id": 40,
@@ -10128,7 +10127,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 74
+            "y": 98
           },
           "hiddenSeries": false,
           "id": 41,
@@ -10260,7 +10259,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 19
+            "y": 43
           },
           "hiddenSeries": false,
           "id": 84,
@@ -10472,7 +10471,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 26
+            "y": 50
           },
           "hiddenSeries": false,
           "id": 85,
@@ -10685,7 +10684,7 @@
             "h": 7,
             "w": 16,
             "x": 0,
-            "y": 33
+            "y": 57
           },
           "hiddenSeries": false,
           "id": 86,
@@ -10898,7 +10897,7 @@
             "h": 7,
             "w": 8,
             "x": 16,
-            "y": 33
+            "y": 57
           },
           "hiddenSeries": false,
           "id": 87,
@@ -11078,7 +11077,7 @@
             "h": 8,
             "w": 9,
             "x": 0,
-            "y": 20
+            "y": 44
           },
           "hiddenSeries": false,
           "id": 133,
@@ -11235,7 +11234,7 @@
             "h": 8,
             "w": 8,
             "x": 9,
-            "y": 20
+            "y": 44
           },
           "hiddenSeries": false,
           "id": 161,
@@ -11386,7 +11385,7 @@
             "h": 8,
             "w": 7,
             "x": 17,
-            "y": 20
+            "y": 44
           },
           "hiddenSeries": false,
           "id": 163,
@@ -11588,8 +11587,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11605,7 +11603,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 29
+            "y": 53
           },
           "id": 273,
           "options": {
@@ -11701,8 +11699,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11717,7 +11714,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 22
+            "y": 46
           },
           "id": 271,
           "options": {
@@ -11790,8 +11787,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -11807,7 +11803,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 22
+            "y": 46
           },
           "id": 269,
           "options": {
@@ -11847,6 +11843,196 @@
       ],
       "title": "Integration Collector",
       "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 275,
+      "panels": [],
+      "title": "Kubernetes Watcher",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "deepflow-querier-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ns"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 23
+      },
+      "id": 277,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "deepflow-querier-datasource",
+            "uid": "${datasource}"
+          },
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_resource_watcher\",\"select\":[{\"key\":\"metrics.list_avg_cost_time\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"list_cost_time\",\"params\":[],\"uuid\":\"c9c1072b-56b9-b811-ecd6-fd88ea0ae30c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8dc0b25b-4123-39af-8336-2ea89a8fc7b9\",\"type\":\"tag\"}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4fbd3efa-785c-26ae-b001-35078ac708a5\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2d686faf-cbb2-bae5-3035-94a8dbf63892\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9bfb535d-2c2f-386d-3709-2421d27e3327\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3cda2a5a-876d-f8c9-14b7-5f77616b3853\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
+          "refId": "A"
+        }
+      ],
+      "title": "Resource Watcher List Resource cost time ",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "deepflow-querier-datasource",
+        "uid": "${datasource}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 23
+      },
+      "id": 279,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "deepflow-querier-datasource",
+            "uid": "${datasource}"
+          },
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_resource_watcher\",\"select\":[{\"key\":\"metrics.list_avg_length\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"list_length\",\"params\":[],\"uuid\":\"c9c1072b-56b9-b811-ecd6-fd88ea0ae30c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8dc0b25b-4123-39af-8336-2ea89a8fc7b9\",\"type\":\"tag\"}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4fbd3efa-785c-26ae-b001-35078ac708a5\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2d686faf-cbb2-bae5-3035-94a8dbf63892\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"19a34c5e-e8fd-0872-04ad-bd4e1f806a69\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3cda2a5a-876d-f8c9-14b7-5f77616b3853\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
+          "refId": "A"
+        }
+      ],
+      "title": "Resource Watcher List Resource length",
+      "type": "timeseries"
     }
   ],
   "refresh": "10s",
@@ -11875,7 +12061,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -12172,6 +12358,6 @@
   "timezone": "browser",
   "title": "DeepFlow Agent",
   "uid": "DeepFlow_Agent",
-  "version": 7,
+  "version": 3,
   "weekStart": ""
 }
