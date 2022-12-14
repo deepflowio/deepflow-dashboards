@@ -35,4 +35,6 @@ datasources:
   type: tempo
   access: proxy
   url: ${DEEPFLOW_REQUEST_URL}
-  jsonData: {}
+  jsonData: 
+    traceQuery:
+      timeShiftEnabled: true
