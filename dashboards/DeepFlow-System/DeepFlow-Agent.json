@@ -13507,7 +13507,7 @@
       "type": "row"
     }
   ],
-  "refresh": "10s",
+  "refresh": "",
   "schemaVersion": 37,
   "style": "dark",
   "tags": [],
