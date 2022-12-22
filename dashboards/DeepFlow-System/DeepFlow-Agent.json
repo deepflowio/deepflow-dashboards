@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "id": 124,
+  "id": 57,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -3951,7 +3951,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 135
+            "y": 8
           },
           "hiddenSeries": false,
           "id": 4,
@@ -3974,7 +3974,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -4097,7 +4097,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 135
+            "y": 8
           },
           "hiddenSeries": false,
           "id": 5,
@@ -4121,7 +4121,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -4272,7 +4272,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 136
+            "y": 9
           },
           "hiddenSeries": false,
           "id": 13,
@@ -4297,7 +4297,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -4433,7 +4433,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 143
+            "y": 16
           },
           "hiddenSeries": false,
           "id": 9,
@@ -4460,7 +4460,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -4623,7 +4623,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 137
+            "y": 10
           },
           "hiddenSeries": false,
           "id": 14,
@@ -4650,7 +4650,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -4786,7 +4786,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 144
+            "y": 17
           },
           "hiddenSeries": false,
           "id": 15,
@@ -4813,7 +4813,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -5511,7 +5511,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -5562,7 +5562,7 @@
               "measurement": "trident_second_quadruple_generator_window_delay",
               "policy": "default",
               "query": "SELECT max(\"value\") FROM \"trident_second_quadruple_generator_window_latency\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_quadruple_generator\",\"select\":[{\"key\":\"metrics.window_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"89e6500a-1046-d6aa-02d5-356805404aa7\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c92170d-5575-2c0a-e2eb-8b3196480485\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_quadruple_generator\",\"select\":[{\"key\":\"metrics.window-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"89e6500a-1046-d6aa-02d5-356805404aa7\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c92170d-5575-2c0a-e2eb-8b3196480485\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\",\"showMetrics\":1,\"tracingId\":null}",
               "rawQuery": false,
               "refId": "A",
               "resultFormat": "time_series",
@@ -5624,7 +5624,7 @@
               "measurement": "trident_minute_quadruple_generator_window_delay",
               "policy": "default",
               "query": "SELECT max(\"value\") FROM \"trident_minute_quadruple_generator_latency\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.window_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"9f25c675-f382-e665-1b4e-fe6cb88fa099\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"10b32bf1-b962-401c-e75c-f86363dfdbe5\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"9f25c675-f382-e665-1b4e-fe6cb88fa099\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"10b32bf1-b962-401c-e75c-f86363dfdbe5\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\",\"showMetrics\":1,\"tracingId\":null}",
               "rawQuery": false,
               "refId": "B",
               "resultFormat": "time_series",
@@ -5728,7 +5728,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -5778,7 +5778,7 @@
               "measurement": "trident_second_collector_window_delay",
               "policy": "default",
               "query": "SELECT max(\"value\") FROM \"trident_second_quadruple_generator_window_latency\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_collector\",\"select\":[{\"key\":\"metrics.window_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"6c8c815b-339f-855a-6e40-7e3c6cbc7a31\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c656253a-9f7d-8e86-a569-294fc67def52\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_collector\",\"select\":[{\"key\":\"metrics.window-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"6c8c815b-339f-855a-6e40-7e3c6cbc7a31\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c656253a-9f7d-8e86-a569-294fc67def52\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\",\"showMetrics\":1,\"tracingId\":null}",
               "rawQuery": false,
               "refId": "A",
               "resultFormat": "time_series",
@@ -5840,7 +5840,7 @@
               "measurement": "trident_minute_collector_window_delay",
               "policy": "default",
               "query": "SELECT max(\"value\") FROM \"trident_minute_quadruple_generator_latency\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_collector\",\"select\":[{\"key\":\"metrics.window_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"c61cbbb1-2f0f-0992-39e9-d0d5e96f4a72\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"213a807a-2aeb-b12e-45f2-3abb6cb92451\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_collector\",\"select\":[{\"key\":\"metrics.window-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"window_delay\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.flow-delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"flow_delay\",\"params\":[],\"uuid\":\"c61cbbb1-2f0f-0992-39e9-d0d5e96f4a72\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"213a807a-2aeb-b12e-45f2-3abb6cb92451\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\",\"showMetrics\":1,\"tracingId\":null}",
               "rawQuery": false,
               "refId": "B",
               "resultFormat": "time_series",
@@ -5903,8 +5903,8 @@
           "dashLength": 10,
           "dashes": false,
           "datasource": {
-            "type": "influxdb",
-            "uid": "-285FeR4z"
+            "type": "deepflow-querier-datasource",
+            "uid": "${datasource}"
           },
           "fieldConfig": {
             "defaults": {
@@ -5942,7 +5942,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -5991,7 +5991,75 @@
               ],
               "measurement": "trident_packet_collector_no_endpoint",
               "policy": "default",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.no-endpoint\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"no-endpoint\",\"params\":[],\"uuid\":\"e03fee99-8d04-9576-5f32-7c4996b22263\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c8fddada-5e4f-31ca-27bc-2f601285b30a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f2135da0-35b3-4ca1-f175-28fbcb267365\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6926cb7c-1457-ad5c-87e3-07719b2a0867\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d75e670f-05a7-2dce-710a-4a8fd6786994\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c1ac79e-9491-141b-4662-b1f40b2bb079\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute-\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "/60"
+                    ],
+                    "type": "math"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$host$/"
+                }
+              ]
+            },
+            {
+              "alias": "$tag_host $tag_index",
+              "datasource": {
+                "type": "influxdb",
+                "uid": "-285FeR4z"
+              },
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "host"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "index"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "hide": false,
+              "measurement": "trident_packet_collector_no_endpoint",
+              "policy": "default",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_quadruple_generator\",\"select\":[{\"key\":\"metrics.no-endpoint\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"no-endpoint\",\"params\":[],\"uuid\":\"e03fee99-8d04-9576-5f32-7c4996b22263\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c8fddada-5e4f-31ca-27bc-2f601285b30a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f2135da0-35b3-4ca1-f175-28fbcb267365\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6926cb7c-1457-ad5c-87e3-07719b2a0867\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6a8d83ff-9e7d-5dae-7169-c2a035b968f1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c1ac79e-9491-141b-4662-b1f40b2bb079\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second-\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "A",
               "resultFormat": "time_series",
               "select": [
                 [
@@ -6097,7 +6165,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -6147,7 +6215,7 @@
               "measurement": "trident_quadruple_generator_drop_before_window",
               "policy": "default",
               "query": "SELECT mean(\"value\") /60 FROM \"trident_minute_quadruple_generator_drop_before_window\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"59d0e692-5a20-5d07-969f-ab83f46b3a18\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"59d0e692-5a20-5d07-969f-ab83f46b3a18\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\",\"showMetrics\":0,\"tracingId\":null}",
               "rawQuery": true,
               "refId": "A",
               "resultFormat": "time_series",
@@ -6185,7 +6253,7 @@
                 "uid": "${datasource}"
               },
               "hide": false,
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"17f6b718-5dba-5a48-5287-446486d53549\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_quadruple_generator\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"17f6b718-5dba-5a48-5287-446486d53549\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "B"
             }
           ],
@@ -6264,7 +6332,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -6314,7 +6382,7 @@
               "measurement": "trident_collector_drop_before_window",
               "policy": "default",
               "query": "SELECT mean(\"value\") /60 FROM \"trident_minute_collector_drop_before_window\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_collector\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"87054f85-12c8-f8eb-6585-53e930f45394\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_second_collector\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"87054f85-12c8-f8eb-6585-53e930f45394\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-second\",\"showMetrics\":0,\"tracingId\":null}",
               "rawQuery": true,
               "refId": "A",
               "resultFormat": "time_series",
@@ -6383,7 +6451,7 @@
               "measurement": "trident_collector_drop_before_window",
               "policy": "default",
               "query": "SELECT mean(\"value\") /60 FROM \"trident_minute_collector_drop_before_window\" WHERE \"host\" =~ /^$host$/ AND $timeFilter GROUP BY time($__interval), \"host\", \"index\" fill(null)",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_collector\",\"select\":[{\"key\":\"metrics.drop_before_window\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c13a0c4b-41c5-79d7-caf3-1ec8ef9a56d4\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_minute_collector\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drops\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c13a0c4b-41c5-79d7-caf3-1ec8ef9a56d4\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}#${tag.index}-minute\",\"showMetrics\":0,\"tracingId\":null}",
               "rawQuery": true,
               "refId": "B",
               "resultFormat": "time_series",
@@ -6495,7 +6563,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -6749,7 +6817,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -6855,7 +6923,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7020,7 +7088,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7183,7 +7251,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7346,7 +7414,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7506,7 +7574,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7660,7 +7728,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.2.2",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7810,7 +7878,7 @@
             "type": "deepflow-querier-datasource",
             "uid": "${datasource}"
           },
-          "description": "msg3: 遥测数据\nmsg4: l4流日志\nmsg5: l7-http-dns流日志",
+          "description": "",
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -7823,7 +7891,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 142
+            "y": 14
           },
           "hiddenSeries": false,
           "id": 22,
@@ -7847,7 +7915,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -7904,7 +7972,7 @@
               "measurement": "trident_collect_sender_encoder_in",
               "orderByTime": "ASC",
               "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender_encoder\",\"select\":[{\"key\":\"metrics.in\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"in\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.port\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7d1307d5-7de1-0b0c-518c-517355e772ad\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.index\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"89edb27b-201c-3cc4-0716-e002411b6663\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ad84cecb-b19c-4657-e6a8-7660edb0b037\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.port}#${tag.index}-${tag.type}\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.dropped\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e03fee99-8d04-9576-5f32-7c4996b22263\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c8fddada-5e4f-31ca-27bc-2f601285b30a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f2135da0-35b3-4ca1-f175-28fbcb267365\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6926cb7c-1457-ad5c-87e3-07719b2a0867\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"12a4cde6-ea21-211b-6e24-f4cce4753845\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c1ac79e-9491-141b-4662-b1f40b2bb079\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host} ${tag.type}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A",
               "resultFormat": "time_series",
               "select": [
@@ -7938,7 +8006,7 @@
           ],
           "thresholds": [],
           "timeRegions": [],
-          "title": "in",
+          "title": "drop",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -7973,7 +8041,10 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
+          "datasource": {
+            "type": "deepflow-querier-datasource",
+            "uid": "${datasource}"
+          },
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -7986,7 +8057,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 142
+            "y": 14
           },
           "hiddenSeries": false,
           "id": 57,
@@ -8010,7 +8081,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -8061,7 +8132,7 @@
               "measurement": "trident_collect_sender_tx",
               "orderByTime": "ASC",
               "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"tx\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.port\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cf982431-9a82-a8ff-af79-b35541adbf1b\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"bc400e1e-e2bd-54d5-5a38-d7ec853cdf41\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.port}-${tag.type}\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"tx\",\"params\":[],\"uuid\":\"e03fee99-8d04-9576-5f32-7c4996b22263\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c8fddada-5e4f-31ca-27bc-2f601285b30a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f2135da0-35b3-4ca1-f175-28fbcb267365\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6926cb7c-1457-ad5c-87e3-07719b2a0867\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"64232b5b-3a7d-bf12-ebd3-6caacaf39276\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c1ac79e-9491-141b-4662-b1f40b2bb079\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.type}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "B",
               "resultFormat": "time_series",
               "select": [
@@ -8130,7 +8201,10 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
+          "datasource": {
+            "type": "deepflow-querier-datasource",
+            "uid": "${datasource}"
+          },
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -8143,7 +8217,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 149
+            "y": 21
           },
           "hiddenSeries": false,
           "id": 58,
@@ -8167,7 +8241,7 @@
             "alertThreshold": true
           },
           "percentage": false,
-          "pluginVersion": "9.1.5",
+          "pluginVersion": "9.2.4",
           "pointradius": 5,
           "points": false,
           "renderer": "flot",
@@ -8218,7 +8292,7 @@
               "measurement": "trident_collect_sender_tx_bytes",
               "orderByTime": "ASC",
               "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx_bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"tx\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.port\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5fd9f302-cb45-3525-66c7-01828905074d\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9d62bc27-22a4-49ea-9ad9-3e1f079e8096\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.port}-${tag.type}\"}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"tx-bps\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d52c0ed7-6b09-421f-1874-3c4fb65e6b18\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b7bedba-31a2-f7cf-5b3a-83e1b9c749cf\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9d62bc27-22a4-49ea-9ad9-3e1f079e8096\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.port}-${tag.type}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "C",
               "resultFormat": "time_series",
               "select": [
