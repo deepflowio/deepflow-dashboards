@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 54,
+  "id": 58,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -250,7 +250,7 @@
             "type": "deepflow-querier-datasource",
             "uid": "${datasource}"
           },
-          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.monitor\",\"select\":[{\"key\":\"metrics.mem_rss\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-rss\",\"params\":[],\"uuid\":\"18852661-6d75-03a9-9b5d-e199b933829d\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.mem_inuse\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-inuse\",\"params\":[],\"uuid\":\"d1c853bf-fa4a-e27a-5b3d-4bd114e6f897\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"9c0d5b3d-d817-19ce-85ee-ccf5e4656956\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f3e87d4f-a7ee-f3f2-5915-bfcb7b2cdff2\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e513212-6c4c-68ce-de27-831e8dd2822c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52cb8a8f-611b-19df-3bd4-aeed6e18fc0c\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"10\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}\",\"tracingId\":null}",
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.monitor\",\"select\":[{\"key\":\"metrics.mem_rss\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-rss\",\"params\":[],\"uuid\":\"18852661-6d75-03a9-9b5d-e199b933829d\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.mem_inuse\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-inuse\",\"params\":[],\"uuid\":\"d1c853bf-fa4a-e27a-5b3d-4bd114e6f897\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"9c0d5b3d-d817-19ce-85ee-ccf5e4656956\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f3e87d4f-a7ee-f3f2-5915-bfcb7b2cdff2\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e513212-6c4c-68ce-de27-831e8dd2822c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52cb8a8f-611b-19df-3bd4-aeed6e18fc0c\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"10\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}\",\"showMetrics\":1,\"tracingId\":null}",
           "refId": "A"
         }
       ],
@@ -499,8 +499,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -643,8 +642,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -786,8 +784,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -926,8 +923,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1077,8 +1073,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1226,8 +1221,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1385,8 +1379,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1714,6 +1707,6 @@
   "timezone": "",
   "title": "Capacity Estimation",
   "uid": "Capacity_Estimation",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
