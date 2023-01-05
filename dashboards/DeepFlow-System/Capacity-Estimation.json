@@ -42,10 +42,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "deepflow-querier-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -151,10 +148,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.monitor\",\"select\":[{\"key\":\"metrics.cpu_percent\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"cpu-avg\",\"params\":[],\"uuid\":\"18852661-6d75-03a9-9b5d-e199b933829d\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"9c0d5b3d-d817-19ce-85ee-ccf5e4656956\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8d1dad57-81a8-5bf8-5079-21842344a5bc\",\"subFuncs\":[]}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e513212-6c4c-68ce-de27-831e8dd2822c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52cb8a8f-611b-19df-3bd4-aeed6e18fc0c\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"30\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}\",\"tracingId\":null}",
           "refId": "A"
         }
@@ -163,10 +157,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflow-querier-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -246,10 +237,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.monitor\",\"select\":[{\"key\":\"metrics.mem_rss\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-rss\",\"params\":[],\"uuid\":\"18852661-6d75-03a9-9b5d-e199b933829d\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"metrics.mem_inuse\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"mem-inuse\",\"params\":[],\"uuid\":\"d1c853bf-fa4a-e27a-5b3d-4bd114e6f897\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"9c0d5b3d-d817-19ce-85ee-ccf5e4656956\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f3e87d4f-a7ee-f3f2-5915-bfcb7b2cdff2\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e513212-6c4c-68ce-de27-831e8dd2822c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52cb8a8f-611b-19df-3bd4-aeed6e18fc0c\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"10\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}\",\"showMetrics\":1,\"tracingId\":null}",
           "refId": "A"
         }
@@ -258,10 +246,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflow-querier-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -340,10 +325,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.ingester.ckwriter\",\"select\":[{\"type\":\"metric\",\"key\":\"metrics.write_success_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"success\",\"params\":[],\"uuid\":\"d490d2e5-f0a2-2900-9c89-4662e1fcd082\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"type\":\"tag\",\"key\":\"tag.table\",\"func\":\"\",\"op\":\"NOT REGEXP\",\"val\":\"flow_tag-.*\",\"as\":\"\",\"params\":[],\"uuid\":\"b15e6228-2876-bbee-4285-0b8cf1d00c4a\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"12b4818d-8231-fe0a-a747-d8bc04d2aa5e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"becd5211-a1a9-a169-bc96-1c318ae9176f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a2e954f3-f040-5020-cd8c-850c074eeb7e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.table\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"31dac46a-2706-33cb-05ce-87ad8f8a048c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"51b1cb00-baf2-87d7-b9e6-8771de09c13f\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host} ${tag.table} write\",\"tracingId\":null}",
           "refId": "A"
         }
@@ -352,10 +334,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflow-querier-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -433,10 +412,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server.ingester.ckwriter\",\"select\":[{\"type\":\"metric\",\"key\":\"metrics.write_failed_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"failed\",\"params\":[],\"uuid\":\"3bbb62eb-11a3-f1e1-7d49-363ad988feab\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"type\":\"tag\",\"key\":\"tag.table\",\"func\":\"\",\"op\":\"NOT REGEXP\",\"val\":\"flow_tag-.*\",\"as\":\"\",\"params\":[],\"uuid\":\"b15e6228-2876-bbee-4285-0b8cf1d00c4a\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$server\",\"value\":\"server\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"12b4818d-8231-fe0a-a747-d8bc04d2aa5e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"type\":\"metric\",\"key\":\"fromSelect3bbb62eb-11a3-f1e1-7d49-363ad988feab\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"becd5211-a1a9-a169-bc96-1c318ae9176f\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"metrics.write_failed_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"failed\",\"params\":[],\"uuid\":\"3bbb62eb-11a3-f1e1-7d49-363ad988feab\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a2e954f3-f040-5020-cd8c-850c074eeb7e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.table\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"31dac46a-2706-33cb-05ce-87ad8f8a048c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"51b1cb00-baf2-87d7-b9e6-8771de09c13f\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host} ${tag.table} write\",\"tracingId\":null}",
           "refId": "A"
         }
@@ -455,10 +431,7 @@
       "id": 22,
       "panels": [
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -540,10 +513,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -598,10 +568,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -682,10 +649,7 @@
           "targets": [
             {
               "alias": "$tag_host RSS",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -739,10 +703,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -821,10 +782,7 @@
           "targets": [
             {
               "alias": "$tag_host",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -879,10 +837,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -959,10 +914,7 @@
           "targets": [
             {
               "alias": "$tag_host $tag_id",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -1028,10 +980,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1113,10 +1062,7 @@
           "targets": [
             {
               "alias": "$tag_host $tag_id",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -1176,10 +1122,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1263,10 +1206,7 @@
           "targets": [
             {
               "alias": "flow-aggr $tag_host $tag_index",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
                 {
@@ -1334,10 +1274,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1435,10 +1372,7 @@
           "targets": [
             {
               "alias": "merge $tag_host $tag_index",
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "groupBy": [
                 {
                   "params": [
@@ -1504,10 +1438,7 @@
           "type": "timeseries"
         },
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1585,18 +1516,12 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.kern_lost\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"kern-drop\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent\",\"value\":\"agent\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b804a6a-0373-8ed8-bd7f-3f3c92ccd174\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval_ms\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "deepflow-querier-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"user-drop\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent\",\"value\":\"agent\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b804a6a-0373-8ed8-bd7f-3f3c92ccd174\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval_ms\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "B"
@@ -1643,10 +1568,7 @@
             "$__all"
           ]
         },
-        "datasource": {
-          "type": "deepflow-querier-datasource",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "definition": "{\"database\":\"deepflow_system\",\"sql\":\"show tag tag.host values from deepflow_server.ingester.queue\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": true,
@@ -1675,10 +1597,7 @@
             "$__all"
           ]
         },
-        "datasource": {
-          "type": "deepflow-querier-datasource",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "definition": "{\"database\":\"deepflow_system\",\"sql\":\"show tag tag.host values from deepflow_agent_dispatcher\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": true,

@@ -29,10 +29,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -82,10 +79,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -128,10 +122,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -180,10 +171,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -235,10 +223,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -287,10 +272,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -351,10 +333,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -403,10 +382,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -467,10 +443,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -516,10 +489,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -589,10 +559,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -641,10 +608,7 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -743,10 +707,7 @@
           "selected": true,
           "value": "1"
         },
-        "datasource": {
-          "type": "mysql",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "definition": "select name from domain;",
         "hide": 0,
         "includeAll": false,
