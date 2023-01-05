@@ -3,10 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": {
-          "type": "datasource",
-          "uid": "grafana"
-        },
+        "datasource": "$datasource",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -29,10 +26,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -89,10 +83,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -133,10 +124,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -193,10 +181,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -225,10 +210,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -271,10 +253,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -291,10 +270,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -337,10 +313,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -357,10 +330,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -403,10 +373,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -423,10 +390,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -469,10 +433,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -489,10 +450,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -634,10 +592,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -675,10 +630,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -740,10 +692,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -761,10 +710,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -996,10 +942,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -1046,10 +989,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1105,10 +1045,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -1126,10 +1063,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1350,10 +1284,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -1429,10 +1360,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1475,10 +1403,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -1514,10 +1439,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "grafana-clickhouse-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1627,10 +1549,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": 1,
           "meta": {
             "builderOptions": {
@@ -1694,10 +1613,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": {
-          "type": "grafana-clickhouse-datasource",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "definition": "SELECT name FROM system.databases;",
         "hide": 0,
         "includeAll": true,

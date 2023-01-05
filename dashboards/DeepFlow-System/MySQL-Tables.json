@@ -29,10 +29,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "mysql",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -80,10 +77,7 @@
       "pluginVersion": "9.2.2",
       "targets": [
         {
-          "datasource": {
-            "type": "mysql",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "format": "table",
           "group": [],
           "metricColumn": "none",
@@ -144,10 +138,7 @@
           "text": "acl",
           "value": "acl"
         },
-        "datasource": {
-          "type": "mysql",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "definition": "show tables",
         "hide": 0,
         "includeAll": false,

@@ -30,10 +30,7 @@
     "liveNow": false,
     "panels": [
       {
-        "datasource": {
-          "type": "grafana-clickhouse-datasource",
-          "uid": "${datasource}"
-        },
+        "datasource": "$datasource",
         "fieldConfig": {
           "defaults": {
             "color": {
@@ -93,10 +90,7 @@
               "orderBy": [],
               "table": "$table"
             },
-            "datasource": {
-              "type": "grafana-clickhouse-datasource",
-              "uid": "${datasource}"
-            },
+            "datasource": "$datasource",
             "format": 1,
             "queryType": "builder",
             "rawSql": "SELECT * FROM flow_tag.$table LIMIT 1000",
@@ -135,10 +129,7 @@
             "selected": true,
             "value": "1"
           },
-          "datasource": {
-            "type": "grafana-clickhouse-datasource",
-            "uid": "${datasource}"
-          },
+          "datasource": "$datasource",
           "definition": "show tables from flow_tag",
           "hide": 0,
           "includeAll": false,
