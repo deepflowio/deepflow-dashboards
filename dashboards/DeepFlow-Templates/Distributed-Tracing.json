@@ -65,7 +65,7 @@
           "links": [
             {
               "title": "Open in current dashboard",
-              "url": "/d/Distributed_Tracing/distributed-tracing?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}&${cluster:queryparam}&${namespace:queryparam}&${workload:queryparam}&${vm:queryparam}&${trace_id:queryparam}&${span_id:queryparam}&${request_resource:queryparam}&from=${__from}&to=${__to}"
+              "url": "/d/Distributed_Tracing/distributed-tracing?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}&${cluster:queryparam}&${namespace:queryparam}&${workload:queryparam}&${vm:queryparam}&${trace_id:queryparam}&${span_id:queryparam}&${request_resource:queryparam}&from=${__from}&to=${__to}&${datasource:queryparam}"
             }
           ],
           "mappings": [],
