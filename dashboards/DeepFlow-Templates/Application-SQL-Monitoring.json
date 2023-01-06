@@ -2061,7 +2061,7 @@
               "links": [
                 {
                   "title": "Open in current dashboard",
-                  "url": "/d/Application_SQL_Monitoring/application-sql-monitoring?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}&${cluster:queryparam}&${db_service:queryparam}&${db_chost:queryparam}&${db_ip:queryparam}&${tap_side:queryparam}&${client_for_SQL_Analysis:queryparam}&from=${__from}&to=${__to}"
+                  "url": "/d/Application_SQL_Monitoring/application-sql-monitoring?\ufefforgId=1&var-deepflow_tracing_id=${__data.fields._id}&${cluster:queryparam}&${db_service:queryparam}&${db_chost:queryparam}&${db_ip:queryparam}&${tap_side:queryparam}&${client_for_SQL_Analysis:queryparam}&from=${__from}&to=${__to}&${datasource:queryparam}"
                 }
               ],
               "mappings": [],
