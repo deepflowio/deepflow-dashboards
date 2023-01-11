@@ -1838,8 +1838,8 @@
         {
           "current": {
             "selected": false,
-            "text": "All",
-            "value": "$__all"
+            "text": "Disabled",
+            "value": "$__disabled"
           },
           "datasource": "$datasource",
           "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag tap_side values from vtap_app_edge_port\"}",
@@ -1851,7 +1851,8 @@
           "options": [],
           "query": {
             "database": "flow_metrics",
-            "sql": "show tag tap_side values from vtap_app_edge_port"
+            "sql": "show tag tap_side values from vtap_app_edge_port",
+            "useDisabled": true
           },
           "refresh": 1,
           "regex": "",
