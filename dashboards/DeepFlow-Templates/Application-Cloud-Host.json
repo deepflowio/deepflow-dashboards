@@ -657,10 +657,10 @@
         "current": {
           "selected": true,
           "text": [
-            "All"
+            "Disabled"
           ],
           "value": [
-            "$__all"
+            "$__disabled"
           ]
         },
         "datasource": "$datasource",
@@ -672,7 +672,8 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "show tag l7_protocol values from vtap_app_port"
+          "sql": "show tag l7_protocol values from vtap_app_port",
+          "useDisabled": true
         },
         "refresh": 1,
         "regex": "",
