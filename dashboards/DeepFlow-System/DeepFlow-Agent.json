@@ -3,10 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": {
-          "type": "datasource",
-          "uid": "grafana"
-        },
+        "datasource": "-- Grafana --",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -915,7 +912,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -2551,7 +2547,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -2717,7 +2712,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -2860,7 +2854,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -3012,7 +3005,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -3161,7 +3153,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -3477,7 +3468,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -3625,7 +3615,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -7296,7 +7285,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -7450,7 +7438,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
@@ -8130,7 +8117,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fill": 1,
           "fillGradient": 0,
           "gridPos": {
@@ -10418,7 +10404,6 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {},
           "fieldConfig": {
             "defaults": {
               "links": []
