@@ -30,10 +30,8 @@ dashboard 增加 datasource 变量，手动改为 `"selected": true,"value": "1"
 所有 panel 的 datasource 使用 $datasource：
 ```json
         {
-          "datasource": {
-            "type": "deepflow-querier-datasource",
-            "uid": "${datasource}"
-          }
+          "datasource": "$datasource"
+        }
 ```
 
 dashboard title 和uid 要固定：
