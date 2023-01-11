@@ -3,10 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": {
-          "type": "grafana",
-          "uid": "-- Grafana --"
-        },
+        "datasource": "-- Grafana --",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -47,7 +44,6 @@
       "type": "text"
     },
     {
-      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -137,7 +133,6 @@
       "type": "timeseries"
     },
     {
-      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -227,7 +222,6 @@
       "type": "timeseries"
     },
     {
-      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -317,7 +311,6 @@
       "type": "timeseries"
     },
     {
-      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -407,7 +400,6 @@
       "type": "timeseries"
     },
     {
-      "datasource": {},
       "fieldConfig": {
         "defaults": {
           "color": {
