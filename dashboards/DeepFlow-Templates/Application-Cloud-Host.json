@@ -660,7 +660,7 @@
             "Disabled"
           ],
           "value": [
-            "$__disabled"
+            "__disabled"
           ]
         },
         "datasource": "$datasource",
