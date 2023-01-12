@@ -11628,7 +11628,7 @@
           "type": "timeseries"
         }
       ],
-      "title": "PcapAssembler",
+      "title": "Pcap Assembler (Enterprise Edition Only)",
       "type": "row"
     }
   ],
