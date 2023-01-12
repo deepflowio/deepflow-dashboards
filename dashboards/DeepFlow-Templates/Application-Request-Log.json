@@ -3,10 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": {
-          "type": "grafana",
-          "uid": "-- Grafana --"
-        },
+        "datasource": "-- Grafana --",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -749,10 +746,10 @@
         "current": {
           "selected": true,
           "text": [
-            "All"
+            "Disabled"
           ],
           "value": [
-            "$__all"
+            "__disabled"
           ]
         },
         "datasource": "$datasource",
@@ -764,7 +761,8 @@
         "options": [],
         "query": {
           "database": "flow_log",
-          "sql": "show tag l7_protocol values from l7_flow_log"
+          "sql": "show tag l7_protocol values from l7_flow_log",
+          "useDisabled": true
         },
         "refresh": 1,
         "regex": "",
@@ -814,10 +812,10 @@
         "current": {
           "selected": true,
           "text": [
-            "All"
+            "Disabled"
           ],
           "value": [
-            "$__all"
+            "$__disabled"
           ]
         },
         "datasource": "$datasource",
@@ -829,7 +827,8 @@
         "options": [],
         "query": {
           "database": "flow_log",
-          "sql": "show tag response_status values from l7_flow_log"
+          "sql": "show tag response_status values from l7_flow_log",
+          "useDisabled": true
         },
         "refresh": 1,
         "regex": "",

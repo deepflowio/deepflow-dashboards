@@ -30,10 +30,8 @@ Add the datasource variable to the dashboard and manually change it to `"selecte
 All panel datasources use $datasource:
 ```json
         {
-           "datasource": {
-             "type": "deepflow-querier-datasource",
-             "uid": "${datasource}"
-           }
+          "datasource": "$datasource"
+        }
 ```
 
 The dashboard title and uid should be fixed:
