@@ -138,7 +138,7 @@
               }
             ]
           },
-          "unit": "bps"
+          "unit": "reqps"
         },
         "overrides": []
       },
@@ -751,7 +751,7 @@
                   }
                 ]
               },
-              "unit": "bps"
+              "unit": "reqps"
             },
             "overrides": []
           },
