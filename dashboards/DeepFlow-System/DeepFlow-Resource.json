@@ -76,7 +76,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -168,7 +167,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -269,7 +267,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -379,7 +376,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -486,7 +482,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -605,7 +600,6 @@
       "targets": [
         {
           "dataset": "deepflow",
-          "datasource": "$datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
