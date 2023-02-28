@@ -1340,8 +1340,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "ClickHouse",
+          "selected": true,
           "value": "1"
         },
         "hide": 0,
