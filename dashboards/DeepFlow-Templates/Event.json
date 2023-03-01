@@ -223,17 +223,17 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"event\",\"sql\":\"show tag pod_cluster values from event\",\"useDisabled\":true,\"useAny\":true}",
+        "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "cluster",
         "options": [],
         "query": {
           "database": "event",
-          "sql": "show tag pod_cluster values from event",
-          "useAny": true,
-          "useDisabled": true
+          "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -252,17 +252,17 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"event\",\"sql\":\"show tag pod_ns values from event\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod_ns as `value`, pod_ns as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "namespace",
         "options": [],
         "query": {
           "database": "event",
-          "sql": "show tag pod_ns values from event",
-          "useAny": true,
-          "useDisabled": true
+          "sql": "SELECT pod_ns as `value`, pod_ns as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -281,17 +281,17 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"event\",\"sql\":\"show tag pod_group values from event\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod_group as `value`, pod_group as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND pod_ns IN (${namespace:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "workload",
         "options": [],
         "query": {
           "database": "event",
           "sql": "show tag pod_group values from event",
-          "useAny": true,
-          "useDisabled": true
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -312,15 +312,15 @@
         "datasource": "$datasource",
         "definition": "{\"database\":\"event\",\"sql\":\"show tag pod values from event\",\"useAny\":true,\"useDisabled\":true}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "pod",
         "options": [],
         "query": {
           "database": "event",
           "sql": "show tag pod values from event",
-          "useAny": true,
-          "useDisabled": true
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -341,15 +341,15 @@
         "datasource": "$datasource",
         "definition": "{\"database\":\"event\",\"sql\":\"show tag chost values from event\",\"useAny\":true,\"useDisabled\":true}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "vm",
         "options": [],
         "query": {
           "database": "event",
           "sql": "show tag chost values from event",
-          "useAny": true,
-          "useDisabled": true
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",

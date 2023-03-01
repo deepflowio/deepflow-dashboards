@@ -702,15 +702,15 @@
         "datasource": "$datasource",
         "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag chost values from vtap_flow_port\",\"useDisabled\":true,\"useAny\":true}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "vm",
         "options": [],
         "query": {
           "database": "flow_metrics",
           "sql": "show tag chost values from vtap_flow_port",
-          "useAny": true,
-          "useDisabled": true
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",

@@ -3113,15 +3113,15 @@
           "value": "1"
         },
         "datasource": "$datasource",
-        "definition": "{\"sql\":\"show tag pod_cluster values from vtap_app_port\",\"database\":\"flow_metrics\"}",
+        "definition": "{\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
         "hide": 0,
         "includeAll": false,
-        "multi": false,
+        "multi": true,
         "name": "cluster",
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "show tag pod_cluster values from vtap_app_port"
+          "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999"
         },
         "refresh": 1,
         "regex": "",

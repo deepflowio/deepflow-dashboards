@@ -723,7 +723,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_log\",\"sql\":\"show tag pod_cluster values from l4_flow_log\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"flow_log\",\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": false,
         "label": "",
@@ -732,9 +732,9 @@
         "options": [],
         "query": {
           "database": "flow_log",
-          "sql": "show tag pod_cluster values from l4_flow_log",
-          "useAny": true,
-          "useDisabled": true
+          "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE region REGEXP '$datasource' AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -753,7 +753,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_log\",\"sql\":\"show tag pod_ns values from l4_flow_log\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"flow_log\",\"sql\":\"SELECT pod_ns as `value`, pod_ns as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": false,
         "label": "",
@@ -762,9 +762,9 @@
         "options": [],
         "query": {
           "database": "flow_log",
-          "sql": "show tag pod_ns values from l4_flow_log",
-          "useAny": true,
-          "useDisabled": true
+          "sql": "SELECT pod_ns as `value`, pod_ns as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -783,7 +783,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_log\",\"sql\":\"show tag pod_group values from l4_flow_log\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"flow_log\",\"sql\":\"SELECT pod_group as `value`, pod_group as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND pod_ns IN (${namespace:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":false,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": false,
         "label": "",
@@ -792,9 +792,9 @@
         "options": [],
         "query": {
           "database": "flow_log",
-          "sql": "show tag pod_group values from l4_flow_log",
-          "useAny": true,
-          "useDisabled": true
+          "sql": "SELECT pod_group as `value`, pod_group as `display_name` FROM `vtap_flow_port.1m` WHERE pod_cluster IN (${cluster:singlequote}) AND pod_ns IN (${namespace:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -815,15 +815,15 @@
         "datasource": "$datasource",
         "definition": "{\"database\":\"flow_log\",\"sql\":\"show tag chost values from l4_flow_log\",\"useAny\":true,\"useDisabled\":true}",
         "hide": 0,
-        "includeAll": false,
+        "includeAll": true,
         "multi": true,
         "name": "vm",
         "options": [],
         "query": {
           "database": "flow_log",
           "sql": "show tag chost values from l4_flow_log",
-          "useAny": true,
-          "useDisabled": true
+          "useAny": false,
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
