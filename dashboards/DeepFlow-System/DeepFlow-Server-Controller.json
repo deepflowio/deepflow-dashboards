@@ -133,7 +133,7 @@
           "sql": "SELECT Max(`metrics.count`) AS `Max(metrics.count)`, time(time, 60) AS `time_60`, `tag.type` FROM deepflow_server_controller_cloud_api_count WHERE `tag.host` IN ('mars-2') AND `tag.platform` IN ('kubernetes') AND `tag.domain_name` IN ('mars3') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, `tag.type` LIMIT 10000"
         }
       ],
-      "title": "云平台API返回的资源个数",
+      "title": "Cloud platform API resources count",
       "type": "timeseries"
     },
     {
@@ -242,7 +242,7 @@
           "sql": "SELECT Max(`metrics.avg`) AS `Max(metrics.avg)`, time(time, 60) AS `time_60`, `tag.type` FROM deepflow_server_controller_cloud_api_cost WHERE `tag.host` IN ('mars-2') AND `tag.platform` IN ('kubernetes') AND `tag.domain_name` IN ('mars3') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, `tag.type` LIMIT 10000"
         }
       ],
-      "title": "云平台API调用的耗时",
+      "title": "Cloud platform API call time",
       "type": "timeseries"
     },
     {
@@ -350,7 +350,7 @@
           "sql": "SELECT Max(`metrics.len`) AS `Max(metrics.len)`, time(time, 60) AS `time_60`, `tag.type` FROM deepflow_server_controller_cloud_api_cost WHERE `tag.host` IN ('mars-2') AND `tag.platform` IN ('kubernetes') AND `tag.domain_name` IN ('mars3') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, `tag.type` LIMIT 10000"
         }
       ],
-      "title": "云平台API调用的次数",
+      "title": "Cloud platform API call count",
       "type": "timeseries"
     },
     {
@@ -458,7 +458,7 @@
           "sql": "SELECT Max(`metrics.count`) AS `Max(metrics.count)`, time(time, 60) AS `time_60`, `tag.type` FROM deepflow_server_controller_cloud_info_count WHERE `tag.host` IN ('mars-2') AND `tag.platform` IN ('kubernetes') AND `tag.domain_name` IN ('mars3') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, `tag.type` LIMIT 10000"
         }
       ],
-      "title": "Server-cloud API返回的资源个数",
+      "title": "Server-cloud API resources count",
       "type": "timeseries"
     }
   ],
