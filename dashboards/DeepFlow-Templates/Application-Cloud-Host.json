@@ -566,7 +566,18 @@
               "time_1": true,
               "time_60": true
             },
-            "indexByName": {},
+            "indexByName": {
+              "chost": 0,
+              "l7_protocol": 1,
+              "chost_id": 2,
+              "node_type": 3,
+              "icon_id": 4,
+              "Enum(l7_protocol)": 5,
+              "PerSecond(Avg(request))": 6,
+              "Avg(client_error_ratio)": 7,
+              "Avg(server_error_ratio)": 8,
+              "Avg(rrt)": 9
+            },
             "renameByName": {
               "Avg(TCP重传比例)": "TCP retrans rate ",
               "Avg(client_error_ratio)": "Client error",
