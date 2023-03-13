@@ -685,7 +685,7 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Enum(protocol)": true,
+              "Enum(protocol)": false,
               "client_icon_id": true,
               "client_node_type": true,
               "client_resource_id": true,
@@ -710,7 +710,8 @@
               "subnet_id_0": true,
               "subnet_id_1": true,
               "tap_id": true,
-              "tap_side": true
+              "tap_side": true,
+              "protocol": true
             },
             "indexByName": {
               "Avg(art)": 20,
