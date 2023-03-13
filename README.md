@@ -18,7 +18,7 @@ Add the datasource variable to the dashboard and manually change it to `"selecte
          "multi": false,
          "name": "datasource",
          "options": [],
-         "query": "deepflow-querier-datasource",
+         "query": "deepflowio-deepflow-datasource",
          "queryValue": "",
          "refresh": 1,
          "regex": "",

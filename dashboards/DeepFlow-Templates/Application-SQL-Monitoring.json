@@ -200,7 +200,7 @@
         }
       ],
       "title": "Overview",
-      "type": "deepflow-topo-panel"
+      "type": "deepflowio-topo-panel"
     },
     {
       "datasource": "$datasource",
@@ -2125,7 +2125,7 @@
               "refId": "A"
             }
           ],
-          "type": "deepflow-apptracing-panel"
+          "type": "deepflowio-tracing-panel"
         },
         {
           "datasource": "$datasource",
@@ -2410,7 +2410,7 @@
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "queryValue": "",
         "refresh": 1,
         "regex": "",

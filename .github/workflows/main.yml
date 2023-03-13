@@ -19,7 +19,7 @@ on:
         type: string
 
 env:
-  IMAGE: "deepflow-init-grafana-ds-dh"
+  IMAGE: "deepflowio-init-grafana-ds-dh"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

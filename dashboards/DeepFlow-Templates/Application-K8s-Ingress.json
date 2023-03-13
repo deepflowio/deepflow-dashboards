@@ -187,7 +187,7 @@
         }
       ],
       "title": "Upstream Request Map ",
-      "type": "deepflow-topo-panel"
+      "type": "deepflowio-topo-panel"
     },
     {
       "datasource": "$datasource",
@@ -1349,7 +1349,7 @@
             }
           ],
           "title": "Distributed Tracing",
-          "type": "deepflow-apptracing-panel"
+          "type": "deepflowio-tracing-panel"
         }
       ],
       "title": "Delay",
@@ -3100,7 +3100,7 @@
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "queryValue": "",
         "refresh": 1,
         "regex": "",
