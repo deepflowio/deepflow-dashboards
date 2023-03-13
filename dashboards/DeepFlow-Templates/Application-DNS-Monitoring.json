@@ -212,7 +212,7 @@
         }
       ],
       "title": "DNS Topo",
-      "type": "deepflow-topo-panel"
+      "type": "deepflowio-topo-panel"
     },
     {
       "datasource": "$datasource",
@@ -1956,7 +1956,7 @@
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "queryValue": "",
         "refresh": 1,
         "regex": "",

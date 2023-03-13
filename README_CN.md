@@ -18,7 +18,7 @@ dashboard 增加 datasource 变量，手动改为 `"selected": true,"value": "1"
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "queryValue": "",
         "refresh": 1,
         "regex": "",

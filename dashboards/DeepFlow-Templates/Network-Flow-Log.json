@@ -706,7 +706,7 @@
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,

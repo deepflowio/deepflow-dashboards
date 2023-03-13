@@ -387,7 +387,7 @@
           "refId": "A"
         }
       ],
-      "type": "deepflow-apptracing-panel"
+      "type": "deepflowio-tracing-panel"
     }
   ],
   "refresh": false,
@@ -407,7 +407,7 @@
         "multi": false,
         "name": "datasource",
         "options": [],
-        "query": "deepflow-querier-datasource",
+        "query": "deepflowio-deepflow-datasource",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
