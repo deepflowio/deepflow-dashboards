@@ -79,7 +79,7 @@
           "group": [],
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT * FROM $table",
+          "rawSql": "SELECT * FROM deepflow.$table",
           "refId": "A",
           "select": [
             [
@@ -136,13 +136,13 @@
           "value": "acl"
         },
         "datasource": "$datasource",
-        "definition": "show tables",
+        "definition": "show tables from deepflow",
         "hide": 0,
         "includeAll": false,
         "multi": false,
         "name": "table",
         "options": [],
-        "query": "show tables",
+        "query": "show tables from deepflow",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
