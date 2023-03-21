@@ -6,7 +6,7 @@ datasources:
     requestUrl: ${DEEPFLOW_REQUEST_URL}
     traceUrl: ${DEEPFLOW_TRACEURL}
   name: DeepFlow
-  type: deepflow-querier-datasource
+  type: deepflowio-deepflow-datasource
   uid: DeepFlow
   url: null
 - jsonData:
