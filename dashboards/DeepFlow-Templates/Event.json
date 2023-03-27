@@ -231,9 +231,9 @@
         "options": [],
         "query": {
           "database": "event",
-          "sql": "show tag pod_cluster values from event",
+          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM vtap_flow_port WHERE  '$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
           "useAny": true,
-          "useDisabled": true
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -252,7 +252,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"event\",\"sql\":\"show tag pod_ns values from event\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod_ns as value, pod_ns as display_name FROM vtap_flow_port WHERE  '$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": false,
         "multi": true,
@@ -260,9 +260,9 @@
         "options": [],
         "query": {
           "database": "event",
-          "sql": "show tag pod_ns values from event",
+          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM vtap_flow_port WHERE  '$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
           "useAny": true,
-          "useDisabled": true
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
@@ -281,7 +281,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"event\",\"sql\":\"show tag pod_group values from event\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod_group as `value`, pod_group as `display_name` FROM `vtap_flow_port` WHERE '$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote}) AND '$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":false}",
         "hide": 0,
         "includeAll": false,
         "multi": true,
@@ -289,9 +289,9 @@
         "options": [],
         "query": {
           "database": "event",
-          "sql": "show tag pod_group values from event",
+          "sql": "SELECT pod_group as `value`, pod_group as `display_name` FROM `vtap_flow_port` WHERE '$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote}) AND '$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote}) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
           "useAny": true,
-          "useDisabled": true
+          "useDisabled": false
         },
         "refresh": 1,
         "regex": "",
