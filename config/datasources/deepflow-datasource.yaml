@@ -38,3 +38,8 @@ datasources:
   jsonData: 
     traceQuery:
       timeShiftEnabled: true
+- name: DeepFlow-Prometheus
+  uid: DeepFlow-Prometheus
+  type: prometheus
+  access: proxy
+  url: ${DEEPFLOW_REQUEST_URL}/prom
