@@ -1970,7 +1970,7 @@
           "value": "__any"
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_cluster values from vtap_app_port\",\"useDisabled\":true,\"useAny\":true}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999t\",\"useDisabled\":true,\"useAny\":true}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -1978,7 +1978,7 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM vtap_flow_port WHERE  '$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `vtap_flow_port.1m` WHERE  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
           "useAny": true,
           "useDisabled": false
         },
@@ -1995,7 +1995,7 @@
           "value": "__any"
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag pod_service values from vtap_app_port where display_name like '$dns_wildcard'\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_service AS value , pod_service AS display_name FROM `vtap_app_port.1m` WHERE pod_cluster IN (${cluster:singlequote})  AND pod_service LIKE '$wildcard'  GROUP BY `value`\",\"useAny\":true,\"useDisabled\":true}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -2003,7 +2003,7 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "show tag pod_service values from vtap_app_port where display_name like '$dns_wildcard'",
+          "sql": "SELECT pod_service AS value , pod_service AS display_name FROM `vtap_app_port.1m` WHERE pod_cluster IN (${cluster:singlequote})  AND pod_service LIKE '$wildcard'  GROUP BY `value`",
           "useAny": true,
           "useDisabled": true
         },
