@@ -174,13 +174,15 @@
         {
           "id": "organize",
           "options": {
-            "excludeByName": {},
+            "excludeByName": {
+              "auto_instance_id": true
+            },
             "indexByName": {},
             "renameByName": {
               "Enum(event_type)": "Event Type",
               "Enum(auto_instance_type)": "Instance Type",
               "event_desc": "Event Desc",
-              "instance": "Instance",
+              "auto_instance": "Instance",
               "time_str": "Time"
             }
           }
