@@ -758,24 +758,24 @@
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
-          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_port\",\"select\":[{\"key\":\"rtt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"rtt\",\"params\":[],\"uuid\":\"016e679f-c755-d931-7748-0f644d82b4ba\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"art\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"art\",\"params\":[],\"uuid\":\"dea1be27-f952-3532-67b3-dd01cc9cf80c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"rrt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"rrt\",\"params\":[],\"uuid\":\"0dae4bb6-330b-4f3d-b9bb-1224d70c498b\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3868cec7-28d4-efa6-e9f5-ffce2c5f545c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4da814ec-4a05-f26e-06b6-39345acb0dce\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_service\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$service\",\"value\":\"service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"f43241d2-a04b-971e-47ac-16719272a533\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"fad9d4fc-ec16-66de-fa61-faeded5833de\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f99c47b0-0f32-39c2-4fee-b0f1c56453f3\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"322d39d9-96fc-f193-0f8f-c09b398b15b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${pod_cluster}\",\"showMetrics\":-1,\"tracingId\":null}",
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_port\",\"select\":[{\"key\":\"rtt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"TCP Round Trip Duration\",\"params\":[],\"uuid\":\"016e679f-c755-d931-7748-0f644d82b4ba\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"art\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"Data Transfer Duration\",\"params\":[],\"uuid\":\"dea1be27-f952-3532-67b3-dd01cc9cf80c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"rrt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"App Duration\",\"params\":[],\"uuid\":\"0dae4bb6-330b-4f3d-b9bb-1224d70c498b\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3868cec7-28d4-efa6-e9f5-ffce2c5f545c\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4da814ec-4a05-f26e-06b6-39345acb0dce\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_service\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$service\",\"value\":\"service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"f43241d2-a04b-971e-47ac-16719272a533\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"fad9d4fc-ec16-66de-fa61-faeded5833de\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f99c47b0-0f32-39c2-4fee-b0f1c56453f3\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"322d39d9-96fc-f193-0f8f-c09b398b15b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${pod_cluster}-Cluster\",\"showMetrics\":-1,\"tracingId\":null}",
           "refId": "A",
           "returnMetrics": [
             {
-              "displayName": "rtt",
-              "name": "rtt",
+              "displayName": "TCP Round Trip Duration",
+              "name": "TCP Round Trip Duration",
               "type": 3,
               "unit": "us"
             },
             {
-              "displayName": "art",
-              "name": "art",
+              "displayName": "Data Transfer Duration",
+              "name": "Data Transfer Duration",
               "type": 3,
               "unit": "us"
             },
             {
-              "displayName": "rrt",
-              "name": "rrt",
+              "displayName": "App Duration",
+              "name": "App Duration",
               "type": 3,
               "unit": "us"
             }
@@ -807,10 +807,10 @@
               "name": "pod_cluster"
             }
           ],
-          "sql": "SELECT Avg(`rtt`) AS `rtt`, Avg(`art`) AS `art`, Avg(`rrt`) AS `rrt`, time(time, 60) AS `time_60`, node_type(pod_cluster) AS `node_type`, icon_id(pod_cluster) AS `icon_id`, pod_cluster_id, pod_cluster FROM vtap_flow_port WHERE pod_cluster = 'k8s-d-5Us8Lds7Co' AND pod_ns_id!=0 AND auto_service_id!=0 AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, pod_cluster, pod_cluster_id, `node_type` SLIMIT 20 LIMIT 100"
+          "sql": "SELECT Avg(`rtt`) AS `TCP Round Trip Duration`, Avg(`art`) AS `Data Transfer Duration`, Avg(`rrt`) AS `App Duration`, time(time, 60) AS `time_60`, node_type(pod_cluster) AS `node_type`, icon_id(pod_cluster) AS `icon_id`, pod_cluster_id, pod_cluster FROM vtap_flow_port WHERE pod_cluster_id!=0 AND pod_ns_id!=0 AND auto_service_id!=0 AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_60`, pod_cluster, pod_cluster_id, `node_type` SLIMIT 20 LIMIT 100"
         }
       ],
-      "title": "Service Network Delay",
+      "title": "Network Delay (by Cluster)",
       "type": "timeseries"
     },
     {
@@ -1159,8 +1159,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1176,7 +1175,7 @@
             "h": 8,
             "w": 15,
             "x": 0,
-            "y": 20
+            "y": 28
           },
           "id": 33,
           "options": {
@@ -1274,7 +1273,7 @@
             "h": 8,
             "w": 9,
             "x": 15,
-            "y": 20
+            "y": 28
           },
           "id": 35,
           "options": {
@@ -1393,8 +1392,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1410,7 +1408,7 @@
             "h": 8,
             "w": 15,
             "x": 0,
-            "y": 28
+            "y": 36
           },
           "id": 74,
           "options": {
@@ -1508,7 +1506,7 @@
             "h": 8,
             "w": 9,
             "x": 15,
-            "y": 28
+            "y": 36
           },
           "id": 75,
           "options": {
@@ -1639,8 +1637,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1656,7 +1653,7 @@
             "h": 8,
             "w": 24,
             "x": 0,
-            "y": 21
+            "y": 29
           },
           "id": 29,
           "options": {
@@ -1865,8 +1862,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1882,7 +1878,7 @@
             "h": 9,
             "w": 24,
             "x": 0,
-            "y": 29
+            "y": 37
           },
           "id": 31,
           "options": {
@@ -2010,8 +2006,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2026,7 +2021,7 @@
             "h": 7,
             "w": 12,
             "x": 0,
-            "y": 55
+            "y": 22
           },
           "id": 37,
           "options": {
@@ -2139,8 +2134,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2155,7 +2149,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 55
+            "y": 22
           },
           "id": 39,
           "options": {
@@ -2239,8 +2233,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2252,7 +2245,7 @@
             "h": 8,
             "w": 8,
             "x": 0,
-            "y": 62
+            "y": 29
           },
           "id": 43,
           "options": {
@@ -2330,8 +2323,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2343,7 +2335,7 @@
             "h": 8,
             "w": 8,
             "x": 8,
-            "y": 62
+            "y": 29
           },
           "id": 41,
           "options": {
@@ -2421,8 +2413,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   }
                 ]
               },
@@ -2434,7 +2425,7 @@
             "h": 8,
             "w": 8,
             "x": 16,
-            "y": 62
+            "y": 29
           },
           "id": 45,
           "options": {
@@ -2498,6 +2489,153 @@
           ],
           "title": "Time Out (by Consumer)",
           "type": "bargauge"
+        },
+        {
+          "datasource": "$datasource",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "custom": {
+                "align": "auto",
+                "cellOptions": {
+                  "type": "auto"
+                },
+                "inspect": false
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 10
+                  }
+                ]
+              }
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Log Count"
+                },
+                "properties": [
+                  {
+                    "id": "unit",
+                    "value": "short"
+                  },
+                  {
+                    "id": "custom.cellOptions",
+                    "value": {
+                      "mode": "lcd",
+                      "type": "gauge"
+                    }
+                  },
+                  {
+                    "id": "color",
+                    "value": {
+                      "mode": "thresholds"
+                    }
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Message"
+                },
+                "properties": [
+                  {
+                    "id": "custom.filterable",
+                    "value": true
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 37
+          },
+          "id": 77,
+          "options": {
+            "footer": {
+              "countRows": false,
+              "fields": "",
+              "reducer": [
+                "sum"
+              ],
+              "show": false
+            },
+            "showHeader": true,
+            "sortBy": []
+          },
+          "pluginVersion": "9.4.3",
+          "targets": [
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"response_code\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Code\",\"params\":[],\"uuid\":\"555b1219-0655-a006-d254-6423bcd1501f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_exception\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Message\",\"params\":[],\"uuid\":\"eb51c26b-c788-fb4c-612e-6b902e51c41f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"Log Count\",\"params\":[],\"uuid\":\"25038ea5-c8ff-134a-bdd3-5158123f881c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1cfacf8b-ea30-6085-d5c1-52a6a139e1f2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0ed4d8dd-5af6-81ce-c6c6-3db80073dfbf\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$service\",\"value\":\"service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"30450b20-4744-2ca1-db74-1114c7573d6e\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"Dubbo\",\"value\":40}],\"as\":\"\",\"params\":[],\"uuid\":\"0d7570e3-1ea3-03c0-be9b-74c6f1019131\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_code\",\"func\":\"\",\"op\":\"NOT IN\",\"val\":[{\"value\":\"20\",\"label\":\"20\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4efc6a42-30e1-a772-0661-71b64b5422fa\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"0dbf0a6f-fdc9-eaa2-8e15-3f66d0c3db6f\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"response_code\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a8ac2e39-8376-c5be-0d4d-edcad88095cd\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_exception\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"209fc956-eedd-c4ed-3194-f06f2ee4736c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e9f33a34-e322-2732-ce3d-3dc30397c5b0\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"25038ea5-c8ff-134a-bdd3-5158123f881c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"Log Count\",\"showMetrics\":-1,\"tracingId\":null}",
+              "refId": "A",
+              "returnMetrics": [
+                {
+                  "displayName": "Log Count",
+                  "name": "Log Count",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "Code",
+                  "isResource": false,
+                  "name": "`Code`"
+                },
+                {
+                  "displayName": "Message",
+                  "isResource": false,
+                  "name": "`Message`"
+                },
+                {
+                  "displayName": "Response Code",
+                  "isResource": false,
+                  "name": "response_code"
+                },
+                {
+                  "displayName": "Response Exception",
+                  "isResource": false,
+                  "name": "response_exception"
+                }
+              ],
+              "sql": "SELECT Sum(`log_count`) AS `Log Count`, response_code AS `Code`, response_exception AS `Message` FROM l7_flow_log WHERE pod_cluster_id_1!=0 AND pod_ns_id_1!=0 AND auto_service_id_1!=0 AND l7_protocol IN (40) AND response_code NOT IN (20) AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `Code`, `Message` ORDER BY `Log Count` desc LIMIT 100"
+            }
+          ],
+          "title": "Error (by Error Message)",
+          "transformations": [
+            {
+              "id": "organize",
+              "options": {
+                "excludeByName": {
+                  "50,BAD_RESPONSE": false
+                },
+                "indexByName": {
+                  "Code": 0,
+                  "Count": 2,
+                  "Message": 1
+                },
+                "renameByName": {}
+              }
+            }
+          ],
+          "type": "table"
         }
       ],
       "title": "Error",
@@ -2966,7 +3104,7 @@
               "role": "server"
             }
           ],
-          "sql": "SELECT `response_duration` AS `Response Delay`, auto_instance_0, auto_instance_1, Enum(tap_side) AS `Tap Side`, request_type AS `Method`, request_resource, Enum(response_status) AS `Status`, toString(start_time) AS `Start Time`, toString(_id), auto_instance_id_0, auto_instance_id_1 FROM l7_flow_log WHERE tap_port_type IN (7,8) AND pod_cluster_id_1!=0 AND pod_ns_1 = 'dubbo-application' AND auto_service_id_1!=0 AND l7_protocol IN (40) AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' and `response_duration`>='100000' ORDER BY `Response Delay` desc LIMIT 1000"
+          "sql": "SELECT `response_duration` AS `Response Delay`, auto_instance_0, auto_instance_1, Enum(tap_side) AS `Tap Side`, request_type AS `Method`, request_resource, Enum(response_status) AS `Status`, toString(start_time) AS `Start Time`, toString(_id), auto_instance_id_0, auto_instance_id_1 FROM l7_flow_log WHERE tap_port_type IN (7,8) AND pod_cluster_id_1!=0 AND pod_ns_id_1!=0 AND auto_service_id_1!=0 AND l7_protocol IN (40) AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' and `response_duration`>='100000' ORDER BY `Response Delay` desc LIMIT 1000"
         }
       ],
       "title": "Distributed Tracing (>=100ms)",
@@ -3012,7 +3150,7 @@
     {
       "datasource": "$datasource",
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 24,
         "x": 0,
         "y": 40
@@ -3195,6 +3333,6 @@
   "timezone": "",
   "title": "Application - Dubbo Monitoring - K8S",
   "uid": "Application_Dubbo_Monitoring_K8S",
-  "version": 42,
+  "version": 47,
   "weekStart": ""
 }
