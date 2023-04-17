@@ -28,10 +28,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -95,10 +92,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -190,10 +184,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "gridPos": {
         "h": 9,
         "w": 12,
@@ -218,10 +209,7 @@
       "type": "deepflowio-topo-panel"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -283,10 +271,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -347,10 +332,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -413,10 +395,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -474,10 +453,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -634,10 +610,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1s\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"flow_load\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"253f3dfc-69a2-c969-74be-9a0216eaef94\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ad3bb600-3643-75e4-41f3-05dfa4b7237b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3f635b01-1e95-e18d-2124-2d02889842bb\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0dfd866b-9923-0e3b-d727-486d80df4685\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c6f438fa-0a0d-4008-d881-23cf47b5f7a3\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"678383b7-aa09-99d4-34e2-e37402bb3e1c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"953de5c3-e589-7b09-0d55-b512c84c2726\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ffc4b961-9a38-bdaa-e665-716b2b256e05\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"68cd36fd-daa0-aeac-c941-a08c25bd9765\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"1\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_1}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -725,10 +698,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1s\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"flow_load\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"1ca7fff4-5b4f-3983-d742-b067374660a1\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"eb0143cd-5999-d802-9d67-df5ece4c72f6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b86fc28c-0550-16c2-6151-19b40e998801\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4058ac68-1c4b-789e-6167-a8e08a480d44\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"8a736511-190a-312a-deff-3b260aae3853\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"1cd176dd-1907-6357-64ca-4bcabf346343\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"756a1bdb-c70e-6e6f-cfeb-f183bc378008\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8367d9fd-2126-7f0c-71a8-166f647a1d78\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b2f6bebe-15ee-14f3-888d-945414181cf0\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"PerSecond\"}]}}],\"interval\":\"1\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -754,10 +724,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -857,10 +824,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -961,10 +925,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1051,10 +1012,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1141,10 +1099,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "find out which client cause server error",
       "fieldConfig": {
         "defaults": {
@@ -1201,10 +1156,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1261,10 +1213,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": {
-        "type": "deepflowio-deepflow-datasource",
-        "uid": "${datasource}"
-      },
+      "datasource": "$datasource",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1405,10 +1354,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"byte_tx\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"253f3dfc-69a2-c969-74be-9a0216eaef94\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"PerSecond\"}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"PerSecond\"}]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ad3bb600-3643-75e4-41f3-05dfa4b7237b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a279cd37-575e-55d5-5ca8-d756520db4e5\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c51078ea-1035-c3b6-3a38-b1d5baeaab49\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"6a41b871-3b68-70e5-a7b2-7733b40a22aa\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"1ddeff93-036e-3129-198f-2c83b634b3f0\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"953de5c3-e589-7b09-0d55-b512c84c2726\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl2_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ffc4b961-9a38-bdaa-e665-716b2b256e05\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"68cd36fd-daa0-aeac-c941-a08c25bd9765\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl2_1}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -1491,10 +1437,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"byte_rx\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"253f3dfc-69a2-c969-74be-9a0216eaef94\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"PerSecond\"}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"PerSecond\"}]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ad3bb600-3643-75e4-41f3-05dfa4b7237b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a279cd37-575e-55d5-5ca8-d756520db4e5\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c51078ea-1035-c3b6-3a38-b1d5baeaab49\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"98bc059b-becb-a290-5e1e-8413a6b53184\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"1118bfa1-a65a-9a47-e144-90e19e755c74\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"953de5c3-e589-7b09-0d55-b512c84c2726\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl2_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ffc4b961-9a38-bdaa-e665-716b2b256e05\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"68cd36fd-daa0-aeac-c941-a08c25bd9765\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl2_1}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -1550,10 +1493,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"byte_tx\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"bytes\",\"params\":[],\"uuid\":\"0df5ecd3-18dc-d5f9-591c-45e12c7e9ae0\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ae98ffff-3942-400d-b43b-9dcafacfc556\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c7b9bdce-af33-fc18-6cc7-60f651d3bf0f\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"6c7fd839-6e64-3cae-22c5-8ae775fe309e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b428d0d1-1ee7-d082-a0fd-96d08a4e7dfa\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"13e180e1-988f-942c-a0f8-aa32197f1a6c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5f904476-8c4b-cb70-77dd-4d2cc1705fa5\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"96faa5db-3107-0d84-86f0-5d01e1c017d9\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8d470d47-055e-cf8f-9e69-301062df19db\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]},\"fromSelect\":{\"key\":\"byte_tx\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"bytes\",\"params\":[],\"uuid\":\"0df5ecd3-18dc-d5f9-591c-45e12c7e9ae0\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}}],\"interval\":\"\",\"limit\":\"10\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -1609,10 +1549,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_flow_edge_port\",\"select\":[{\"key\":\"byte_rx\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"bytes\",\"params\":[],\"uuid\":\"0df5ecd3-18dc-d5f9-591c-45e12c7e9ae0\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ae98ffff-3942-400d-b43b-9dcafacfc556\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c7b9bdce-af33-fc18-6cc7-60f651d3bf0f\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c60efc94-5425-bc67-fcf8-4e37abb45648\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4d619f38-fda0-2af4-90e5-92d5d20ddbcd\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"TCP\",\"value\":6}],\"as\":\"\",\"params\":[],\"uuid\":\"1faf5c48-6d55-29ea-0daa-27f25a7432c8\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5f904476-8c4b-cb70-77dd-4d2cc1705fa5\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"96faa5db-3107-0d84-86f0-5d01e1c017d9\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8d470d47-055e-cf8f-9e69-301062df19db\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]},\"fromSelect\":{\"key\":\"byte_rx\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"bytes\",\"params\":[],\"uuid\":\"0df5ecd3-18dc-d5f9-591c-45e12c7e9ae0\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}}],\"interval\":\"\",\"limit\":\"10\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -1714,10 +1651,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"query\",\"params\":[],\"uuid\":\"1ca7fff4-5b4f-3983-d742-b067374660a1\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"eb0143cd-5999-d802-9d67-df5ece4c72f6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"962f4677-73b2-c1cd-ca5b-2bf2332f0c54\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"74fe3c06-50d9-1c9f-806d-5587aa8b7794\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"value\":\"SELECT*\",\"label\":\"SELECT*\"}],\"as\":\"\",\"params\":[],\"uuid\":\"83e6d2f5-b03b-523c-8d93-de4635a126db\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"4c0ca70b-fb8c-9dde-a09e-f06a0809a6f1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3ec9e006-9958-c27c-1de9-569d38cf7e20\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b931575d-0e23-6213-fe3b-a2dacd6dd566\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"756a1bdb-c70e-6e6f-cfeb-f183bc378008\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8367d9fd-2126-7f0c-71a8-166f647a1d78\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b2f6bebe-15ee-14f3-888d-945414181cf0\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0}\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -1918,10 +1852,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"dd7a0d8d-a4f3-1234-7859-8177031de1f5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"},{\"type\":\"tag\",\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"10e29789-f6f0-6137-a9ea-7e49540aef78\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Request Type\",\"params\":[],\"uuid\":\"0d9d6918-fe80-ac51-656f-ea18010878d7\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"0e3b5aa4-d0eb-5742-74d5-42d375130ac8\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"response_status\",\"func\":\"Enum\",\"op\":\"\",\"val\":\"\",\"as\":\"Status\",\"params\":[],\"uuid\":\"1a8bc14a-2dde-7974-37be-925a2db12f31\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Latency\",\"params\":[],\"uuid\":\"1ea794e8-9f1f-f65b-2111-b94bcd976822\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"sql_affected_rows\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"AffectedRows\",\"params\":[],\"uuid\":\"599c746d-7258-d0b5-a2fc-5fa3678b562a\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"331638eb-9d52-196c-40db-933e601ae720\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1061ac6c-4f29-9b91-35a3-2cd03e8e9b99\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ca7de1fd-ad9b-d575-5d66-84d12b594c47\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"NOT LIKE\",\"val\":[{\"value\":\"*LIMIT*\",\"label\":\"*LIMIT*\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1c741a73-4274-c445-4b9a-d1b3e4fbd476\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"e055e8f6-134f-093e-ae47-bb0eb1b972ee\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"2fb3a81a-d76d-1f7b-a8cb-6ba38b5e93fa\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"2e5d8bbc-ecf9-8268-dc1b-97dc360a352b\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"aafccbd7-dfbb-553b-f1f2-fff7ae682009\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e8d1249-a1f6-0bef-5f95-000a42b52181\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect1ea794e8-9f1f-f65b-2111-b94bcd976822\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ecc7fa7a-c053-30f8-fc56-7b6b35ad72e6\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"Latency\",\"params\":[],\"uuid\":\"1ea794e8-9f1f-f65b-2111-b94bcd976822\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "B"
@@ -2039,28 +1970,19 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"insert\",\"params\":[],\"uuid\":\"1ca7fff4-5b4f-3983-d742-b067374660a1\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"eb0143cd-5999-d802-9d67-df5ece4c72f6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"af7c20b7-0c82-750e-86b9-8288fb3c8b43\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"0a8c674a-8091-4b11-f5b9-ee3a6f0a20e2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"efa4f69c-a2e3-2499-d979-59b94bfa21d6\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"value\":\"INSERT*\",\"label\":\"INSERT*\"}],\"as\":\"\",\"params\":[],\"uuid\":\"abaefe80-60b5-d11a-f214-e5b0004c8b01\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"e835f6e6-90d9-3daf-89f3-0a0807af6e72\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"abc03e74-d4f3-fac3-9034-ae9c7b9326de\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"756a1bdb-c70e-6e6f-cfeb-f183bc378008\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8367d9fd-2126-7f0c-71a8-166f647a1d78\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b2f6bebe-15ee-14f3-888d-945414181cf0\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0} Insert\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"update\",\"params\":[],\"uuid\":\"1ca7fff4-5b4f-3983-d742-b067374660a1\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"eb0143cd-5999-d802-9d67-df5ece4c72f6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"af7c20b7-0c82-750e-86b9-8288fb3c8b43\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"bfa96f56-3dcb-68d6-00df-76baa1334af2\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"0a8c674a-8091-4b11-f5b9-ee3a6f0a20e2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"value\":\"UPDATE*\",\"label\":\"UPDATE*\"}],\"as\":\"\",\"params\":[],\"uuid\":\"abaefe80-60b5-d11a-f214-e5b0004c8b01\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"6c3dac45-8a56-0c4c-d14f-7566c1a835ba\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"944b1375-bde6-1b81-2478-ac2e9a12e48e\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"756a1bdb-c70e-6e6f-cfeb-f183bc378008\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8367d9fd-2126-7f0c-71a8-166f647a1d78\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b2f6bebe-15ee-14f3-888d-945414181cf0\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0} Update\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"delete\",\"params\":[],\"uuid\":\"1ca7fff4-5b4f-3983-d742-b067374660a1\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"eb0143cd-5999-d802-9d67-df5ece4c72f6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"af7c20b7-0c82-750e-86b9-8288fb3c8b43\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"942ce03b-5a95-e8d1-848d-665ec3ef0215\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"0a8c674a-8091-4b11-f5b9-ee3a6f0a20e2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"value\":\"DELETE*\",\"label\":\"DELETE*\"}],\"as\":\"\",\"params\":[],\"uuid\":\"abaefe80-60b5-d11a-f214-e5b0004c8b01\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3ab3e0af-bfef-9b22-ddb2-b7a06c07fd11\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"81ce852f-7502-227f-8ec3-d119fb4b9571\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"756a1bdb-c70e-6e6f-cfeb-f183bc378008\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8367d9fd-2126-7f0c-71a8-166f647a1d78\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b2f6bebe-15ee-14f3-888d-945414181cf0\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"600\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${resource_gl0_0} Delete\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "C"
@@ -2119,10 +2041,7 @@
           },
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"response_duration\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Latency\",\"params\":[],\"uuid\":\"0df5ecd3-18dc-d5f9-591c-45e12c7e9ae0\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ae98ffff-3942-400d-b43b-9dcafacfc556\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"083cdbb2-fe85-a70f-816f-0ebe568e33c7\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"be10caf4-66c6-b10a-a5d7-11b958fed3c3\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"7f16a692-3636-23a8-424f-563e040ad94c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"45bfcfe4-b57c-729f-2505-c75708ca8808\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"bc9b7787-b451-1d16-89dd-e9ef5afa1726\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5f904476-8c4b-cb70-77dd-4d2cc1705fa5\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"96faa5db-3107-0d84-86f0-5d01e1c017d9\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8d470d47-055e-cf8f-9e69-301062df19db\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"1\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -2198,10 +2117,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"appTracing\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b03920f-68bf-84e6-989a-023c0a983546\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"295380d3-c64d-9305-ac84-57c50c39e74a\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_port_type\",\"func\":\"Enum\",\"op\":\"\",\"val\":\"\",\"as\":\"Data Type\",\"params\":[],\"uuid\":\"8acdd662-266c-5f88-7a44-4843d2c582f5\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"Enum\",\"op\":\"\",\"val\":\"\",\"as\":\"Tap Side\",\"params\":[],\"uuid\":\"e520efef-cc99-1bcc-ff98-3e57c520c075\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Enum\",\"params\":[]}},{\"type\":\"tag\",\"key\":\"request_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Command\",\"params\":[],\"uuid\":\"98f579bd-ac4d-8f3e-15a4-4a2d62dcc1d1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"cbb6c14d-6766-3900-519d-f35d303c3b6c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"type\":\"tag\",\"key\":\"tap_port_type\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"eBPF\",\"value\":7},{\"label\":\"OTel\",\"value\":8}],\"as\":\"\",\"params\":[],\"uuid\":\"1e9bce7f-5590-cc71-65ad-c779e3127d60\"},{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b79356a7-5ba7-12d0-6c6c-f4fca2bc307b\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"3cce1372-7eae-7c8c-a380-eb179ec65bf6\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1a688fcf-35a6-0b46-13ae-86f1d1f339e7\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"REGEXP\",\"val\":\"[\\\\s\\\\S]+\",\"as\":\"\",\"params\":[],\"uuid\":\"8c2b87cb-992d-fe59-4ef4-735f018ae408\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"ef103eed-fa93-8223-6edf-85fffd91bb98\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a4ab2ba7-f156-51f9-86fc-5a06f36cbc69\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelectcc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"func\":\"\",\"op\":\">=\",\"val\":\"100000\",\"as\":\"\",\"params\":[],\"uuid\":\"da18d4b6-9bc6-4019-e684-08ea89d3fcdc\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d04b2ee1-c8a2-6348-cb7e-59f179cc4011\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"fromSelectcc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"477e97ad-c61c-46ed-c321-f94c72e0fd7e\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"cc73cdd5-32cf-31c2-b70f-b7af1d03f6eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -2237,10 +2153,7 @@
           "id": 80,
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"appTracingFlame\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b80b7f00-97e8-52f5-3771-34ada8f2ef51\",\"type\":\"metric\"}],\"where\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7642bb53-f8d3-f900-b288-23f95003cd90\",\"type\":\"tag\"}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b08cef94-a3d1-41ce-424b-93117d5b1600\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e5f70a5d-5921-f8cd-ff7a-1ffe929a6c9b\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"058dd42b-7213-0e46-8bd4-ab807ecc53a2\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"tracingId\":{\"label\":\"$deepflow_tracing_id\",\"value\":\"$deepflow_tracing_id\",\"isVariable\":true,\"variableType\":\"textbox\"}}",
               "refId": "A"
             }
@@ -2364,10 +2277,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "hide": false,
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"19c67fad-787e-f399-9969-1cd5a018c7bb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"Latency\",\"params\":[],\"uuid\":\"dd7ea9f5-1b9f-75ed-898b-722e66754faf\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"331638eb-9d52-196c-40db-933e601ae720\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"f3fecabb-0a4d-1a7e-234e-8dfc069381be\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"2c43c930-57ab-bff2-4ed2-6e0cc6ac4ada\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"4e843825-d6bd-47d3-e471-20ec6eda5d1f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"REGEXP\",\"val\":\"[\\\\s\\\\S]+\",\"as\":\"\",\"params\":[],\"uuid\":\"9ccc9f9c-6085-4077-8317-f63fc9b02db3\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"360407cb-f3f8-25f1-9a6e-ccfa3b2b12cc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1b172207-273e-9a9d-8f2b-3e8ebea95f83\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"aafccbd7-dfbb-553b-f1f2-fff7ae682009\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e8d1249-a1f6-0bef-5f95-000a42b52181\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ecc7fa7a-c053-30f8-fc56-7b6b35ad72e6\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"Duration\",\"params\":[],\"uuid\":\"dd7ea9f5-1b9f-75ed-898b-722e66754faf\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[],\"subFuncs\":[]}},\"cache\":{\"func\":\"Max\",\"params\":[],\"subFuncs\":[]}}],\"interval\":\"60\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "B"
@@ -2445,10 +2355,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"dd7a0d8d-a4f3-1234-7859-8177031de1f5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"Duration\",\"params\":[\"99\"],\"uuid\":\"64916f2c-4f62-4933-128d-02188a3d711e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[\"99\"],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"331638eb-9d52-196c-40db-933e601ae720\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0003a889-a753-29d8-fc59-a8ac73f45898\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c00a1e47-3b2c-cf45-0dc7-29502f1f8b42\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"c7808915-a28b-66fb-8464-4c83bd10e904\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"REGEXP\",\"val\":\"[\\\\s\\\\S]+\",\"as\":\"\",\"params\":[],\"uuid\":\"dd5755de-549e-2829-de19-471484a832a2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"46e4fa9f-2008-10d3-f2b6-62cef14bdc36\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"7da101c9-ae02-fe91-0722-4048e07d54af\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"aafccbd7-dfbb-553b-f1f2-fff7ae682009\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e8d1249-a1f6-0bef-5f95-000a42b52181\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[\"99\"],\"uuid\":\"ecc7fa7a-c053-30f8-fc56-7b6b35ad72e6\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[\"99\"],\"subFuncs\":[]},\"fromSelect\":{\"type\":\"metric\",\"key\":\"response_duration\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"Duration\",\"params\":[\"99\"],\"uuid\":\"64916f2c-4f62-4933-128d-02188a3d711e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[\"99\"],\"subFuncs\":[]}}}],\"interval\":\"\",\"limit\":\"10\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
@@ -2504,10 +2411,7 @@
           "pluginVersion": "9.2.0",
           "targets": [
             {
-              "datasource": {
-                "type": "deepflowio-deepflow-datasource",
-                "uid": "${datasource}"
-              },
+              "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"SQL Statement\",\"params\":[],\"uuid\":\"dd7a0d8d-a4f3-1234-7859-8177031de1f5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"error\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"64916f2c-4f62-4933-128d-02188a3d711e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_cluster\",\"value\":\"db_cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"331638eb-9d52-196c-40db-933e601ae720\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"to\",\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_service_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$db_service\",\"value\":\"db_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0003a889-a753-29d8-fc59-a8ac73f45898\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"to\"},{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_for_SQL_Analysis\",\"value\":\"client_for_SQL_Analysis\",\"isVariable\":true,\"variableType\":\"textbox\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c00a1e47-3b2c-cf45-0dc7-29502f1f8b42\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false,\"sideType\":\"from\"},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"MySQL\",\"value\":60},{\"label\":\"PostgreSQL\",\"value\":61}],\"as\":\"\",\"params\":[],\"uuid\":\"c7808915-a28b-66fb-8464-4c83bd10e904\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$tap_side\",\"value\":\"tap_side\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4df394d2-d69b-c49d-457b-6df3f4822e79\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"request_resource\",\"func\":\"\",\"op\":\"REGEXP\",\"val\":\"[\\\\s\\\\S]+\",\"as\":\"\",\"params\":[],\"uuid\":\"55054167-6822-ea4d-3f64-e21f1d2abd07\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"resource_gl1_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$client_workload\",\"value\":\"client_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4c46c0fa-b2c1-e237-5361-c37ac7ba1f17\",\"subFuncs\":[],\"whereOnly\":false,\"sideType\":\"from\",\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect64916f2c-4f62-4933-128d-02188a3d711e\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"aafccbd7-dfbb-553b-f1f2-fff7ae682009\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"error\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"64916f2c-4f62-4933-128d-02188a3d711e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"request_resource\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6e8d1249-a1f6-0bef-5f95-000a42b52181\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ecc7fa7a-c053-30f8-fc56-7b6b35ad72e6\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]},\"fromSelect\":{\"type\":\"metric\",\"key\":\"error\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"64916f2c-4f62-4933-128d-02188a3d711e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}}],\"interval\":\"\",\"limit\":\"10\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
               "refId": "A"
             }
