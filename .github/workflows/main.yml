@@ -4,11 +4,10 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the "v6.2" branch
   push:
     branches:
-      - main
-      - 'feature-**'
+      - v6.2
     tags:
       - '*'
   workflow_dispatch:
@@ -69,7 +68,7 @@ jobs:
 
       - name: set env
         run: |
-          echo "IMAGE_TAG_PREFIX=${{ github.ref_name }}"|sed 's|main|latest|' >> $GITHUB_ENV
+          echo "IMAGE_TAG_PREFIX=${{ github.ref_name }}"|sed 's|v6.2|latest|' >> $GITHUB_ENV
           echo "IMAGE_TAG=$(git rev-list --count HEAD)" >> $GITHUB_ENV
 
       - name: Build and push deepflow-init-grafana images to ghcr and dockerhub
