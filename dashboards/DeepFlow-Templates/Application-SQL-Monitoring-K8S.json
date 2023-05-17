@@ -2570,7 +2570,7 @@
           ]
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag tap_side values from vtap_app_edge_port\",\"useAny\":false,\"useDisabled\":false}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"show tag tap_side values from vtap_app_edge_port\",\"useAny\":false,\"useDisabled\":true}",
         "hide": 0,
         "includeAll": true,
         "label": "Tap Side",
@@ -2581,7 +2581,7 @@
           "database": "flow_metrics",
           "sql": "show tag tap_side values from vtap_app_edge_port",
           "useAny": false,
-          "useDisabled": false
+          "useDisabled": true
         },
         "refresh": 1,
         "regex": "",
