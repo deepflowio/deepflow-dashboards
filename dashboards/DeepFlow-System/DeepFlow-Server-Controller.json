@@ -490,7 +490,7 @@
           "value": "1"
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.host`  AS `value`,`tag.host`  AS `display_name` FROM deepflow_server_controller_cloud_api_count\"}",
+        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.host`  AS value,`tag.host`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;\"}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -498,7 +498,7 @@
         "options": [],
         "query": {
           "database": "deepflow_system",
-          "sql": "SELECT `tag.host`  AS `value`,`tag.host`  AS `display_name` FROM deepflow_server_controller_cloud_api_count"
+          "sql": "SELECT `tag.host`  AS value,`tag.host`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;"
         },
         "refresh": 1,
         "regex": "",
@@ -512,7 +512,7 @@
           "value": "1"
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.platform`  AS `value`,`tag.platform`  AS `display_name` FROM deepflow_server_controller_cloud_api_count\"}",
+        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.platform`  AS value,`tag.platform`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;\"}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -520,7 +520,7 @@
         "options": [],
         "query": {
           "database": "deepflow_system",
-          "sql": "SELECT `tag.platform`  AS `value`,`tag.platform`  AS `display_name` FROM deepflow_server_controller_cloud_api_count"
+          "sql": "SELECT `tag.platform`  AS value,`tag.platform`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;"
         },
         "refresh": 1,
         "regex": "",
@@ -534,7 +534,7 @@
           "value": "1"
         },
         "datasource": "$datasource",
-        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.domain_name`  AS `value`,`tag.domain_name`  AS `display_name` FROM deepflow_server_controller_cloud_api_count\"}",
+        "definition": "{\"database\":\"deepflow_system\",\"sql\":\"SELECT `tag.domain_name`  AS value,`tag.domain_name`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;\"}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -542,7 +542,7 @@
         "options": [],
         "query": {
           "database": "deepflow_system",
-          "sql": "SELECT `tag.domain_name`  AS `value`,`tag.domain_name`  AS `display_name` FROM deepflow_server_controller_cloud_api_count"
+          "sql": "SELECT `tag.domain_name`  AS value,`tag.domain_name`  AS display_name FROM deepflow_server_controller_cloud_api_count group by value,display_name;"
         },
         "refresh": 1,
         "regex": "",
