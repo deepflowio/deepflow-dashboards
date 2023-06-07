@@ -75,12 +75,23 @@
         "topoSettings": {
           "nodeTags": [],
           "type": "simpleTopo"
+        },
+        "metricsUnits": {
+          "bps": "bps"
         }
       },
       "targets": [
         {
           "queryText": "{\"appType\":\"accessRelationship\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_app_edge_port\",\"select\":[{\"type\":\"metric\",\"key\":\"request\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"992060ab-cae6-ccba-7b91-22bf0cc8687a\",\"subFuncs\":[{\"func\":\"PerSecond\"}]},{\"type\":\"metric\",\"key\":\"server_error_ratio\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6344696d-8779-d710-2f8c-386aaf4efb42\",\"subFuncs\":[]},{\"type\":\"metric\",\"key\":\"rrt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7d199436-12bd-1120-261b-7a771340b9f1\",\"subFuncs\":[]}],\"where\":[{\"type\":\"tag\",\"key\":\"pod_cluster_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"271eb506-643b-5cfd-4355-bae6d85f55c5\",\"subFuncs\":[],\"whereOnly\":false},{\"type\":\"tag\",\"key\":\"pod_ns_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"4d3605f5-c4dc-a545-c2f3-c5cbccea12c6\",\"subFuncs\":[],\"whereOnly\":false},{\"type\":\"tag\",\"key\":\"pod_group_1\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$workload\",\"value\":\"workload\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"99039168-8060-a317-c409-c5c56256b910\",\"subFuncs\":[],\"whereOnly\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$protocol\",\"value\":\"protocol\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"a70c090f-97fd-ddb0-16d9-063a5ecf9885\",\"subFuncs\":[],\"whereOnly\":false}],\"having\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f4d371ae-d6ab-9fa4-a4e0-4bb514d24a81\"}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"resource_gl0_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"85ef1a81-5901-ac73-7493-ec2f3748c58d\",\"sideType\":\"from\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true},{\"type\":\"tag\",\"key\":\"pod_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"736db275-da05-3b9b-e1e7-843c057758e3\",\"sideType\":\"to\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"5070823d-9f74-25af-f95a-56f8b00e5b36\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false}],\"orderBy\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b5e81d1-8982-7e6a-7c49-3bf9f6159b26\",\"sort\":\"asc\"}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\"}",
-          "refId": "A"
+          "refId": "A",
+          "returnMetrics": [
+            {
+              "displayName": "bps",
+              "name": "bps",
+              "type": 1,
+              "unit": "Byte/s"
+            }
+          ]
         }
       ],
       "title": "Pod Map",
@@ -683,6 +694,9 @@
             "topoSettings": {
               "nodeTags": [],
               "type": "simpleTopo"
+            },
+            "metricsUnits": {
+              "bps": "bps"
             }
           },
           "targets": [
