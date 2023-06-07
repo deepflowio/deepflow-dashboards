@@ -75,6 +75,9 @@
         "topoSettings": {
           "nodeTags": [],
           "type": "simpleTopo"
+        },
+        "metricsUnits": {
+          "bps": "bps"
         }
       },
       "targets": [
@@ -689,12 +692,23 @@
         "topoSettings": {
           "nodeTags": [],
           "type": "simpleTopo"
+        },
+        "metricsUnits": {
+          "bps": "bps"
         }
       },
       "targets": [
         {
           "queryText": "{\"appType\":\"accessRelationship\",\"db\":\"flow_metrics\",\"sources\":\"1m\",\"from\":\"vtap_app_edge_port\",\"select\":[{\"type\":\"metric\",\"key\":\"request\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"992060ab-cae6-ccba-7b91-22bf0cc8687a\",\"subFuncs\":[{\"func\":\"PerSecond\"}]},{\"type\":\"metric\",\"key\":\"server_error_ratio\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6344696d-8779-d710-2f8c-386aaf4efb42\",\"subFuncs\":[]},{\"type\":\"metric\",\"key\":\"rrt\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7d199436-12bd-1120-261b-7a771340b9f1\",\"subFuncs\":[]}],\"where\":[{\"type\":\"tag\",\"key\":\"chost_0\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$vm\",\"value\":\"vm\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"ae4fc4f1-f780-7b6c-d2cc-50c6c356bfe7\",\"subFuncs\":[],\"whereOnly\":false},{\"type\":\"tag\",\"key\":\"l7_protocol\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$protocol\",\"value\":\"protocol\",\"isVariable\":true}],\"as\":\"\",\"params\":[],\"uuid\":\"c05aa33b-5530-8b07-0f18-889fd9b14866\",\"subFuncs\":[],\"whereOnly\":false}],\"having\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f4d371ae-d6ab-9fa4-a4e0-4bb514d24a81\"}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"chost_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"246dbbad-c2f9-e77d-b5bd-15cbab844927\",\"sideType\":\"from\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true},{\"type\":\"tag\",\"key\":\"resource_gl0_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a07db6d8-9434-0447-52e4-a26c09d3856a\",\"sideType\":\"to\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true},{\"type\":\"tag\",\"key\":\"tap_side\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c5062a58-6ff6-e67e-d3df-706a89907b18\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false}],\"orderBy\":[{\"type\":\"metric\",\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b5e81d1-8982-7e6a-7c49-3bf9f6159b26\",\"sort\":\"asc\"}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\"}",
-          "refId": "A"
+          "refId": "A",
+          "returnMetrics": [
+            {
+              "displayName": "bps",
+              "name": "bps",
+              "type": 1,
+              "unit": "Byte/s"
+            }
+          ]
         }
       ],
       "title": "Cloud Host Map",
