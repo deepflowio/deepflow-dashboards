@@ -10520,6 +10520,245 @@
         "h": 1,
         "w": 24,
         "x": 0,
+        "y": 23
+      },
+      "id": 275,
+      "panels": [
+        {
+          "datasource": "$datasource",
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "ns"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 9,
+            "x": 0,
+            "y": 24
+          },
+          "id": 277,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_prometheus_targets_watcher\",\"select\":[{\"key\":\"metrics.target_compressed_length\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"list_cost_time\",\"params\":[],\"uuid\":\"c9c1072b-56b9-b811-ecd6-fd88ea0ae30c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"8dc0b25b-4123-39af-8336-2ea89a8fc7b9\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e5bba45e-a282-72ce-c0ba-e288c41ccb3a\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2d686faf-cbb2-bae5-3035-94a8dbf63892\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9bfb535d-2c2f-386d-3709-2421d27e3327\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3cda2a5a-876d-f8c9-14b7-5f77616b3853\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
+              "refId": "A",
+              "returnMetrics": [
+                {
+                  "displayName": "target_compressed_length",
+                  "name": "target_compressed_length",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_10",
+                  "isResource": false,
+                  "name": "`time_10`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                },
+                {
+                  "displayName": "tag.kind",
+                  "isResource": false,
+                  "name": "tag.kind"
+                }
+              ],
+              "sql": "SELECT Avg(`metrics.target_compressed_length`) AS `target_compressed_length`, time(time, 10) AS `time_10`, `tag.host`, `tag.kind` FROM deepflow_agent_prometheus_watcher WHERE (`tag.host` = 'node1-V1' OR `tag.host` = 'node2-V2' OR `tag.host` = 'node27-V6' OR `tag.host` = 'master26-V7' OR `tag.host` = 'huanchao-linux-H2' OR `tag.host` = 'huanchao-VirtualBox' OR `tag.host` = 'ydx-H3' OR `tag.host` = 'DF-DAILY-R0-C1' OR `tag.host` = 'DF-DAILY-R0-D1' OR `tag.host` = 'DeepflowQA-master26-W44' OR `tag.host` = 'node27' OR `tag.host` = 'DeepflowQA-node27-W43' OR `tag.host` = 'master26') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_10`, `tag.host`, `tag.kind` SLIMIT 20 LIMIT 10000"
+            }
+          ],
+          "title": "Target compressed length",
+          "type": "timeseries"
+        },
+        {
+          "datasource": "$datasource",
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "ns"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 9,
+            "x": 0,
+            "y": 24
+          },
+          "id": 277,
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "single",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_prometheus_targets_watcher\",\"select\":[{\"key\":\"metrics.config_compressed_length\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"list_cost_time\",\"params\":[],\"uuid\":\"c9c1072b-56b9-b811-ecd6-fd88ea0ae30c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"8dc0b25b-4123-39af-8336-2ea89a8fc7b9\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e5bba45e-a282-72ce-c0ba-e288c41ccb3a\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2d686faf-cbb2-bae5-3035-94a8dbf63892\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9bfb535d-2c2f-386d-3709-2421d27e3327\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3cda2a5a-876d-f8c9-14b7-5f77616b3853\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
+              "refId": "A",
+              "returnMetrics": [
+                {
+                  "displayName": "config_compressed_length",
+                  "name": "config_compressed_length",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_10",
+                  "isResource": false,
+                  "name": "`time_10`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                },
+                {
+                  "displayName": "tag.kind",
+                  "isResource": false,
+                  "name": "tag.kind"
+                }
+              ],
+              "sql": "SELECT Avg(`metrics.config_compressed_length`) AS `config_compressed_length`, time(time, 10) AS `time_10`, `tag.host`, `tag.kind` FROM deepflow_agent_prometheus_watcher WHERE (`tag.host` = 'node1-V1' OR `tag.host` = 'node2-V2' OR `tag.host` = 'node27-V6' OR `tag.host` = 'master26-V7' OR `tag.host` = 'huanchao-linux-H2' OR `tag.host` = 'huanchao-VirtualBox' OR `tag.host` = 'ydx-H3' OR `tag.host` = 'DF-DAILY-R0-C1' OR `tag.host` = 'DF-DAILY-R0-D1' OR `tag.host` = 'DeepflowQA-master26-W44' OR `tag.host` = 'node27' OR `tag.host` = 'DeepflowQA-node27-W43' OR `tag.host` = 'master26') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_10`, `tag.host`, `tag.kind` SLIMIT 20 LIMIT 10000"
+            }
+          ],
+          "title": "Config compressed length",
+          "type": "timeseries"
+        }
+      ],
+      "title": "Prometheus Watcher",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": "$datasource",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
         "y": 24
       },
       "id": 317,
