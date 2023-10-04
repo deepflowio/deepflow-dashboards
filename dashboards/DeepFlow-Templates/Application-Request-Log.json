@@ -40,7 +40,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "[English doc](https://deepflow.yunshan.net/docs/auto-metrics/request-log/?from=deepflow_grafana) | [中文文档](https://deepflow.yunshan.net/docs/zh/auto-metrics/request-log/?from=deepflow_grafana) \n",
+        "content": "[English doc](https://deepflow.io/docs/features/universal-map/request-log/?from=deepflow_grafana) | [中文文档](https://deepflow.io/docs/zh/features/universal-map/request-log/?from=deepflow_grafana) \n",
         "mode": "markdown"
       },
       "pluginVersion": "9.2.5",
