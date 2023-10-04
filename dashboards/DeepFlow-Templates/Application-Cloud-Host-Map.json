@@ -40,7 +40,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "[English doc](https://deepflow.yunshan.net/docs/auto-metrics/application-metrics/?from=deepflow_grafana) | [中文文档](https://deepflow.yunshan.net/docs/zh/auto-metrics/application-metrics/?from=deepflow_grafana) ",
+        "content": "[English doc](https://deepflow.io/docs/features/universal-map/application-metrics/?from=deepflow_grafana) | [中文文档](https://deepflow.io/docs/zh/features/universal-map/application-metrics/?from=deepflow_grafana) ",
         "mode": "markdown"
       },
       "pluginVersion": "9.2.5",
