@@ -97,7 +97,7 @@
               {
                 "targetBlank": true,
                 "title": "",
-                "url": "/d/Application_Out_Of_The_Box/application-out-of-the-box?orgId=1&var-client=${__data.fields.客户端服务}&var-server=${__data.fields.服务端服务}&var-endpoint=${__data.fields.端点}&var-l7_protocol=${__data.fields.应用协议}"
+                "url": "/d/Application_Out_Of_The_Box_CN/application-e5bc80-e7aeb1-e58db3-e794a8?orgId=1&var-client=${__data.fields.客户端服务}&var-server=${__data.fields.服务端服务}&var-endpoint=${__data.fields.端点}&var-l7_protocol=${__data.fields.应用协议}"
               }
             ],
             "mappings": [],
@@ -1909,7 +1909,7 @@
             "links": [
               {
                 "title": "Open in current dashboard",
-                "url": "/d/Application_Out_Of_The_Box/application-out-of-the-box?orgId=1&var-deepflow_tracing_id=${__data.fields._id}&${client:queryparam}&${server:queryparam}&${endpoint:queryparam}&${l7_protocol:queryparam}&from=${__from}&to=${__to}"
+                "url": "/d/Application_Out_Of_The_Box_CN/application-e5bc80-e7aeb1-e58db3-e794a8?orgId=1&var-deepflow_tracing_id=${__data.fields._id}&${client:queryparam}&${server:queryparam}&${endpoint:queryparam}&${l7_protocol:queryparam}&from=${__from}&to=${__to}"
               }
             ],
             "mappings": [],
