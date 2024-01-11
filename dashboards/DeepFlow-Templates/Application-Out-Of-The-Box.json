@@ -2479,8 +2479,8 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "Application - 开箱即用",
-    "uid": "Application_Out_Of_The_Box_CN",
+    "title": "Application - Out Of The Box",
+    "uid": "Application_Out_Of_The_Box",
     "version": 5,
     "weekStart": ""
   }
