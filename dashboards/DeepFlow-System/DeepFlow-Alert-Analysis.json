@@ -1,0 +1,1895 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 124,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 3,
+        "panels": [],
+        "title": "Server Alerts",
+        "type": "row"
+      },
+      {
+        "datasource": "$datasource",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 0,
+          "y": 1
+        },
+        "id": 7,
+        "options": {
+          "legend": {
+            "calcs": [
+              "max",
+              "mean"
+            ],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": "$datasource",
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server_ingester_recviver\",\"select\":[{\"key\":\"metrics.invalid\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server_host\",\"value\":\"server_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a946306d-a39f-4bdc-3d1e-a92709da741b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"33afab48-43d6-47b0-c38c-297b64123b95\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.invalid\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Sum(metrics.invalid)",
+                "name": "Sum(metrics.invalid)",
+                "type": 1,
+                "unit": ""
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "time_$__interval",
+                "isResource": false,
+                "name": "`time_$__interval`"
+              },
+              {
+                "displayName": "tag.host",
+                "isResource": false,
+                "name": "tag.host"
+              }
+            ],
+            "sql": "SELECT Sum(`metrics.invalid`) AS `Sum(metrics.invalid)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_server_ingester_recviver WHERE `tag.host` IN ('metaflow-demo-0') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.invalid`)>='1' SLIMIT 20 LIMIT 10000"
+          }
+        ],
+        "title": "Ingester Recviver Invalid",
+        "type": "timeseries"
+      },
+      {
+        "datasource": "$datasource",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 12,
+          "y": 1
+        },
+        "id": 5,
+        "options": {
+          "legend": {
+            "calcs": [
+              "max",
+              "mean"
+            ],
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true,
+            "sortBy": "Mean",
+            "sortDesc": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "10.2.3",
+        "targets": [
+          {
+            "datasource": "$datasource",
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server_ingester_decoder\",\"select\":[{\"key\":\"metrics.drop_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server_host\",\"value\":\"server_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5928e883-5dee-e271-7418-bf71cab80729\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"3d90bffb-11a4-3a5c-113f-7a6cc9434acb\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.drop_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.msg_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f025ab30-eda5-936b-e3b2-fce0d900b621\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Sum(metrics.drop_count)",
+                "name": "Sum(metrics.drop_count)",
+                "type": 1,
+                "unit": ""
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "time_$__interval",
+                "isResource": false,
+                "name": "`time_$__interval`"
+              },
+              {
+                "displayName": "tag.host",
+                "isResource": false,
+                "name": "tag.host"
+              },
+              {
+                "displayName": "tag.msg_type",
+                "isResource": false,
+                "name": "tag.msg_type"
+              }
+            ],
+            "sql": "SELECT Sum(`metrics.drop_count`) AS `Sum(metrics.drop_count)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.msg_type` FROM deepflow_server_ingester_decoder WHERE `tag.host` IN ('metaflow-demo-0') AND time>=1707353948 AND time<=1707357548 GROUP BY `time_$__interval`, `tag.host`, `tag.msg_type` HAVING Sum(`metrics.drop_count`)>='1' SLIMIT 100 LIMIT 10000"
+          }
+        ],
+        "title": "Ingester Decoder Drop",
+        "type": "timeseries"
+      },
+      {
+        "datasource": "$datasource",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 0,
+          "y": 10
+        },
+        "id": 4,
+        "options": {
+          "legend": {
+            "calcs": [
+              "max",
+              "mean"
+            ],
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true,
+            "sortBy": "Mean",
+            "sortDesc": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": "$datasource",
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server_ingester_ckwriter\",\"select\":[{\"key\":\"metrics.write_failed_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"274748d4-5f23-a711-910f-2423820ac142\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server_host\",\"value\":\"server_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0784c656-11ac-671e-1428-aab9c1e946b5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect274748d4-5f23-a711-910f-2423820ac142\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"11137625-2487-1cd6-d375-6af451e7ce7f\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.write_failed_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"274748d4-5f23-a711-910f-2423820ac142\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e3ff2f8b-d93e-1e2a-d52b-2ec74fbc2848\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.name\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4eee52c2-4939-ec0c-5e4f-116181fde859\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c171df0b-bcf7-d342-25bb-491da03ba5df\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Sum(metrics.write_failed_count)",
+                "name": "Sum(metrics.write_failed_count)",
+                "type": 1,
+                "unit": ""
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "time_$__interval",
+                "isResource": false,
+                "name": "`time_$__interval`"
+              },
+              {
+                "displayName": "tag.host",
+                "isResource": false,
+                "name": "tag.host"
+              },
+              {
+                "displayName": "tag.name",
+                "isResource": false,
+                "name": "tag.name"
+              }
+            ],
+            "sql": "SELECT Sum(`metrics.write_failed_count`) AS `Sum(metrics.write_failed_count)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.name` FROM deepflow_server_ingester_ckwriter WHERE `tag.host` IN ('metaflow-demo-0') AND time>=1707353948 AND time<=1707357548 GROUP BY `time_$__interval`, `tag.host`, `tag.name` HAVING Sum(`metrics.write_failed_count`)>='1' SLIMIT 100 LIMIT 10000"
+          }
+        ],
+        "title": "Clickhouse Write Failed",
+        "type": "timeseries"
+      },
+      {
+        "datasource": "$datasource",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 12,
+          "x": 12,
+          "y": 10
+        },
+        "id": 6,
+        "options": {
+          "legend": {
+            "calcs": [
+              "max",
+              "mean"
+            ],
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true,
+            "sortBy": "Mean",
+            "sortDesc": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": "$datasource",
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_server_queue\",\"select\":[{\"key\":\"metrics.overwritten\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f0872712-806e-393f-267c-91943591cdea\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$server_host\",\"value\":\"server_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"7d7b4e5a-57fc-7f9c-fcfc-1b48c87b506d\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelectf0872712-806e-393f-267c-91943591cdea\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"3b8d6e39-376c-5913-a4c6-91012b16bcf9\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.overwritten\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f0872712-806e-393f-267c-91943591cdea\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"351d74ce-9e4f-f17d-3cff-061de49dd585\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.module\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"42e035ef-93a7-b684-30c8-98283d755017\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3d73b928-6b55-b657-6978-9ee188da497e\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Sum(metrics.overwritten)",
+                "name": "Sum(metrics.overwritten)",
+                "type": 1,
+                "unit": ""
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "time_$__interval",
+                "isResource": false,
+                "name": "`time_$__interval`"
+              },
+              {
+                "displayName": "tag.host",
+                "isResource": false,
+                "name": "tag.host"
+              },
+              {
+                "displayName": "tag.module",
+                "isResource": false,
+                "name": "tag.module"
+              }
+            ],
+            "sql": "SELECT Sum(`metrics.overwritten`) AS `Sum(metrics.overwritten)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.module` FROM deepflow_server_queue WHERE `tag.host` IN ('metaflow-demo-0') AND time>=1707353948 AND time<=1707357548 GROUP BY `time_$__interval`, `tag.host`, `tag.module` HAVING Sum(`metrics.overwritten`)>='1' SLIMIT 100 LIMIT 10000"
+          }
+        ],
+        "title": "Ingester Queue Overwritten",
+        "type": "timeseries"
+      },
+      {
+        "collapsed": true,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 19
+        },
+        "id": 23,
+        "panels": [
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 20
+            },
+            "id": 19,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_dispatcher\",\"select\":[{\"key\":\"metrics.kernel_drops\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ee2b4ecc-8d63-6280-0c9e-11bc7124139b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"a0b4a0c6-f5fb-5a8e-b527-cd3460c28e73\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.kernel_drops\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.kernel_drops)",
+                    "name": "Sum(metrics.kernel_drops)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.kernel_drops`) AS `Sum(metrics.kernel_drops)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_dispatcher WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.kernel_drops`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Dispatcher Kernel-Drops",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 12,
+              "y": 20
+            },
+            "id": 11,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_dispatcher\",\"select\":[{\"key\":\"metrics.invalid_packets\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ee2b4ecc-8d63-6280-0c9e-11bc7124139b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"a0b4a0c6-f5fb-5a8e-b527-cd3460c28e73\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.invalid_packets\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.invalid_packets)",
+                    "name": "Sum(metrics.invalid_packets)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.invalid_packets`) AS `Sum(metrics.invalid_packets)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_dispatcher WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.invalid_packets`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Dispatcher Invalid-Packets",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 12,
+              "x": 0,
+              "y": 29
+            },
+            "id": 20,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_dispatcher\",\"select\":[{\"key\":\"metrics.err\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ee2b4ecc-8d63-6280-0c9e-11bc7124139b\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"a0b4a0c6-f5fb-5a8e-b527-cd3460c28e73\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.err\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.err)",
+                    "name": "Sum(metrics.err)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.err`) AS `Sum(metrics.err)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_dispatcher WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.err`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Dispatcher Error",
+            "type": "timeseries"
+          }
+        ],
+        "title": "Agent cBPF Dispatcher Alerts",
+        "type": "row"
+      },
+      {
+        "collapsed": true,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 20
+        },
+        "id": 22,
+        "panels": [
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 38
+            },
+            "id": 12,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5e8c7e09-42d5-cfaf-4b06-51ed4dd822d2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"8dd1cf2f-4985-dd74-7315-348393e2cb1b\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.user_enqueue_lost)",
+                    "name": "Sum(metrics.user_enqueue_lost)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.user_enqueue_lost`) AS `Sum(metrics.user_enqueue_lost)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.user_enqueue_lost`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "eBPF-Collector User-Enque-Lost",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 12,
+              "y": 38
+            },
+            "id": 21,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.kern_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5e8c7e09-42d5-cfaf-4b06-51ed4dd822d2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"8dd1cf2f-4985-dd74-7315-348393e2cb1b\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.kern_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.kern_lost)",
+                    "name": "Sum(metrics.kern_lost)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.kern_lost`) AS `Sum(metrics.kern_lost)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.kern_lost`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "eBPF-Collector Kernel-Lost",
+            "type": "timeseries"
+          }
+        ],
+        "title": "Agent eBPF Collector Alerts",
+        "type": "row"
+      },
+      {
+        "collapsed": true,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 21
+        },
+        "id": 2,
+        "panels": [
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 48
+            },
+            "id": 14,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_flow_aggr\",\"select\":[{\"key\":\"metrics.drop-in-throttle\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"987409de-f54b-2478-36a2-ed38087f2f91\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"64c55206-b806-0c9b-e7dd-b7b4cfc6b0bb\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.drop-in-throttle\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.drop-in-throttle)",
+                    "name": "Sum(metrics.drop-in-throttle)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.drop-in-throttle`) AS `Sum(metrics.drop-in-throttle)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_flow_aggr WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.drop-in-throttle`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Flow-Aggr Drop-In-Throttle",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 12,
+              "y": 48
+            },
+            "id": 15,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_l7_session_aggr\",\"select\":[{\"key\":\"metrics.throttle-drop\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"0c32a509-eb32-cbb2-edf6-3f19025a0c48\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"0dc051f9-02b1-fa36-a78c-49aea231fa54\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.throttle-drop\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.throttle-drop)",
+                    "name": "Sum(metrics.throttle-drop)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.throttle-drop`) AS `Sum(metrics.throttle-drop)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_l7_session_aggr WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.throttle-drop`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "L7-Session-Aggr Throttle-Drop",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 57
+            },
+            "id": 9,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collector\",\"select\":[{\"key\":\"metrics.drop-inactive\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"73dd0817-a339-633a-4712-7e49c127e119\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"2b447d7d-002f-4a58-ef76-627ce82e382a\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.drop-inactive\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8cbd2637-3a20-a384-cd6f-5f57c60d47eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.drop-inactive)",
+                    "name": "Sum(metrics.drop-inactive)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  },
+                  {
+                    "displayName": "tag.kind",
+                    "isResource": false,
+                    "name": "tag.kind"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.drop-inactive`) AS `Sum(metrics.drop-inactive)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.kind` FROM deepflow_agent_collector WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host`, `tag.kind` HAVING Sum(`metrics.drop-inactive`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Collector Drop-Inactive",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 12,
+              "y": 57
+            },
+            "id": 18,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collector\",\"select\":[{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"73dd0817-a339-633a-4712-7e49c127e119\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"2b447d7d-002f-4a58-ef76-627ce82e382a\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.drop-before-window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.kind\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"8cbd2637-3a20-a384-cd6f-5f57c60d47eb\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.drop-before-window)",
+                    "name": "Sum(metrics.drop-before-window)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  },
+                  {
+                    "displayName": "tag.kind",
+                    "isResource": false,
+                    "name": "tag.kind"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.drop-before-window`) AS `Sum(metrics.drop-before-window)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.kind` FROM deepflow_agent_collector WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host`, `tag.kind` HAVING Sum(`metrics.drop-before-window`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Collector Drop-Before-Window",
+            "type": "timeseries"
+          }
+        ],
+        "title": "Agent Aggregator Alerts",
+        "type": "row"
+      },
+      {
+        "collapsed": true,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 22
+        },
+        "id": 24,
+        "panels": [
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 67
+            },
+            "id": 16,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_queue\",\"select\":[{\"key\":\"metrics.overwritten\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"fa502de9-a80b-f5f5-b557-39a00daad074\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"3ce25e15-da7f-9e90-d938-ab48efbe097c\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.overwritten\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.module\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a30822b3-4161-20d2-59c5-4f453015433f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.overwritten)",
+                    "name": "Sum(metrics.overwritten)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  },
+                  {
+                    "displayName": "tag.module",
+                    "isResource": false,
+                    "name": "tag.module"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.overwritten`) AS `Sum(metrics.overwritten)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.module` FROM deepflow_agent_queue WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host`, `tag.module` HAVING Sum(`metrics.overwritten`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "Queue Overwritten",
+            "type": "timeseries"
+          },
+          {
+            "datasource": "$datasource",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisBorderShow": false,
+                  "axisCenteredZero": false,
+                  "axisColorMode": "text",
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "insertNulls": false,
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green"
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 12,
+              "y": 67
+            },
+            "id": 8,
+            "options": {
+              "legend": {
+                "calcs": [
+                  "max",
+                  "mean"
+                ],
+                "displayMode": "table",
+                "placement": "right",
+                "showLegend": true,
+                "sortBy": "Mean",
+                "sortDesc": true
+              },
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              }
+            },
+            "targets": [
+              {
+                "datasource": "$datasource",
+                "debug": false,
+                "metaExtra": {},
+                "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.dropped\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a370982e-1c78-c00a-afd5-df75d5df5853\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"dd979e10-7822-20d2-2360-653d785a8c39\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.dropped\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"e13512ee-ce5d-e3de-ad15-a46ffdd7012f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"100\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+                "refId": "A",
+                "returnMetrics": [
+                  {
+                    "displayName": "Sum(metrics.dropped)",
+                    "name": "Sum(metrics.dropped)",
+                    "type": 1,
+                    "unit": ""
+                  }
+                ],
+                "returnTags": [
+                  {
+                    "displayName": "time_$__interval",
+                    "isResource": false,
+                    "name": "`time_$__interval`"
+                  },
+                  {
+                    "displayName": "tag.host",
+                    "isResource": false,
+                    "name": "tag.host"
+                  },
+                  {
+                    "displayName": "tag.type",
+                    "isResource": false,
+                    "name": "tag.type"
+                  }
+                ],
+                "sql": "SELECT Sum(`metrics.dropped`) AS `Sum(metrics.dropped)`, time(time, $__interval) AS `time_$__interval`, `tag.host`, `tag.type` FROM deepflow_agent_collect_sender WHERE `tag.host` IN ('metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-0-V1','deepflow-ce-cloud-demo-1-W2') AND time>=1707354073 AND time<=1707357673 GROUP BY `time_$__interval`, `tag.host`, `tag.type` HAVING Sum(`metrics.dropped`)>='1' SLIMIT 100 LIMIT 10000"
+              }
+            ],
+            "title": "CollectSender Dropped",
+            "type": "timeseries"
+          }
+        ],
+        "title": "Agent Queue & Sender Alerts",
+        "type": "row"
+      }
+    ],
+    "refresh": "",
+    "schemaVersion": 39,
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": true,
+            "value": "1"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "label": "Data Source",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "query": "deepflowio-deepflow-datasource",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "type": "datasource"
+        },
+        {
+          "current": {
+            "selected": false,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "$datasource",
+          "definition": "{\"database\":\"deepflow_system\",\"sql\":\"show tag tag.host values from deepflow_server_ingester_queue\"}",
+          "hide": 0,
+          "includeAll": true,
+          "multi": true,
+          "name": "server_host",
+          "options": [],
+          "query": {
+            "database": "deepflow_system",
+            "sql": "show tag tag.host values from deepflow_server_ingester_queue"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        },
+        {
+          "current": {
+            "selected": false,
+            "text": [
+              "All"
+            ],
+            "value": [
+              "$__all"
+            ]
+          },
+          "datasource": "$datasource",
+          "definition": "{\"database\":\"deepflow_system\",\"sql\":\"show tag tag.host values from deepflow_agent_dispatcher\"}",
+          "hide": 0,
+          "includeAll": true,
+          "multi": true,
+          "name": "agent_host",
+          "options": [],
+          "query": {
+            "database": "deepflow_system",
+            "sql": "show tag tag.host values from deepflow_agent_dispatcher"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "DeepFlow Alert Analysis",
+    "uid": "DeepFlow_Alert_Analysis",
+    "version": 35,
+    "weekStart": ""
+  }
