@@ -3116,8 +3116,8 @@
               "_id": false,
               "auto_instance_id_0": true,
               "auto_instance_id_1": true,
-              "resource_gl0_id_0": true,
-              "resource_gl0_id_1": true
+              "auto_instance_id_0": true,
+              "auto_instance_id_1": true
             },
             "indexByName": {
               "Method": 5,
@@ -3138,8 +3138,8 @@
               "auto_instance_0": "Client",
               "auto_instance_1": "Service",
               "request_resource": "Service Name",
-              "resource_gl0_0": "Client",
-              "resource_gl0_1": "Service",
+              "auto_instance_0": "Client",
+              "auto_instance_1": "Service",
               "响应时延": "Delay"
             }
           }
