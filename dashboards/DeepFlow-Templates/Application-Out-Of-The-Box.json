@@ -24,7 +24,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 117,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1930,8 +1929,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1957,8 +1955,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -2347,8 +2344,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "value": "1"
+          "selected": false,
+          "text": "DeepFlow",
+          "value": "DeepFlow"
         },
         "hide": 0,
         "includeAll": false,
@@ -2365,7 +2363,8 @@
       {
         "current": {
           "selected": true,
-          "value": "1"
+          "text": "Any",
+          "value": "__any"
         },
         "datasource": {
           "type": "deepflowio-deepflow-datasource",
@@ -2409,8 +2408,9 @@
       },
       {
         "current": {
-          "selected": true,
-          "value": "1"
+          "selected": false,
+          "text": "Disabled",
+          "value": "__disabled"
         },
         "datasource": {
           "type": "deepflowio-deepflow-datasource",
@@ -2455,7 +2455,8 @@
       {
         "current": {
           "selected": true,
-          "value": "1"
+          "text": "eBPF",
+          "value": "3"
         },
         "datasource": {
           "type": "deepflowio-deepflow-datasource",
@@ -2487,6 +2488,6 @@
   "timezone": "",
   "title": "Application - 开箱即用",
   "uid": "Application_Out_Of_The_Box_CN",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
