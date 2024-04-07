@@ -387,6 +387,7 @@
           "refId": "A"
         }
       ],
+      "title": "DeepFlow Flame Graph",
       "type": "deepflowio-tracing-panel"
     }
   ],
