@@ -21,6 +21,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
+  "id": 83,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -88,7 +89,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 50
         },
@@ -150,7 +152,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 40
         },
@@ -251,7 +254,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 40
         },
@@ -320,7 +324,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 50
         },
@@ -382,7 +387,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 50
         },
@@ -445,7 +451,8 @@
           "fields": "",
           "values": false
         },
-                "text": {
+        "showPercentChange": false,
+        "text": {
           "titleSize": 20,
           "valueSize": 50
         },
@@ -1316,7 +1323,8 @@
     },
     {
       "datasource": {
-        "uid": "$datasource"
+        "type": "deepflowio-deepflow-datasource",
+        "uid": "DeepFlow"
       },
       "fieldConfig": {
         "defaults": {
@@ -1427,7 +1435,7 @@
           },
           "debug": false,
           "metaExtra": {},
-          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"response_duration\",\"func\":\"Spread\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"827fa1f8-71f3-97fb-6766-da685f1cbd57\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Spread\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"request_resource\",\"func\":\"TopK\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[1],\"uuid\":\"88ebf18e-c760-e031-ec3d-2ccae5892204\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"TopK\",\"params\":[1]}},{\"type\":\"metric\",\"key\":\"row\",\"func\":\"Count\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Count\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1f30b17e-dfde-8824-e903-bb37edd077a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":true,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_group\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$ingress_workload\",\"value\":\"ingress_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"2216cc44-e065-89c7-d933-d22563661d44\",\"subFuncs\":[],\"whereOnly\":true,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"signal_source\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"eBPF\",\"value\":3}],\"as\":\"\",\"params\":[],\"uuid\":\"45a406da-be4f-5895-aafe-8343b8ba7ba2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"func\":\"Count\",\"op\":\"<=\",\"val\":\"2\",\"as\":\"\",\"params\":[],\"uuid\":\"55d53ce7-70b4-a48c-869e-83cdebeac271\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"row\",\"func\":\"Count\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Count\",\"params\":[]}},\"cache\":{\"func\":\"Count\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"x_request_id\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b4fdc8f1-9784-cf5e-ab8e-bd4f3af7de07\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"agent\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"13f45baa-27ae-fb8c-ed5a-868dbf937814\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"capture_network_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a432b64f-a3df-e64a-1bfe-6d0f8565ced3\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"223beb8e-a8b2-cd78-803b-c9a7eb9aa8fb\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"flow_log\",\"sources\":\"\",\"from\":\"l7_flow_log\",\"select\":[{\"key\":\"response_duration\",\"func\":\"Spread\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"827fa1f8-71f3-97fb-6766-da685f1cbd57\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Spread\",\"params\":[]}},{\"type\":\"metric\",\"key\":\"request_resource\",\"func\":\"TopK\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[1],\"uuid\":\"88ebf18e-c760-e031-ec3d-2ccae5892204\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"TopK\",\"params\":[1]}},{\"type\":\"metric\",\"key\":\"row\",\"func\":\"Count\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Count\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1f30b17e-dfde-8824-e903-bb37edd077a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":true,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_group\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$ingress_workload\",\"value\":\"ingress_workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"2216cc44-e065-89c7-d933-d22563661d44\",\"subFuncs\":[],\"whereOnly\":true,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"signal_source\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"eBPF\",\"value\":3}],\"as\":\"\",\"params\":[],\"uuid\":\"45a406da-be4f-5895-aafe-8343b8ba7ba2\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"func\":\"Count\",\"op\":\"<=\",\"val\":\"2\",\"as\":\"\",\"params\":[],\"uuid\":\"55d53ce7-70b4-a48c-869e-83cdebeac271\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"type\":\"metric\",\"key\":\"row\",\"func\":\"Count\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3a2a3e79-c92d-522a-b1ca-18e2266a1aba\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Count\",\"params\":[]}},\"cache\":{\"func\":\"Count\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"agent\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"13f45baa-27ae-fb8c-ed5a-868dbf937814\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"x_request_id_0\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"bd3845b1-682a-3cbe-8586-53eaa2418293\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"x_request_id_1\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b4c9cf48-df6f-fd3c-2fba-f532db970080\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"capture_network_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a432b64f-a3df-e64a-1bfe-6d0f8565ced3\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"223beb8e-a8b2-cd78-803b-c9a7eb9aa8fb\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
           "refId": "A",
           "returnMetrics": [
             {
@@ -1456,11 +1464,6 @@
               "name": "`time_$__interval`"
             },
             {
-              "displayName": "X-Request-ID",
-              "isResource": false,
-              "name": "x_request_id"
-            },
-            {
               "displayName": "DeepFlow Agent",
               "isResource": false,
               "name": "agent_id"
@@ -1469,6 +1472,16 @@
               "displayName": "DeepFlow Agent",
               "isResource": false,
               "name": "agent"
+            },
+            {
+              "displayName": "Request X-Request-ID",
+              "isResource": false,
+              "name": "x_request_id_0"
+            },
+            {
+              "displayName": "Response X-Request-ID",
+              "isResource": false,
+              "name": "x_request_id_1"
             },
             {
               "displayName": "Network Location",
@@ -1481,7 +1494,7 @@
               "name": "capture_network_type"
             }
           ],
-          "sql": "SELECT Spread(`response_duration`) AS `Spread(Response Delay)`, TopK(`request_resource`,1) AS `TopK(Request Resource,1)`, Count(`row`) AS `Count(Row Count)`, time(time, $__interval) AS `time_$__interval`, x_request_id, agent_id, agent, capture_network_type_id, capture_network_type FROM l7_flow_log WHERE (`pod_cluster_0` = 'k8s-d-rUL3jSx3ft' OR `pod_cluster_1` = 'k8s-d-rUL3jSx3ft') AND (`pod_group_0` = 'demo-ingress-nginx-ingress' OR `pod_group_1` = 'demo-ingress-nginx-ingress') AND `signal_source` IN (3) AND time>=1715307714 AND time<=1715308614 GROUP BY `time_$__interval`, x_request_id, agent, capture_network_type, agent_id, capture_network_type_id HAVING Count(`row`)<='2' SLIMIT 20 LIMIT 10000"
+          "sql": "SELECT Spread(`response_duration`) AS `Spread(Response Delay)`, TopK(`request_resource`,1) AS `TopK(Request Resource,1)`, Count(`row`) AS `Count(Row Count)`, time(time, $__interval) AS `time_$__interval`, agent_id, agent, x_request_id_0, x_request_id_1, capture_network_type_id, capture_network_type FROM l7_flow_log WHERE (`pod_cluster_0` = 'k8s-d-rUL3jSx3ft' OR `pod_cluster_1` = 'k8s-d-rUL3jSx3ft') AND (`pod_group_0` = 'demo-ingress-nginx-ingress' OR `pod_group_1` = 'demo-ingress-nginx-ingress') AND `signal_source` IN (3) AND time>=1715307367 AND time<=1715310967 GROUP BY `time_$__interval`, agent, x_request_id_0, x_request_id_1, capture_network_type, agent_id, capture_network_type_id HAVING Count(`row`)<='2' SLIMIT 20 LIMIT 10000"
         }
       ],
       "title": "Ingress Forwarding Latency",
@@ -1495,7 +1508,9 @@
               "agent_id": true,
               "capture_network_type": true,
               "capture_network_type_id": true,
-              "x_request_id": true
+              "x_request_id": true,
+              "x_request_id_0": true,
+              "x_request_id_1": true
             },
             "includeByName": {},
             "indexByName": {
@@ -3275,8 +3290,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -3335,8 +3349,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "red",
-                      "value": null
+                      "color": "red"
                     }
                   ]
                 }
@@ -3434,8 +3447,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "purple",
-                      "value": null
+                      "color": "purple"
                     }
                   ]
                 }
