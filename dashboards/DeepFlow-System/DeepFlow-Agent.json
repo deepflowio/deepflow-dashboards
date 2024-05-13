@@ -7807,7 +7807,7 @@
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_flow_map\",\"select\":[{\"key\":\"metrics.drop_by_window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drop_by_window\",\"params\":[],\"uuid\":\"d81c989c-1109-ce31-42ff-100082ac77ad\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"57e98dac-7f92-eb6b-3418-573b2cbeba02\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"56fc5a0a-e762-ff8d-d606-e6c2040a49c1\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"bda6d000-c62f-00cb-045e-19ee36469b7f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a5c1969b-4182-1c41-f75b-1971d285aeb4\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":0,\"tracingId\":null}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_flow_map\",\"select\":[{\"key\":\"metrics.drop_by_window\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drop_by_window\",\"params\":[],\"uuid\":\"d81c989c-1109-ce31-42ff-100082ac77ad\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"57e98dac-7f92-eb6b-3418-573b2cbeba02\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"56fc5a0a-e762-ff8d-d606-e6c2040a49c1\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"bda6d000-c62f-00cb-045e-19ee36469b7f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a5c1969b-4182-1c41-f75b-1971d285aeb4\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "A",
               "returnMetrics": [
                 {
@@ -7830,9 +7830,38 @@
                 }
               ],
               "sql": "SELECT Sum(`metrics.drop_by_window`) AS `drop_by_window`, time(time, 10) AS `time_10`, `tag.host` FROM deepflow_agent_flow_map WHERE (`tag.host` = 'node1-V1' OR `tag.host` = 'node2-V2' OR `tag.host` = 'node27-V6' OR `tag.host` = 'master26-V7' OR `tag.host` = 'huanchao-linux-H2' OR `tag.host` = 'huanchao-VirtualBox' OR `tag.host` = 'ydx-H3' OR `tag.host` = 'DF-DAILY-R0-C1' OR `tag.host` = 'DF-DAILY-R0-D1' OR `tag.host` = 'DeepflowQA-master26-W44' OR `tag.host` = 'node27' OR `tag.host` = 'DeepflowQA-node27-W43' OR `tag.host` = 'master26') AND time>='${__from:date:seconds}' AND time<='${__to:date:seconds}' GROUP BY `time_10`, `tag.host` SLIMIT 20 LIMIT 10000"
+            },
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "hide": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_system\",\"sources\":\"\",\"from\":\"deepflow_agent_flow_map\",\"select\":[{\"key\":\"metrics.drop_by_capacity\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"drop_by_capacity\",\"params\":[],\"uuid\":\"d81c989c-1109-ce31-42ff-100082ac77ad\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"57e98dac-7f92-eb6b-3418-573b2cbeba02\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"397a8f60-c775-ce29-4e97-3853c43ad433\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"bda6d000-c62f-00cb-045e-19ee36469b7f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a5c1969b-4182-1c41-f75b-1971d285aeb4\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "B",
+              "returnMetrics": [
+                {
+                  "displayName": "drop_by_capacity",
+                  "name": "drop_by_capacity",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT Sum(`metrics.drop_by_capacity`) AS `drop_by_capacity`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_flow_map WHERE `tag.host` = 'controller21-V81' AND time>=1715584004 AND time<=1715587604 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
             }
           ],
-          "title": "Packet drop by window",
+          "title": "Packet Drop",
           "type": "timeseries"
         },
         {
