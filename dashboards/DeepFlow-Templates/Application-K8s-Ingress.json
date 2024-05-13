@@ -1521,15 +1521,13 @@
               "agent_id": 5,
               "capture_network_type": 6,
               "capture_network_type_id": 7,
-              "time_2": 0,
+              "time_value": 0,
               "x_request_id": 8
             },
             "renameByName": {
               "Spread(Response Delay)": "Ingress Forwarding Latency",
               "TopK(Request Resource,1)": "Request Resource",
-              "time_0.5": "Time",
-              "time_2": "Time",
-              "time_5": "Time"
+              "time_value": "Time"
             }
           }
         }
