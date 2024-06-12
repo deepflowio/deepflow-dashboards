@@ -18,7 +18,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 178,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -441,8 +440,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -560,8 +558,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -719,8 +716,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1164,8 +1160,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1278,8 +1273,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1397,7 +1391,7 @@
               "showLineNumbers": false,
               "showMiniMap": false
             },
-            "content": "# ebpf_collector.metrics.kern_lost\n\n### Reason: eBPF perf buffer full\n\nData exchange between the eBPF kernel (producer) and user-space perf-reader (consumer) uses the perf buffer.\n\n### Resolution: Adjust Agent configuration\n\n- Adjust perf buffer size: Increase the buffer size by adjusting the Agent's `ebpf`.`perf-pages-count`.\n- Increase thread count: Adjust the Agent's `ebpf`.`thread-num`, which represents the number of consumer threads. Note that this will increase CPU and memory usage.\n- Disable Golang uprobe: Currently, enabling Golang uprobe significantly increases perf buffer consumption, especially when using uprobe to collect HTTP2 protocol data.\n\nHowever, disabling Golang uprobe will also disable distributed tracing and HTTPS protocol collection for that process, which may not be practical at the moment. Improvements are planned for future versions.",
+            "content": "# ebpf_collector.metrics.user_enqueue_lost\n\n### Reason: Traffic burst or insufficient collection performance\n\nData exchange between the user-space perf-reader (producer) and the Rust receiving thread (consumer) uses a ring buffer.\n\n### Resolution: Adjust Agent Configuration\n\n- Increase Buffer Size: Adjust the Agent's `ebpf`.`ring-size`. Note that this will increase memory usage.\n- Increase Thread Count: Adjust the Agent's `ebpf`.`thread-num`, which represents the number of consumer threads. Note that this will increase both CPU and memory usage.",
             "mode": "markdown"
           },
           "pluginVersion": "10.4.0",
@@ -1539,8 +1533,11 @@
           "type": "timeseries"
         },
         {
-          "datasource": "$datasource",
-          "description": "## ebpf_collector.metrics.kern_lost\n\n## Reason: eBPF perf buffer full\n\nData exchange between the eBPF kernel (producer) and user-space perf-reader (consumer) uses the perf buffer.\n\n## Resolution: Adjust Agent configuration\n\n- Adjust perf buffer size: Increase the buffer size by adjusting the Agent's `ebpf`.`perf-pages-count`.\n- Increase thread count: Adjust the Agent's `ebpf`.`thread-num`, which represents the number of consumer threads. Note that this will increase CPU and memory usage.\n- Disable Golang uprobe: Currently, enabling Golang uprobe significantly increases perf buffer consumption, especially when using uprobe to collect HTTP2 protocol data.\n\nHowever, disabling Golang uprobe will also disable distributed tracing and HTTPS protocol collection for that process, which may not be practical at the moment. Improvements are planned for future versions.",
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "description": "# ebpf_collector.metrics.user_enqueue_lost\n\n### Reason: Traffic burst or insufficient collection performance\n\nData exchange between the user-space perf-reader (producer) and the Rust receiving thread (consumer) uses a ring buffer.\n\n### Solution: Adjust Agent Configuration\n\n- Increase Buffer Size: Adjust the Agent's `ebpf`.`ring-size`. Note that this will increase memory usage.\n- Increase Thread Count: Adjust the Agent's `ebpf`.`thread-num`, which represents the number of consumer threads. Note that this will increase both CPU and memory usage.",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -1624,21 +1621,21 @@
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.kern_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5e8c7e09-42d5-cfaf-4b06-51ed4dd822d2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"8dd1cf2f-4985-dd74-7315-348393e2cb1b\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.kern_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.kern_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$agent_host\",\"value\":\"agent_host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5e8c7e09-42d5-cfaf-4b06-51ed4dd822d2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"fromSelect093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"func\":\"Sum\",\"op\":\">=\",\"val\":\"1\",\"as\":\"\",\"params\":[],\"uuid\":\"8dd1cf2f-4985-dd74-7315-348393e2cb1b\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9a75cd41-d76c-3869-1f28-e40d90f802a1\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6b81c4c4-cbc4-44b6-f8d5-ad8b266b4fe5\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.user_enqueue_lost\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"093f5358-c5b1-0e5f-68e5-70db03c5a296\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}},\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[]}}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
               "refId": "A",
               "returnMetrics": [
                 {
-                  "displayName": "Sum(metrics.kern_lost)",
-                  "name": "Sum(metrics.kern_lost)",
+                  "displayName": "Sum(metrics.user_enqueue_lost)",
+                  "name": "Sum(metrics.user_enqueue_lost)",
                   "type": 1,
                   "unit": ""
                 }
               ],
               "returnTags": [
                 {
-                  "displayName": "time_$__interval",
+                  "displayName": "time_value",
                   "isResource": false,
-                  "name": "`time_$__interval`"
+                  "name": "`time_value`"
                 },
                 {
                   "displayName": "tag.host",
@@ -1646,10 +1643,10 @@
                   "name": "tag.host"
                 }
               ],
-              "sql": "SELECT Sum(`metrics.kern_lost`) AS `Sum(metrics.kern_lost)`, time(time, $__interval) AS `time_$__interval`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('deepflow-ce-cloud-demo-1-W2','metaflow-demo-0-V1','metaflow-demo-1-V3','metaflow-demo-2-V2','deepflow-ce-cloud-demo-0-W1') AND time>=1717450079 AND time<=1717471679 GROUP BY `time_$__interval`, `tag.host` HAVING Sum(`metrics.kern_lost`)>='1' ORDER BY `Sum(metrics.kern_lost)` desc SLIMIT 20 LIMIT 10000"
+              "sql": "SELECT Sum(`metrics.user_enqueue_lost`) AS `Sum(metrics.user_enqueue_lost)`, time(time, $__interval) AS `time_value`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('deepflow-ce-cloud-demo-1-W2','deepflow-ce-cloud-demo-0-W1','metaflow-demo-2-V2','metaflow-demo-0-V1','metaflow-demo-1-V3','deepflow-ce-demo-0','deepflow-ce-demo-1','deepflow-ce-demo-2') AND time>=1718080890 AND time<=1718167290 GROUP BY `time_value`, `tag.host` HAVING Sum(`metrics.user_enqueue_lost`)>='1' ORDER BY `Sum(metrics.user_enqueue_lost)` desc SLIMIT 20 LIMIT 10000"
             }
           ],
-          "title": "ebpf_collector.metrics.kern_lost",
+          "title": "ebpf_collector.metrics.user_enqueue_lost",
           "type": "timeseries"
         },
         {
@@ -1867,8 +1864,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -1981,8 +1977,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2130,8 +2125,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2305,8 +2299,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2417,8 +2410,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2571,8 +2563,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2741,8 +2732,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2860,8 +2850,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3014,8 +3003,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3168,8 +3156,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -3254,8 +3241,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "value": "1"
+          "selected": false,
+          "text": "DeepFlow",
+          "value": "DeepFlow"
         },
         "hide": 0,
         "includeAll": false,
@@ -3333,6 +3321,6 @@
   "timezone": "",
   "title": "DeepFlow Alert Analysis",
   "uid": "DeepFlow_Alert_Analysis",
-  "version": 13,
+  "version": 4,
   "weekStart": ""
 }
