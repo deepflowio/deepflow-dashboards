@@ -21,7 +21,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
-  "id": 4,
+  "id": 58,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -71,6 +71,462 @@
         "w": 24,
         "x": 0,
         "y": 1
+      },
+      "id": 298,
+      "panels": [
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 10,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "links": [],
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "bps"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 3
+          },
+          "id": 334,
+          "interval": "$interval",
+          "options": {
+            "legend": {
+              "calcs": [
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "right",
+              "showLegend": true,
+              "sortBy": "Mean",
+              "sortDesc": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "9.3.6",
+          "targets": [
+            {
+              "alias": "$tag_host-$tag_port tx_bps-$tag_type",
+              "datasource": "$datasource",
+              "debug": false,
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "$__interval"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "host"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "port"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "type"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "trident_collect_sender_tx_bytes",
+              "metaExtra": {},
+              "orderByTime": "ASC",
+              "policy": "default",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"PerSecond\"}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"PerSecond\"}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c86a329f-a2d9-e1cc-02fc-e684ac8e7676\",\"type\":\"metric\"}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9d62bc27-22a4-49ea-9ad9-3e1f079e8096\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+              "refId": "C",
+              "resultFormat": "time_series",
+              "returnMetrics": [
+                {
+                  "displayName": "PerSecond(Math(Avg(metrics.tx-bytes)*8))",
+                  "name": "PerSecond(Math(Avg(metrics.tx-bytes)*8))",
+                  "type": 1,
+                  "unit": "/s"
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_value",
+                  "isResource": false,
+                  "name": "`time_value`"
+                },
+                {
+                  "displayName": "tag.type",
+                  "isResource": false,
+                  "name": "tag.type"
+                }
+              ],
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  },
+                  {
+                    "params": [
+                      "*8/60"
+                    ],
+                    "type": "math"
+                  }
+                ]
+              ],
+              "sql": "SELECT PerSecond((Avg(`metrics.tx-bytes`)*8)) AS `PerSecond(Math(Avg(metrics.tx-bytes)*8))`, time(time, 60) AS `time_value`, `tag.type` FROM deepflow_agent_collect_sender WHERE `tag.host` IN ('sandbox-10.0.221.223-V73','sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `time_value`, `tag.type` SLIMIT 20 LIMIT 10000",
+              "tags": [
+                {
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$host$/"
+                }
+              ]
+            }
+          ],
+          "title": "Bandwidth",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "continuous-GrYlRd"
+              },
+              "mappings": [],
+              "min": 0,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "bps"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 12,
+            "x": 0,
+            "y": 13
+          },
+          "id": 335,
+          "interval": "$interval",
+          "options": {
+            "displayMode": "lcd",
+            "maxVizHeight": 300,
+            "minVizHeight": 10,
+            "minVizWidth": 0,
+            "namePlacement": "auto",
+            "orientation": "horizontal",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "limit": 100,
+              "values": true
+            },
+            "showUnfilled": true,
+            "sizing": "auto",
+            "valueMode": "color"
+          },
+          "pluginVersion": "10.4.0",
+          "targets": [
+            {
+              "alias": "$tag_host",
+              "datasource": "$datasource",
+              "debug": false,
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "auto"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "host"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "trident_monitor_cpu_percent",
+              "metaExtra": {},
+              "orderByTime": "ASC",
+              "policy": "default",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4890d5c5-e3eb-b571-2982-46912cde2c08\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4fb85f48-65a3-3114-8b28-6187df94aa6e\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52bd951f-4c36-1797-cec7-fa7d9874dbf5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c00750f3-d338-6199-9206-ec6278004bfa\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"98b3dc95-df93-502d-c4a5-bacf5d8c06a8\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}},\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"interval\":\"\",\"limit\":\"20\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "returnMetrics": [
+                {
+                  "displayName": "Math(Math(Avg(metrics.tx-bytes)*8)/10)",
+                  "name": "Math(Math(Avg(metrics.tx-bytes)*8)/10)",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                },
+                {
+                  "displayName": "tag.type",
+                  "isResource": false,
+                  "name": "tag.type"
+                }
+              ],
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "sql": "SELECT ((Avg(`metrics.tx-bytes`)*8)/10) AS `Math(Math(Avg(metrics.tx-bytes)*8)/10)`, `tag.host`, `tag.type` FROM deepflow_agent_collect_sender WHERE (`tag.host` = 'sandbox-10.0.221.223-V73' OR `tag.host` = 'sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `tag.host`, `tag.type` ORDER BY `Math(Math(Avg(metrics.tx-bytes)*8)/10)` desc LIMIT 20",
+              "tags": [
+                {
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$host$/"
+                }
+              ]
+            }
+          ],
+          "title": "Top <agent, signal> by avg bandwidth",
+          "type": "bargauge"
+        },
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "continuous-GrYlRd"
+              },
+              "mappings": [],
+              "min": 0,
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green"
+                  }
+                ]
+              },
+              "unit": "bps"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 9,
+            "w": 12,
+            "x": 12,
+            "y": 13
+          },
+          "id": 336,
+          "interval": "$interval",
+          "options": {
+            "displayMode": "lcd",
+            "maxVizHeight": 300,
+            "minVizHeight": 10,
+            "minVizWidth": 0,
+            "namePlacement": "auto",
+            "orientation": "horizontal",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "limit": 100,
+              "values": true
+            },
+            "showUnfilled": true,
+            "sizing": "auto",
+            "valueMode": "color"
+          },
+          "pluginVersion": "10.4.0",
+          "targets": [
+            {
+              "alias": "$tag_host",
+              "datasource": "$datasource",
+              "debug": false,
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "auto"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "host"
+                  ],
+                  "type": "tag"
+                },
+                {
+                  "params": [
+                    "null"
+                  ],
+                  "type": "fill"
+                }
+              ],
+              "measurement": "trident_monitor_cpu_percent",
+              "metaExtra": {},
+              "orderByTime": "ASC",
+              "policy": "default",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4890d5c5-e3eb-b571-2982-46912cde2c08\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c42d35b6-dacf-7e75-9192-82830aa5691d\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52bd951f-4c36-1797-cec7-fa7d9874dbf5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"98b3dc95-df93-502d-c4a5-bacf5d8c06a8\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.tx-bytes\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}},\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"interval\":\"\",\"limit\":\"20\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "returnMetrics": [
+                {
+                  "displayName": "Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)",
+                  "name": "Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "sql": "SELECT ((Percentile(`metrics.tx-bytes`,0.9)*8)/10) AS `Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)`, `tag.host` FROM deepflow_agent_collect_sender WHERE (`tag.host` = 'sandbox-10.0.221.223-V73' OR `tag.host` = 'sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `tag.host` ORDER BY `Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)` desc LIMIT 20",
+              "tags": [
+                {
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$host$/"
+                }
+              ]
+            }
+          ],
+          "title": "Top agents by total bandwidth",
+          "type": "bargauge"
+        }
+      ],
+      "title": "01 - Bandwidth Statistics of All Selected Agents",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 2
       },
       "id": 326,
       "panels": [
@@ -882,462 +1338,6 @@
         }
       ],
       "title": "00 - CPU & MEM Statistics of All Selected Agents",
-      "type": "row"
-    },
-    {
-      "collapsed": true,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 2
-      },
-      "id": 298,
-      "panels": [
-        {
-          "datasource": {
-            "type": "deepflowio-deepflow-datasource",
-            "uid": "$datasource"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "palette-classic"
-              },
-              "custom": {
-                "axisBorderShow": false,
-                "axisCenteredZero": false,
-                "axisColorMode": "text",
-                "axisLabel": "",
-                "axisPlacement": "auto",
-                "barAlignment": 0,
-                "drawStyle": "line",
-                "fillOpacity": 10,
-                "gradientMode": "none",
-                "hideFrom": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
-                },
-                "insertNulls": false,
-                "lineInterpolation": "linear",
-                "lineWidth": 1,
-                "pointSize": 5,
-                "scaleDistribution": {
-                  "type": "linear"
-                },
-                "showPoints": "never",
-                "spanNulls": false,
-                "stacking": {
-                  "group": "A",
-                  "mode": "none"
-                },
-                "thresholdsStyle": {
-                  "mode": "off"
-                }
-              },
-              "links": [],
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
-              },
-              "unit": "bps"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 10,
-            "w": 24,
-            "x": 0,
-            "y": 3
-          },
-          "id": 334,
-          "interval": "$interval",
-          "options": {
-            "legend": {
-              "calcs": [
-                "mean"
-              ],
-              "displayMode": "table",
-              "placement": "right",
-              "showLegend": true,
-              "sortBy": "Mean",
-              "sortDesc": true
-            },
-            "tooltip": {
-              "mode": "multi",
-              "sort": "none"
-            }
-          },
-          "pluginVersion": "9.3.6",
-          "targets": [
-            {
-              "alias": "$tag_host-$tag_port tx_bps-$tag_type",
-              "datasource": "$datasource",
-              "debug": false,
-              "dsType": "influxdb",
-              "groupBy": [
-                {
-                  "params": [
-                    "$__interval"
-                  ],
-                  "type": "time"
-                },
-                {
-                  "params": [
-                    "host"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "port"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "type"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "null"
-                  ],
-                  "type": "fill"
-                }
-              ],
-              "measurement": "trident_collect_sender_tx_bytes",
-              "metaExtra": {},
-              "orderByTime": "ASC",
-              "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"aefa8f81-77fd-0a24-2d68-ec46a6e9b11c\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"PerSecond\"}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"PerSecond\"}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d7eaa824-9a00-9530-e376-cc46aaba0206\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c86a329f-a2d9-e1cc-02fc-e684ac8e7676\",\"type\":\"metric\"}],\"groupBy\":[{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"9d62bc27-22a4-49ea-9ad9-3e1f079e8096\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"75eda237-e15f-290f-fdda-98017b960c9b\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
-              "refId": "C",
-              "resultFormat": "time_series",
-              "returnMetrics": [
-                {
-                  "displayName": "PerSecond(Math(Avg(metrics.tx-bytes)*8))",
-                  "name": "PerSecond(Math(Avg(metrics.tx-bytes)*8))",
-                  "type": 1,
-                  "unit": "/s"
-                }
-              ],
-              "returnTags": [
-                {
-                  "displayName": "time_value",
-                  "isResource": false,
-                  "name": "`time_value`"
-                },
-                {
-                  "displayName": "tag.type",
-                  "isResource": false,
-                  "name": "tag.type"
-                }
-              ],
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  },
-                  {
-                    "params": [
-                      "*8/60"
-                    ],
-                    "type": "math"
-                  }
-                ]
-              ],
-              "sql": "SELECT PerSecond((Avg(`metrics.tx-bytes`)*8)) AS `PerSecond(Math(Avg(metrics.tx-bytes)*8))`, time(time, 60) AS `time_value`, `tag.type` FROM deepflow_agent_collect_sender WHERE `tag.host` IN ('sandbox-10.0.221.223-V73','sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `time_value`, `tag.type` SLIMIT 20 LIMIT 10000",
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=~",
-                  "value": "/^$host$/"
-                }
-              ]
-            }
-          ],
-          "title": "Bandwidth",
-          "type": "timeseries"
-        },
-        {
-          "datasource": {
-            "type": "deepflowio-deepflow-datasource",
-            "uid": "$datasource"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "continuous-GrYlRd"
-              },
-              "mappings": [],
-              "min": 0,
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  }
-                ]
-              },
-              "unit": "bps"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 9,
-            "w": 12,
-            "x": 0,
-            "y": 13
-          },
-          "id": 335,
-          "interval": "$interval",
-          "options": {
-            "displayMode": "lcd",
-            "maxVizHeight": 300,
-            "minVizHeight": 10,
-            "minVizWidth": 0,
-            "namePlacement": "auto",
-            "orientation": "horizontal",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "limit": 100,
-              "values": true
-            },
-            "showUnfilled": true,
-            "sizing": "auto",
-            "valueMode": "color"
-          },
-          "pluginVersion": "10.4.0",
-          "targets": [
-            {
-              "alias": "$tag_host",
-              "datasource": "$datasource",
-              "debug": false,
-              "dsType": "influxdb",
-              "groupBy": [
-                {
-                  "params": [
-                    "auto"
-                  ],
-                  "type": "time"
-                },
-                {
-                  "params": [
-                    "host"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "null"
-                  ],
-                  "type": "fill"
-                }
-              ],
-              "measurement": "trident_monitor_cpu_percent",
-              "metaExtra": {},
-              "orderByTime": "ASC",
-              "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4890d5c5-e3eb-b571-2982-46912cde2c08\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4fb85f48-65a3-3114-8b28-6187df94aa6e\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52bd951f-4c36-1797-cec7-fa7d9874dbf5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c00750f3-d338-6199-9206-ec6278004bfa\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"98b3dc95-df93-502d-c4a5-bacf5d8c06a8\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.tx-bytes\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}},\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"interval\":\"\",\"limit\":\"20\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
-              "refId": "A",
-              "resultFormat": "time_series",
-              "returnMetrics": [
-                {
-                  "displayName": "Math(Math(Avg(metrics.tx-bytes)*8)/10)",
-                  "name": "Math(Math(Avg(metrics.tx-bytes)*8)/10)",
-                  "type": 1,
-                  "unit": ""
-                }
-              ],
-              "returnTags": [
-                {
-                  "displayName": "tag.host",
-                  "isResource": false,
-                  "name": "tag.host"
-                },
-                {
-                  "displayName": "tag.type",
-                  "isResource": false,
-                  "name": "tag.type"
-                }
-              ],
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  }
-                ]
-              ],
-              "sql": "SELECT ((Avg(`metrics.tx-bytes`)*8)/10) AS `Math(Math(Avg(metrics.tx-bytes)*8)/10)`, `tag.host`, `tag.type` FROM deepflow_agent_collect_sender WHERE (`tag.host` = 'sandbox-10.0.221.223-V73' OR `tag.host` = 'sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `tag.host`, `tag.type` ORDER BY `Math(Math(Avg(metrics.tx-bytes)*8)/10)` desc LIMIT 20",
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=~",
-                  "value": "/^$host$/"
-                }
-              ]
-            }
-          ],
-          "title": "Top <agent, signal> by avg bandwidth",
-          "type": "bargauge"
-        },
-        {
-          "datasource": {
-            "type": "deepflowio-deepflow-datasource",
-            "uid": "$datasource"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "continuous-GrYlRd"
-              },
-              "mappings": [],
-              "min": 0,
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  }
-                ]
-              },
-              "unit": "bps"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 9,
-            "w": 12,
-            "x": 12,
-            "y": 13
-          },
-          "id": 336,
-          "interval": "$interval",
-          "options": {
-            "displayMode": "lcd",
-            "maxVizHeight": 300,
-            "minVizHeight": 10,
-            "minVizWidth": 0,
-            "namePlacement": "auto",
-            "orientation": "horizontal",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "limit": 100,
-              "values": true
-            },
-            "showUnfilled": true,
-            "sizing": "auto",
-            "valueMode": "color"
-          },
-          "pluginVersion": "10.4.0",
-          "targets": [
-            {
-              "alias": "$tag_host",
-              "datasource": "$datasource",
-              "debug": false,
-              "dsType": "influxdb",
-              "groupBy": [
-                {
-                  "params": [
-                    "auto"
-                  ],
-                  "type": "time"
-                },
-                {
-                  "params": [
-                    "host"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "null"
-                  ],
-                  "type": "fill"
-                }
-              ],
-              "measurement": "trident_monitor_cpu_percent",
-              "metaExtra": {},
-              "orderByTime": "ASC",
-              "policy": "default",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.tx-bytes\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4890d5c5-e3eb-b571-2982-46912cde2c08\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c42d35b6-dacf-7e75-9192-82830aa5691d\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"52bd951f-4c36-1797-cec7-fa7d9874dbf5\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"fromSelect0\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"98b3dc95-df93-502d-c4a5-bacf5d8c06a8\",\"type\":\"metric\",\"sort\":\"desc\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"fromSelect\":{\"key\":\"metrics.tx-bytes\",\"func\":\"Percentile\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[90],\"uuid\":\"188af921-ed5d-87f9-6522-7e1d5d887032\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}},\"cache\":{\"func\":\"Percentile\",\"params\":[90],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"MULTIPLY\",\"params\":8},{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":10}]}}],\"interval\":\"\",\"limit\":\"20\",\"offset\":\"\",\"formatAs\":\"table\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
-              "refId": "A",
-              "resultFormat": "time_series",
-              "returnMetrics": [
-                {
-                  "displayName": "Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)",
-                  "name": "Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)",
-                  "type": 1,
-                  "unit": ""
-                }
-              ],
-              "returnTags": [
-                {
-                  "displayName": "tag.host",
-                  "isResource": false,
-                  "name": "tag.host"
-                }
-              ],
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  }
-                ]
-              ],
-              "sql": "SELECT ((Percentile(`metrics.tx-bytes`,0.9)*8)/10) AS `Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)`, `tag.host` FROM deepflow_agent_collect_sender WHERE (`tag.host` = 'sandbox-10.0.221.223-V73' OR `tag.host` = 'sandbox-10.0.221.224-V74') AND time>=1717461643 AND time<=1717465243 GROUP BY `tag.host` ORDER BY `Math(Math(Percentile(metrics.tx-bytes,0.9)*8)/10)` desc LIMIT 20",
-              "tags": [
-                {
-                  "key": "host",
-                  "operator": "=~",
-                  "value": "/^$host$/"
-                }
-              ]
-            }
-          ],
-          "title": "Top agents by total bandwidth",
-          "type": "bargauge"
-        }
-      ],
-      "title": "01 - Bandwidth Statistics of All Selected Agents",
       "type": "row"
     },
     {
@@ -2848,12 +2848,402 @@
     },
     {
       "collapsed": true,
-      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
         "y": 6
+      },
+      "id": 492,
+      "panels": [
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "description": "dequeue/enqueue rate (left), burst/queue-size (right)",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 10,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "µs"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": ".+-(burst|queue-size)"
+                },
+                "properties": [
+                  {
+                    "id": "custom.axisPlacement",
+                    "value": "right"
+                  },
+                  {
+                    "id": "unit",
+                    "value": "short"
+                  }
+                ]
+              },
+              {
+                "__systemRef": "hideSeriesFrom",
+                "matcher": {
+                  "id": "byNames",
+                  "options": {
+                    "mode": "exclude",
+                    "names": [
+                      "node2-V2-latency-max"
+                    ],
+                    "prefix": "All except:",
+                    "readOnly": true
+                  }
+                },
+                "properties": [
+                  {
+                    "id": "custom.hideFrom",
+                    "value": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 7
+          },
+          "id": 493,
+          "interval": "$interval",
+          "options": {
+            "legend": {
+              "calcs": [
+                "mean",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "right",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.period_push_max_delay\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"latency-max\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"277c3977-1ccb-efc3-cf4b-882acc90a56e\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "A",
+              "returnMetrics": [
+                {
+                  "displayName": "latency-max",
+                  "name": "latency-max",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT Max(`metrics.period_push_max_delay`) AS `latency-max`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1','DF-DAILY-R0-D1') AND time>=1718617029 AND time<=1718618829 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
+            },
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.period_push_avg_delay\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"latency-avg\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca360-c20a-122d-960d-fa7f58aebe71\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "B",
+              "returnMetrics": [
+                {
+                  "displayName": "latency-avg",
+                  "name": "latency-avg",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT Avg(`metrics.period_push_avg_delay`) AS `latency-avg`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1','DF-DAILY-R0-D1') AND time>=1718617029 AND time<=1718618829 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
+            }
+          ],
+          "title": "Push latency",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
+          "description": "dequeue/enqueue rate (left), burst/queue-size (right)",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 10,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "ops"
+            },
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byRegexp",
+                  "options": ".+-(burst|queue-size)"
+                },
+                "properties": [
+                  {
+                    "id": "custom.axisPlacement",
+                    "value": "right"
+                  },
+                  {
+                    "id": "unit",
+                    "value": "short"
+                  }
+                ]
+              }
+            ]
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 12,
+            "y": 7
+          },
+          "id": 494,
+          "interval": "$interval",
+          "options": {
+            "legend": {
+              "calcs": [
+                "mean",
+                "max"
+              ],
+              "displayMode": "table",
+              "placement": "right",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.proc_exec_event_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"proc-exec\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f6cb5472-5eb9-ff13-c0ca-6cc092193834\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "A",
+              "returnMetrics": [
+                {
+                  "displayName": "proc-exec",
+                  "name": "proc-exec",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT (Sum(`metrics.proc_exec_event_count`)/60) AS `proc-exec`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600500 AND time<=1718604100 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
+            },
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.proc_exit_event_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"proc-exit\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"53a64c8a-94b1-1144-5885-97bdc35c2eb7\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "B",
+              "returnMetrics": [
+                {
+                  "displayName": "proc-exit",
+                  "name": "proc-exit",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT (Sum(`metrics.proc_exit_event_count`)/60) AS `proc-exit`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600500 AND time<=1718604100 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
+            },
+            {
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.period_push_conflict_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"push-conflict\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"76105c80-194f-d43d-5e07-b4e9eef67ab3\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "C",
+              "returnMetrics": [
+                {
+                  "displayName": "push-conflict",
+                  "name": "push-conflict",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT (Sum(`metrics.period_push_conflict_count`)/60) AS `push-conflict`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600985 AND time<=1718604585 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
+            }
+          ],
+          "title": "Events stats",
+          "type": "timeseries"
+        }
+      ],
+      "title": "13 - eBPF Internals",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": "$datasource",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
       },
       "id": 299,
       "panels": [
@@ -2904,7 +3294,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   }
                 ]
               },
@@ -2916,7 +3307,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 7
+            "y": 8
           },
           "id": 311,
           "interval": "$interval",
@@ -3016,7 +3407,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   }
                 ]
               },
@@ -3028,7 +3420,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 7
+            "y": 8
           },
           "id": 488,
           "interval": "$interval",
@@ -3129,7 +3521,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3162,7 +3555,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 15
+            "y": 16
           },
           "id": 313,
           "interval": "$interval",
@@ -3185,7 +3578,7 @@
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.user_dequeue_count\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"dequeue\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"187c7c29-a592-05c5-1580-3f4a8a494275\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.user_dequeue_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"dequeue\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[],\"subFuncs\":[{\"func\":\"Math\",\"op\":\"DIVIDE\",\"params\":60}]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"348bdb64-8234-a5a0-ab0a-29475ee378c8\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"60\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "A",
               "returnMetrics": [
                 {
@@ -3207,7 +3600,7 @@
                   "name": "tag.host"
                 }
               ],
-              "sql": "SELECT (Avg(`metrics.user_dequeue_count`)/60) AS `dequeue`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('sandbox-10.0.221.223-V73','sandbox-10.0.221.224-V74') AND time>=1717468233 AND time<=1717471833 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
+              "sql": "SELECT (Sum(`metrics.user_dequeue_count`)/60) AS `dequeue`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600985 AND time<=1718604585 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
             },
             {
               "datasource": "$datasource",
@@ -3239,8 +3632,31 @@
             },
             {
               "datasource": "$datasource",
-              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.queue_burst_count\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"burst\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b804a6a-0373-8ed8-bd7f-3f3c92ccd174\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
-              "refId": "C"
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.queue_burst_count\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"total-batch\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6675ff6e-c77e-f54d-cfe5-bd073ddaf6d4\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"slimit\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
+              "refId": "C",
+              "returnMetrics": [
+                {
+                  "displayName": "total-batch",
+                  "name": "total-batch",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_60",
+                  "isResource": false,
+                  "name": "`time_60`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                }
+              ],
+              "sql": "SELECT Max(`metrics.queue_burst_count`) AS `total-batch`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600985 AND time<=1718604585 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
             },
             {
               "datasource": "$datasource",
@@ -3299,7 +3715,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3332,7 +3749,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 15
+            "y": 16
           },
           "id": 338,
           "interval": "$interval",
@@ -3430,7 +3847,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3445,7 +3863,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 23
+            "y": 24
           },
           "id": 305,
           "interval": "$interval",
@@ -3556,7 +3974,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3572,7 +3991,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 23
+            "y": 24
           },
           "id": 309,
           "interval": "$interval",
@@ -3655,7 +4074,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3670,7 +4090,7 @@
             "h": 8,
             "w": 12,
             "x": 0,
-            "y": 31
+            "y": 32
           },
           "id": 315,
           "interval": "$interval",
@@ -3742,7 +4162,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -3758,7 +4179,7 @@
             "h": 8,
             "w": 12,
             "x": 12,
-            "y": 31
+            "y": 32
           },
           "id": 307,
           "interval": "$interval",
@@ -3826,7 +4247,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "id": 112,
       "panels": [
@@ -4209,7 +4630,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 9
       },
       "id": 125,
       "panels": [
@@ -5170,7 +5591,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 10
       },
       "id": 121,
       "panels": [
@@ -5609,7 +6030,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 10
+        "y": 11
       },
       "id": 232,
       "panels": [
@@ -6028,7 +6449,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 11
+        "y": 12
       },
       "id": 344,
       "panels": [
@@ -6582,7 +7003,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 13
       },
       "id": 345,
       "panels": [
@@ -7024,7 +7445,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 14
       },
       "id": 122,
       "panels": [
@@ -7408,7 +7829,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 14
+        "y": 15
       },
       "id": 480,
       "panels": [
@@ -7951,7 +8372,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 16
       },
       "id": 267,
       "panels": [
@@ -8212,7 +8633,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 16
+        "y": 17
       },
       "id": 275,
       "panels": [
@@ -8855,7 +9276,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 18
       },
       "id": 265,
       "panels": [
@@ -9107,7 +9528,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 19
       },
       "id": 135,
       "panels": [
@@ -9616,7 +10037,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 20
       },
       "id": 317,
       "panels": [
@@ -9981,7 +10402,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 21
       },
       "id": 119,
       "panels": [
@@ -10471,8 +10892,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "value": "1"
+          "selected": false,
+          "text": "DeepFlow",
+          "value": "DeepFlow"
         },
         "hide": 0,
         "includeAll": false,
@@ -10489,7 +10911,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -10668,7 +11090,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -10754,7 +11176,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -10784,7 +11206,7 @@
   },
   "timezone": "browser",
   "title": "DeepFlow Agent",
-  "uid": "DeepFlow_Agent",
-  "version": 18,
+  "uid": "DeepFlow_Agent-lizf2",
+  "version": 24,
   "weekStart": ""
 }
