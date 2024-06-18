@@ -11090,7 +11090,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
             "All"
           ],
@@ -11176,7 +11176,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -11206,7 +11206,7 @@
   },
   "timezone": "browser",
   "title": "DeepFlow Agent",
-  "uid": "DeepFlow_Agent-lizf2",
-  "version": 24,
+  "uid": "DeepFlow_Agent",
+  "version": 19,
   "weekStart": ""
 }
