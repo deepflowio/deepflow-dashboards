@@ -39,6 +39,7 @@
       "id": 16,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 18,
@@ -392,6 +393,7 @@
       "pluginVersion": "10.4.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -810,6 +812,7 @@
       "pluginVersion": "10.1.5",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -1179,6 +1182,7 @@
       "pluginVersion": "10.1.5",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -2113,6 +2117,7 @@
       "pluginVersion": "10.4.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -2347,9 +2352,9 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "DeepFlow",
-          "value": "DeepFlow"
+        "_comment": "Please DON'T modify this variable selection field.",
+          "selected": true,
+          "value": "1"
         },
         "hide": 0,
         "includeAll": false,
@@ -2364,6 +2369,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "Any",
@@ -2412,6 +2418,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "Any",
@@ -2436,6 +2443,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "*",

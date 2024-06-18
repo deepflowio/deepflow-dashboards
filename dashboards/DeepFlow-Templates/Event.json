@@ -198,6 +198,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"
@@ -215,6 +216,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
@@ -244,6 +246,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
@@ -273,6 +276,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
@@ -302,6 +306,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
@@ -331,6 +336,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [

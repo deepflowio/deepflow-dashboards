@@ -30,6 +30,7 @@ Add the datasource variable to the dashboard and manually change it to `"selecte
 All panel datasources use $datasource:
 ```json
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource"
         }
 ```

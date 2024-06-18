@@ -66,6 +66,7 @@
       "id": 3,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -87,6 +88,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -108,6 +110,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ingester.recviver.metrics.invalid\n\n#### Reason: Server discards invalid data received\n\n- A small amount of Invalid: Usually not data sent by deepflow-agent, might be flood traffic in the network\n- A large amount of Invalid: Please check if the versions of deepflow-agent and deepflow-server are consistent\n\n#### Resolution: Identify the source of invalid data and handle it\n\nSearch the deepflow-server logs for the `TCP client.*invalid` keyword:\n\n```\n[root@host1 ~]# kubectl -n deepflow logs deepflow-server-cd8bf9fd4-bsg7t | grep \"TCP client.*invalid\"\n2024-04-29 10:25:37.841 [WARN] [receiver] receiver.go:835 TCP client (10.40.50.38:41418) decode error.header type 238 is invalid\n```\n\n- If the source `IP:Port` of the invalid data is deepflow-agent, it should be upgraded\n- If not, consider adding the source to the iptables blacklist to block it\n- For the latter, it usually indicates unexpected broadcast traffic or scanning traffic in the user's network",
           "fieldConfig": {
@@ -188,6 +191,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -220,6 +224,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ingester_decoder.metrics.drop_count\n\n## Reason: Flow_log data exceeds decode rate limit and is actively discarded\n\nThe data decode rate for each deepflow-server replica is set to 50K/s by default. Any data exceeding this rate limit will be actively discarded.\n\nNote that the rate limits for each type of data are independent, each defaulting to 50K/s. The `msg_type` displayed in this metric means:\n- l4_log: Flow logs\n- l7_log: Call logs\n\n## Resolution: Scale out or increase rate limit\n\n- If the CPU/MEM/Load/Disk usage on the server hosting deepflow-server exceeds 70%, consider scaling out\n- If resources are still sufficient, adjust the throttle and other parameters of deepflow-server to increase the rate limit",
           "fieldConfig": {
@@ -303,6 +308,7 @@
           "pluginVersion": "10.2.3",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -354,6 +360,7 @@
       "id": 25,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -375,6 +382,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -396,6 +404,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ingester_ckwriter.metrics.write_failed_count\n\n## Reason: Failed to write to ClickHouse\n\nWrite failures are usually caused by ClickHouse service anomalies or insufficient disk space.\n\n## Resolution: Recovery/Scaling/Bug Fix\n\n- Recovery: Fix the ClickHouse service if it is abnormal\n- Scaling: Expand disk space or reduce the amount of data being written if space is insufficient\n- Bug Fix: If the issue is not due to the above reasons, search for `write block failed` in the deepflow-server logs to determine further action",
           "fieldConfig": {
@@ -477,6 +486,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -514,6 +524,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ingester_force_delete_clickhouse_data.metrics.bytes_on_disk\n\n## Reason: Insufficient disk space\n\nDue to insufficient disk space, deepflow-server proactively deletes data from ClickHouse to prevent the disk from being filled.\n\n## Resolution: Disk Expansion\n\nIncrease disk space to ensure it can store ClickHouse data for the specified retention period.\n\nIf disk expansion is not possible, go to the `System - Data Nodes - Monitoring Data Storage Configuration` page to adjust the `Retention Period`.",
           "fieldConfig": {
@@ -595,6 +606,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -651,6 +663,7 @@
       "id": 27,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -672,6 +685,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## queue.metrics.overwritten\n\n## Reason: Data loss due to full memory queue\n\nThe deepflow-server process consists of many modules that pass data to each other via memory queues.\n\nWhen the data production rate of the producer module exceeds the consumption rate of the consumer module, data accumulates in the memory queue.\n\nWhen the queue is full, new data from the producer will overwrite the oldest data, resulting in `overwritten`.\n\nThus, the number of overwritten entries represents the amount of data lost.\n\n## Resolution: Scaling/Increasing Queue Length/Increasing Queue Count\n\n- If the CPU/MEM/Load/Disk usage on the server hosting deepflow-server exceeds 70%, consider scaling out\n- Otherwise, refer to the help manual under `diagnose/how-to-profile-deepflow-server-ingester/` to adjust the size and number of specific queues\n\nIncreasing the queue size will directly lead to higher memory usage, while increasing the number of queues implies adding more consumer threads.",
           "fieldConfig": {
@@ -753,6 +767,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -804,6 +819,7 @@
       "id": 23,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 7,
@@ -825,6 +841,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 7,
@@ -846,6 +863,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## dispatcher.metrics.kernel_drops\n\n## Reason: Traffic surges or insufficient capture performance\n\nThe deepflow-agent collects traffic from the network card using AF_PACKET/cBPF, but traffic surges can cause packet loss.\nAdditionally, if the traffic volume remains high and exceeds the processing capacity of deepflow-agent, continuous packet loss may occur.\n\n## Resolution: Increase buffer size and more\n\nAdjust the following agent configurations to help reduce packet loss:\n- `capture_packet_size`: The default capture packet size is 64KB. If there is no need for traffic distribution, this value can be reduced to match `l7_log_packet_size`.\n- `max_cpus`: The agent is limited to using a maximum of 1 vCPU by default. If CPU usage has reached its threshold, consider increasing this limit.\n- `afpacket-blocks`: The default buffer size is `MIN(max_memory/16, 128MB)`. Increasing this value can help handle traffic surges.\n- Disable unnecessary features to help reduce packet loss.",
           "fieldConfig": {
@@ -928,6 +946,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -960,6 +979,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## dispatcher.metrics.get_token_failed\n\n## Reason: Reached collection rate limit\n\nHigh traffic rates can trigger the OOM Killer in deepflow-agent. Therefore, the collection rate is limited by default.\n\nWhen the rate limit is reached, in addition to this metric, the agent will also enter an abnormal state of `Collection Packet Rate Limit Reached` (`RX_PPS_THRESHOLD_EXCEEDED`), triggering an alert.\n\n## Resolution: Increase collection packet rate limit in collector configuration\n\nCorresponding Yaml configuration: `max_collect_pps`, default is 200Kpps.",
           "fieldConfig": {
@@ -1042,6 +1062,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1074,6 +1095,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 7,
@@ -1095,6 +1117,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 7,
@@ -1116,6 +1139,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## dispatcher.metrics.invalid_packets\n\n## Reason: Packet length too short\n\nThis alert is triggered when the packet length is less than 18 bytes. It can also be caused by insufficient length after tunnel parsing.\n\n## Resolution: Disable tunnel parsing\n\nIf it is confirmed that incorrect tunnel parsing is the cause, modify the collector configuration to set `tunnel decapsulation type` to empty to avoid this issue.",
           "fieldConfig": {
@@ -1197,6 +1221,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1229,6 +1254,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## dispatcher.metrics.err\n\n## Reason: Network card driver issue\n\nThis is typically caused by the network card driver and occurs very rarely.\n\n## Resolution: Restart the network card\n\nExecute `ifconfig $nic down; ifconfig $nic up` on the server where the collector is running.\n\n<mark>Note: This is a high-risk operation.</mark>",
           "fieldConfig": {
@@ -1310,6 +1336,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1356,6 +1383,7 @@
       "id": 22,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -1377,6 +1405,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -1398,6 +1427,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -1419,6 +1449,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ebpf_collector.metrics.kern_lost\n\n## Reason: eBPF perf buffer full\n\nData exchange between the eBPF kernel (producer) and user-space perf-reader (consumer) uses the perf buffer.\n\n## Resolution: Adjust Agent configuration\n\n- Adjust perf buffer size: Increase the buffer size by adjusting the Agent's `ebpf`.`perf-pages-count`.\n- Increase thread count: Adjust the Agent's `ebpf`.`thread-num`, which represents the number of consumer threads. Note that this will increase CPU and memory usage.\n- Disable Golang uprobe: Currently, enabling Golang uprobe significantly increases perf buffer consumption, especially when using uprobe to collect HTTP2 protocol data.\n\nHowever, disabling Golang uprobe will also disable distributed tracing and HTTPS protocol collection for that process, which may not be practical at the moment. Improvements are planned for future versions.",
           "fieldConfig": {
@@ -1501,6 +1532,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1618,6 +1650,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1650,6 +1683,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## ebpf_collector.metrics.get_token_failed\n\n## Reason: Reached collection rate limit\n\nHigh traffic rates can trigger the OOM Killer in deepflow-agent. Therefore, the collection rate is limited by default.\n\nWhen the rate limit is reached, in addition to this metric, the agent will also enter an abnormal state of `Collection Packet Rate Limit Reached` (`RX_PPS_THRESHOLD_EXCEEDED`), triggering an alert.\n\n## Resolution: Increase collection packet rate limit in collector configuration\n\nCorresponding Yaml configuration: `global-ebpf-pps-threshold`, default is 0, meaning no rate limit.",
           "fieldConfig": {
@@ -1732,6 +1766,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1778,6 +1813,7 @@
       "id": 31,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -1799,6 +1835,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -1820,6 +1857,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## flow_map.metrics.drop_by_capacity\n\n## Reason: Flow log output rate limit reached\n\nBefore being sent, flow logs pass through a rate-limiting module to prevent the agent from consuming excessive bandwidth by sending flow logs at too high a rate.\n\n## Resolution: Consider adjusting the rate limit\n\nIf the agent has sufficient CPU, memory, and bandwidth resources, consider increasing the rate limit by adjusting `l4_log_collect_nps_threshold`.",
           "fieldConfig": {
@@ -1901,6 +1939,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -1933,6 +1972,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## flow_map.metrics.drop_by_window\n\n## Reason: Packet timestamp too delayed\n\nPossible reasons:\n- There is a significant time difference when AF_PACKET/cBPF captures the packet.\n- Excessive internal processing time within deepflow-agent, usually occurring under very high traffic conditions.\n\n## Resolution: Increase the delay tolerance of the Flow hash table\n\nIncrease the `packet-delay` setting in the advanced collector configuration to enhance the delay tolerance of the Flow hash table.",
           "fieldConfig": {
@@ -2014,6 +2054,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2060,6 +2101,7 @@
       "id": 33,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 7,
@@ -2081,6 +2123,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## quadruple_generator.metrics.drop-before-window\n\n## Reason: Flow log timestamp too delayed during metric `pre`-aggregation\n\nPossible reasons:\n- There is a significant time difference when AF_PACKET/cBPF captures the packet.\n- Excessive internal processing time within deepflow-agent, usually occurring under very high traffic conditions.\n\n## Resolution: Increase the delay tolerance of the `pre`-aggregation module\n\nAdjust the delay tolerance of the pre-aggregation window:\n- Increase the `packet-delay` setting in the advanced collector configuration\n- Increase the `second-flow-extra-delay-second` setting in the advanced collector configuration",
           "fieldConfig": {
@@ -2162,6 +2205,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2213,6 +2257,7 @@
       "id": 35,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2234,6 +2279,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2255,6 +2301,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## flow_aggr.metrics.drop-in-throttle\n\n## Reason: Flow log output rate limit reached\n\nBefore being sent, flow logs pass through a rate-limiting module to prevent the agent from consuming excessive bandwidth by sending flow logs at too high a rate.\n\n## Resolution: Consider adjusting the rate limit\n\nIf the agent has sufficient CPU, memory, and bandwidth resources, consider increasing the rate limit by adjusting `l4_log_collect_nps_threshold`.",
           "fieldConfig": {
@@ -2334,6 +2381,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2366,6 +2414,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## flow_aggr.metrics.drop-before-window\n\n## Reason: Flow log timestamp too delayed\n\nPossible reasons:\n- There is a significant time difference when AF_PACKET/cBPF captures the packet.\n- Excessive internal processing time within deepflow-agent, usually occurring under very high traffic conditions.\n\n## Resolution: Increase the delay tolerance of flow log aggregation\n\nAdjust the delay tolerance of the flow log aggregation window:\n- Increase the `packet-delay` setting in the advanced collector configuration\n- Increase the `second-flow-extra-delay-second` setting in the advanced collector configuration",
           "fieldConfig": {
@@ -2447,6 +2496,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2498,6 +2548,7 @@
       "id": 37,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2519,6 +2570,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## l7_session_aggr.metrics.throttle-drop\n\n## Reason: Call log output rate limit reached\n\nBefore being sent, call logs pass through a rate-limiting module to prevent the agent from consuming excessive bandwidth by sending logs at too high a rate.\n\n## Resolution: Consider adjusting the rate limit or reducing call logs\n\n1. If the agent has sufficient CPU, memory, and bandwidth resources, consider increasing the rate limit by adjusting `l7_log_collect_nps_threshold`.\n2. Adjust the `l7-protocol-enabled` configuration item to disable parsing of application protocols you are not interested in.\n3. For some protocols (e.g., Redis) with weak signatures, if many incorrect parsings are found, adjust `l7-protocol-ports` to limit the port numbers for which the protocol is attempted to be parsed.",
           "fieldConfig": {
@@ -2598,6 +2650,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2644,6 +2697,7 @@
       "id": 34,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2666,6 +2720,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2688,6 +2743,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## collector.metrics.drop-inactive\n\n## Reason: Both client and server are Internet IPs or inactive IPs\n\nThis usually occurs because the IP addresses of both ends of the communication appear in the `Network Resources - IP Addresses/Subnets` list.\n\nDeepFlow automatically syncs the IP addresses and subnets of cloud resources and container resources. Additionally, it considers `10/8, 172.16/12, 192.168/16, 169.254/16` as internal network segments.\n\nIf the IP addresses in the agent's operating environment do not appear in the above IPs or subnets, they will be marked as Internet.\n\n## Resolution: Add the IPs you need to monitor as network resources\n\nEnter `is_internet = true` in the flow log search bar to find traffic where both ends are marked as Internet.\n\nAdd the IP segments you wish to monitor to the `Resources - Network Resources - Subnets` to avoid this alert and obtain more detailed metric data.",
           "fieldConfig": {
@@ -2769,6 +2825,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2806,6 +2863,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## collector.metrics.drop-before-window\n\n## Reason: Flow log timestamp too delayed during metric aggregation\n\nPossible reasons:\n- There is a significant time difference when AF_PACKET/cBPF captures the packet.\n- Excessive internal processing time within deepflow-agent, usually occurring under very high traffic conditions.\n\n## Resolution: Increase the delay tolerance of the aggregation module\n\nAdjust the delay tolerance of the aggregation window:\n- Increase the `packet-delay` setting in the advanced collector configuration\n- Increase the `second-flow-extra-delay-second` setting in the advanced collector configuration",
           "fieldConfig": {
@@ -2887,6 +2945,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2938,6 +2997,7 @@
       "id": 2,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -2959,6 +3019,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## collect_sender.metrics.dropped\n\n## Reason: Agent failed to send data to Server\n\nThis includes sending statistics, monitoring, and log data.\n\n## Resolution: Troubleshoot using the following methods\n\n- On the controller, execute `deepflow-ctl trisolaris.check --cip $ip --cmac $mac config | grep analyzer_ip` to check if the assigned data node IP is correct.\n- On the controller, execute `deepflow-agent-ctl -a $ip -p $port rpc --get config | grep analyzer_ip` to check if the distributed data node IP is correct.\n- On the controller, execute `deepflow-agent-ctl -a $ip -p $port rpc --get config | grep socket_type` to confirm the type of communication port. `0` indicates UDP, `1` indicates TCP.\n- On the corresponding data node, check if the port is listening properly: `netstat -anp | grep 20033` or `netstat -anp | grep 30033`.\n- If the communication port is in TCP mode, use `telnet` on the server where the Agent is located to confirm whether the port can be accessed normally.\n- If the communication port is in UDP mode, check the Agent logs for `Socket send failed`, which may indicate a sudden network interruption.",
           "fieldConfig": {
@@ -3040,6 +3101,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3091,6 +3153,7 @@
       "id": 24,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 8,
@@ -3112,6 +3175,7 @@
           "type": "text"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "## queue.metrics.overwritten\n\n## Reason: Data loss due to full memory queue\n\nThe deepflow-agent process consists of many modules that pass data between each other using memory queues.\n\nWhen the rate at which the producer module puts data into the queue exceeds the rate at which the consumer module takes data out, the data is buffered in the memory queue.\n\nWhen the queue becomes full, new data from the producer will overwrite the oldest data, resulting in `overwritten`.\n\nTherefore, the number of overwritten items represents the number of data losses.\n\n## Resolution: Expand/increase queue length/increase the number of queues\n\n- If the CPU/MEM usage of the deepflow-agent is already near the threshold, adjusting the queue is not recommended.\n- Otherwise, refer to the help manual under `Troubleshooting/Enterprise Edition Maintenance/Collector Alerts` to adjust the size and number of specific queues.\n\nIncreasing the queue size will directly lead to higher memory usage, and increasing the number of queues means adding more consumer concurrent threads.",
           "fieldConfig": {
@@ -3193,6 +3257,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3241,9 +3306,9 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "DeepFlow",
-          "value": "DeepFlow"
+        "_comment": "Please DON'T modify this variable selection field.",
+          "selected": true,
+          "value": "1"
         },
         "hide": 0,
         "includeAll": false,
@@ -3258,6 +3323,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
@@ -3285,6 +3351,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [

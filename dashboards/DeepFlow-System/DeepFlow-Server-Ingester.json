@@ -119,6 +119,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -255,6 +256,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -391,6 +393,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -514,6 +517,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -656,6 +660,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -859,6 +864,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "debug": false,
           "metaExtra": {},
@@ -1451,6 +1457,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"
@@ -1469,6 +1476,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [

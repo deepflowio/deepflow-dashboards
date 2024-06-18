@@ -83,6 +83,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -181,6 +182,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -253,6 +255,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -313,6 +316,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -373,6 +377,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -433,6 +438,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -592,6 +598,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -692,6 +699,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -942,6 +950,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1045,6 +1054,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1284,6 +1294,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1403,6 +1414,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1549,6 +1561,7 @@
       "pluginVersion": "9.3.0",
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1591,6 +1604,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"

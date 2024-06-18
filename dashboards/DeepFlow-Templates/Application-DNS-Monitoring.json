@@ -817,6 +817,7 @@
       "id": 13,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -914,6 +915,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1016,6 +1018,7 @@
       "id": 20,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1103,6 +1106,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1205,6 +1209,7 @@
       "id": 18,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1296,6 +1301,7 @@
           "type": "bargauge"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1386,6 +1392,7 @@
           "type": "bargauge"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1484,6 +1491,7 @@
           "type": "piechart"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1581,6 +1589,7 @@
           "type": "piechart"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1735,6 +1744,7 @@
           "type": "histogram"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1946,6 +1956,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"
@@ -1964,6 +1975,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "Any",
@@ -1989,6 +2001,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "Any",
@@ -2014,6 +2027,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "*dns*",
@@ -2058,6 +2072,7 @@
         "type": "query"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "0.0.0.0/0",
@@ -2077,6 +2092,7 @@
         "type": "textbox"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": "Disabled",
@@ -2121,6 +2137,7 @@
         "type": "textbox"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [

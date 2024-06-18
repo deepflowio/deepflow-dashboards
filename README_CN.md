@@ -8,6 +8,7 @@ dashboard 增加 datasource 变量，手动改为 `"selected": true,"value": "1"
 
 ```json
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"
@@ -30,6 +31,7 @@ dashboard 增加 datasource 变量，手动改为 `"selected": true,"value": "1"
 所有 panel 的 datasource 使用 $datasource：
 ```json
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource"
         }
 ```
