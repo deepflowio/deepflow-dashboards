@@ -59,6 +59,7 @@
       "id": 18,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "gridPos": {
             "h": 20,
@@ -94,6 +95,7 @@
           "type": "deepflowio-topo-panel"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -189,6 +191,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -278,6 +281,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -369,6 +373,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -458,6 +463,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1585,6 +1591,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"
@@ -1602,6 +1609,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [

@@ -74,6 +74,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -152,6 +153,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -235,6 +237,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -304,6 +307,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -383,6 +387,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -479,6 +484,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 2,
           "meta": {
@@ -584,6 +590,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 2,
           "meta": {
@@ -682,6 +689,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 2,
           "meta": {
@@ -793,6 +801,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 2,
           "meta": {
@@ -916,6 +925,7 @@
       },
       "targets": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1272,6 +1282,7 @@
             "limit": 100,
             "mode": "list"
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "format": 1,
           "meta": {
@@ -1339,6 +1350,7 @@
   "templating": {
     "list": [
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "value": "1"

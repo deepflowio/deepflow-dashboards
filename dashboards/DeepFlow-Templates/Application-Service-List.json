@@ -189,6 +189,7 @@
         "pluginVersion": "9.4.3",
         "targets": [
           {
+            "_comment": "Please DON'T modify this variable selection field.",
             "datasource": "$datasource",
             "debug": false,
             "metaExtra": {},
@@ -475,6 +476,7 @@
         "pluginVersion": "9.4.3",
         "targets": [
           {
+            "_comment": "Please DON'T modify this variable selection field.",
             "datasource": "$datasource",
             "debug": false,
             "metaExtra": {},
@@ -618,6 +620,7 @@
               "__any"
             ]
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "definition": "{\"sql\":\"show tag auto_service values from application\",\"database\":\"flow_metrics\",\"useAny\":true}",
           "hide": 0,
@@ -665,6 +668,7 @@
               "$__all"
             ]
           },
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "definition": "{\"sql\":\"show tag signal_source values from application\",\"database\":\"flow_metrics\"}",
           "hide": 0,

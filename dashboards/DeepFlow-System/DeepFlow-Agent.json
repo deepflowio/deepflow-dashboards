@@ -162,6 +162,7 @@
           "targets": [
             {
               "alias": "$tag_host-$tag_port tx_bps-$tag_type",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "dsType": "influxdb",
@@ -312,6 +313,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "dsType": "influxdb",
@@ -444,6 +446,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "dsType": "influxdb",
@@ -618,6 +621,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "dsType": "influxdb",
@@ -889,6 +893,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -944,6 +949,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
@@ -999,6 +1005,7 @@
           "type": "bargauge"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1053,6 +1060,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
@@ -1108,6 +1116,7 @@
           "type": "bargauge"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1224,6 +1233,7 @@
           "type": "bargauge"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -1282,6 +1292,7 @@
           "targets": [
             {
               "alias": "$tag_host",
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "dsType": "influxdb",
               "groupBy": [
@@ -2631,6 +2642,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2800,6 +2812,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -2983,6 +2996,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3011,6 +3025,7 @@
               "sql": "SELECT Max(`metrics.period_push_max_delay`) AS `latency-max`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1','DF-DAILY-R0-D1') AND time>=1718617029 AND time<=1718618829 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3145,6 +3160,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3173,6 +3189,7 @@
               "sql": "SELECT (Sum(`metrics.proc_exec_event_count`)/60) AS `proc-exec`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600500 AND time<=1718604100 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3201,6 +3218,7 @@
               "sql": "SELECT (Sum(`metrics.proc_exit_event_count`)/60) AS `proc-exit`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600500 AND time<=1718604100 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3329,6 +3347,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3442,6 +3461,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3575,6 +3595,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3603,6 +3624,7 @@
               "sql": "SELECT (Sum(`metrics.user_dequeue_count`)/60) AS `dequeue`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600985 AND time<=1718604585 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 10000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3631,6 +3653,7 @@
               "sql": "SELECT (Sum(`metrics.user_enqueue_count`)/60) AS `enqueue`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','node1-V1') AND time>=1709862002 AND time<=1709865602 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3659,6 +3682,7 @@
               "sql": "SELECT Max(`metrics.queue_burst_count`) AS `total-batch`, time(time, 60) AS `time_60`, `tag.host` FROM deepflow_agent_ebpf_collector WHERE `tag.host` IN ('node2-V2','DF-DAILY-R0-C1-W4202','DF-DAILY-R0-C1') AND time>=1718600985 AND time<=1718604585 GROUP BY `time_60`, `tag.host` SLIMIT 20 LIMIT 1000"
             },
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_ebpf_collector\",\"select\":[{\"key\":\"metrics.queue_capacity\",\"func\":\"Max\",\"op\":\"\",\"val\":\"\",\"as\":\"queue-size\",\"params\":[],\"uuid\":\"49f32ee0-09f1-3dbe-21fe-06af93e36aff\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Max\",\"params\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"20785821-8916-ee3d-ee44-c78400e0982f\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4b804a6a-0373-8ed8-bd7f-3f3c92ccd174\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"899c8249-75ec-1df1-377b-26de23e3c2ee\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"eccca0a9-a550-94e3-41bb-4fb9edbc17b3\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"interval\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":1,\"tracingId\":null}",
               "refId": "D"
@@ -3771,6 +3795,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3803,6 +3828,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "Once the reclaim-max is reached, the recovery mechanism will start to delete the data that is too old.",
           "fieldConfig": {
@@ -3884,6 +3910,7 @@
           "pluginVersion": "9.2.3",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -3928,6 +3955,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "adapt: 1 kernel adaptation succeeds,   0 kernel adaptation fails.\ntracer_state: TRACER_INIT(0), TRACER_RUNNING(1),  TRACER_STOP(2).\nperf_pages: Number of pages occupied by the perf buffer memory.\nworker-num: The number of worker threads processing the data.\n\n",
           "fieldConfig": {
@@ -4031,6 +4059,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -4118,6 +4147,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "Displays the maximum number of entries in the socket tracking hash table and the number of entries currently in use.",
           "fieldConfig": {
@@ -4199,6 +4229,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -4252,6 +4283,7 @@
       "id": 112,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -4333,6 +4365,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -4718,6 +4751,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -4838,6 +4872,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -4958,6 +4993,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5073,6 +5109,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5189,6 +5226,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5309,6 +5347,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5430,6 +5469,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5467,6 +5507,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "description": "",
           "fieldConfig": {
@@ -5544,6 +5585,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5695,6 +5737,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -5737,6 +5780,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -5833,6 +5877,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "hide": false,
@@ -5882,6 +5927,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -5978,6 +6024,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6134,6 +6181,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6270,6 +6318,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6307,6 +6356,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -6403,6 +6453,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6553,6 +6604,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6690,6 +6742,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6727,6 +6780,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -6824,6 +6878,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -6861,6 +6916,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -6957,6 +7013,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -7107,6 +7164,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -7149,6 +7207,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -7245,6 +7304,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "hide": false,
@@ -7393,6 +7453,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -7536,6 +7597,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -7659,6 +7721,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -7783,6 +7846,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8314,6 +8378,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8463,6 +8528,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8586,6 +8652,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8723,6 +8790,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8844,6 +8912,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -8989,6 +9058,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9111,6 +9181,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9229,6 +9300,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9364,6 +9436,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9480,6 +9553,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9659,6 +9733,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9815,6 +9890,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -9990,6 +10066,7 @@
           "pluginVersion": "10.4.0",
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -10121,6 +10198,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -10238,6 +10316,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -10355,6 +10434,7 @@
           },
           "targets": [
             {
+              "_comment": "Please DON'T modify this variable selection field.",
               "datasource": "$datasource",
               "debug": false,
               "metaExtra": {},
@@ -10407,6 +10487,7 @@
       "id": 119,
       "panels": [
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -10679,6 +10760,7 @@
           "type": "timeseries"
         },
         {
+          "_comment": "Please DON'T modify this variable selection field.",
           "datasource": "$datasource",
           "fieldConfig": {
             "defaults": {
@@ -10892,9 +10974,9 @@
     "list": [
       {
         "current": {
-          "selected": false,
-          "text": "DeepFlow",
-          "value": "DeepFlow"
+        "_comment": "Please DON'T modify this variable selection field.",
+          "selected": true,
+          "value": "1"
         },
         "hide": 0,
         "includeAll": false,
@@ -10910,6 +10992,7 @@
         "type": "datasource"
       },
       {
+        "_comment": "Please DON'T modify this variable selection field.",
         "current": {
           "selected": true,
           "text": [
