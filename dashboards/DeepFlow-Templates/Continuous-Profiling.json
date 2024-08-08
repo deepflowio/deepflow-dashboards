@@ -1,0 +1,281 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 123,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": true,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 16,
+      "panels": [
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "datasource": "$datasource",
+          "gridPos": {
+            "h": 7,
+            "w": 23,
+            "x": 0,
+            "y": 1
+          },
+          "id": 15,
+          "options": {
+            "code": {
+              "language": "plaintext",
+              "showLineNumbers": false,
+              "showMiniMap": false
+            },
+            "content": "# DeepFlow AutoProfiling\n\nView the on-CPU profile data collected by DeepFlow based on eBPF. The supported variables include:\n- `app_service`: Process name\n- `cluster`: K8s cluster name\n- `namespace`: K8s namespace\n- `auto_service`: Auto service tag, which can be used to filter K8s services and workloads\n- `auto_instance`: Auto instance tag, which can be used to filter K8s pods",
+            "mode": "markdown"
+          },
+          "pluginVersion": "10.4.3",
+          "title": "Help",
+          "type": "text"
+        }
+      ],
+      "title": "Help",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 18,
+      "panels": [],
+      "title": "AutoProfiling",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "deepflowio-deepflow-datasource",
+        "uid": "${datasource}"
+      },
+      "gridPos": {
+        "h": 27,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "id": 17,
+      "targets": [
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "${datasource}"
+          },
+          "debug": false,
+          "metaExtra": {},
+          "queryText": "{\"appType\":\"profiling\",\"db\":\"profile\",\"sources\":\"\",\"from\":\"in_process\",\"select\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d676049c-6ef7-0f12-8718-719463247e88\",\"type\":\"metric\"}],\"where\":[{\"type\":\"tag\",\"key\":\"app_service\",\"func\":\"\",\"op\":\"IN\",\"val\":{\"label\":\"$app_service\",\"value\":\"app_service\",\"isVariable\":true,\"variableType\":\"query\"},\"as\":\"\",\"params\":[],\"uuid\":\"00660f77-8b30-e91f-8d67-a63f76d3e682\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"profile_language_type\",\"func\":\"\",\"op\":\"IN\",\"val\":{\"label\":\"eBPF\",\"value\":\"eBPF\"},\"as\":\"\",\"params\":[],\"uuid\":\"45b9e7ab-96bf-3afc-c73e-8abf36cf94a9\"},{\"type\":\"tag\",\"key\":\"profile_event_type\",\"func\":\"\",\"op\":\"IN\",\"val\":{\"label\":\"on-cpu\",\"value\":\"on-cpu\"},\"as\":\"\",\"params\":[],\"uuid\":\"d213cef0-f6e0-66af-0d41-b71f97e17024\"},{\"type\":\"tag\",\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"fc163229-7622-78fc-4e22-05f01c2d8aac\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"4a47b69e-d81f-c4a4-0eb1-89dfb8b99585\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_service\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$auto_service\",\"value\":\"auto_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"ba7b7997-7781-f3c9-f1c8-a9367cb77036\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_instance\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$auto_instance\",\"value\":\"auto_instance\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"d30ad1e0-d6e9-ef44-d561-cea1b2acc761\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"3fb0d77f-c590-383f-9c84-f30afe7975cf\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"f448d201-0a53-2941-950e-b318744e5e50\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6d0f84b1-37ae-dea5-1a47-4323294d889f\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"\",\"limit\":\"100\",\"offset\":\"\",\"formatAs\":\"\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+          "refId": "A",
+          "returnMetrics": [],
+          "returnTags": [],
+          "sql": "SELECT * FROM in_process WHERE `app_service` IN ('deepflow-server') AND `profile_language_type` IN ('eBPF') AND `profile_event_type` IN ('on-cpu') AND time>=1723113333 AND time<=1723114233 LIMIT 100"
+        }
+      ],
+      "title": "Panel Title",
+      "type": "flamegraph"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "value": "1"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "deepflowio-deepflow-datasource",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
+        "current": {
+          "selected": true,
+          "value": "1"
+        },
+        "datasource": {
+          "uid": "$datasource"
+        },
+        "definition": "{\"database\":\"profile\",\"sql\":\"show tag app_service values from in_process\"}",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "app_service",
+        "options": [],
+        "query": {
+          "database": "profile",
+          "sql": "show tag app_service values from in_process"
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "_comment": "Please DON'T modify this variable selection field.",
+        "current": {
+          "selected": false,
+          "text": "Disabled",
+          "value": "__disabled"
+        },
+        "datasource": {
+          "uid": "$datasource"
+        },
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `application.1m` WHERE `display_name` != '' AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "cluster",
+        "options": [],
+        "query": {
+          "database": "flow_metrics",
+          "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `application.1m` WHERE `display_name` != '' AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": true,
+          "useDisabled": true
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Disabled",
+          "value": "__disabled"
+        },
+        "datasource": {
+          "uid": "$datasource"
+        },
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "namespace",
+        "options": [],
+        "query": {
+          "database": "flow_metrics",
+          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": true,
+          "useDisabled": true
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "_comment": "Please DON'T modify this variable selection field.",
+        "current": {
+          "selected": false,
+          "text": "Disabled",
+          "value": "__disabled"
+        },
+        "datasource": {
+          "uid": "$datasource"
+        },
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT auto_service as `value`, auto_service as `display_name` FROM `application.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "auto_service",
+        "options": [],
+        "query": {
+          "database": "flow_metrics",
+          "sql": "SELECT auto_service as `value`, auto_service as `display_name` FROM `application.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": true,
+          "useDisabled": true
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "_comment": "Please DON'T modify this variable selection field.",
+        "current": {
+          "selected": false,
+          "text": "Disabled",
+          "value": "__disabled"
+        },
+        "datasource": {
+          "uid": "$datasource"
+        },
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"\\tSELECT auto_instance as `value`, auto_instance as `display_name` FROM `application.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND ('$auto_service' IN ('__any', '__disabled') OR auto_service IN (${auto_service:singlequote})) AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "auto_instance",
+        "options": [],
+        "query": {
+          "database": "flow_metrics",
+          "sql": "\tSELECT auto_instance as `value`, auto_instance as `display_name` FROM `application.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND ('$auto_service' IN ('__any', '__disabled') OR auto_service IN (${auto_service:singlequote})) AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "useAny": true,
+          "useDisabled": true
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Continuous Profiling",
+  "uid": "Continuous_Profiling",
+  "version": 2,
+  "weekStart": ""
+}
