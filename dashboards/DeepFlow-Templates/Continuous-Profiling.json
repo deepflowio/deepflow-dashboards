@@ -24,7 +24,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 123,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -45,7 +44,7 @@
             "h": 7,
             "w": 23,
             "x": 0,
-            "y": 1
+            "y": 9
           },
           "id": 15,
           "options": {
@@ -83,11 +82,125 @@
         "type": "deepflowio-deepflow-datasource",
         "uid": "${datasource}"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "bars",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "µs"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 2
+      },
+      "id": 19,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "${datasource}"
+          },
+          "debug": false,
+          "metaExtra": {},
+          "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"profile\",\"sources\":\"\",\"from\":\"in_process\",\"select\":[{\"key\":\"profile_value\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"16003ce5-61b8-f842-f019-f9dfe2a6c254\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"app_service\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$app_service\",\"value\":\"app_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"b4701039-2e0b-54d3-6de0-8dc8b8d8ed9a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"1c32c5eb-15e4-4043-63cd-b10f29746b6f\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"24c12fb6-5847-0efe-3198-98ab6d18d7aa\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_service\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$auto_service\",\"value\":\"auto_service\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"e0b8122c-30ca-d3d7-97b5-a6959822f5df\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_instance\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$auto_instance\",\"value\":\"auto_instance\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"614e1cca-61e1-eb87-d034-1f9bc90be562\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"4652f639-8e9d-fd91-5cbe-ddb381c0119b\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"profile_event_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"7175a4cc-873a-61f5-dbd5-09cf9a42cd84\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ce565b85-e930-a4af-79fd-f185c30029b2\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+          "refId": "A",
+          "returnMetrics": [
+            {
+              "displayName": "Sum(profile_value)",
+              "name": "Sum(profile_value)",
+              "type": 1,
+              "unit": ""
+            }
+          ],
+          "returnTags": [
+            {
+              "displayName": "time_value",
+              "isResource": false,
+              "name": "`time_value`"
+            },
+            {
+              "displayName": "剖析类型",
+              "isResource": false,
+              "name": "profile_event_type"
+            }
+          ],
+          "sql": "SELECT Sum(`profile_value`) AS `Sum(profile_value)`, time(time, $__interval) AS `time_value`, profile_event_type FROM in_process WHERE Enum(`app_service`) = 'greptime' AND `pod_cluster` = 'k8s-d-ErYTIDu3A3' AND `pod_ns` = 'greptimedb-cluster' AND `auto_service` = 'greptimedb-datanode' AND time>=1723698606 AND time<=1723709406 GROUP BY `time_value`, profile_event_type SLIMIT 20 LIMIT 10000"
+        }
+      ],
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "deepflowio-deepflow-datasource",
+        "uid": "${datasource}"
+      },
       "gridPos": {
         "h": 27,
         "w": 24,
         "x": 0,
-        "y": 2
+        "y": 10
       },
       "id": 17,
       "targets": [
@@ -105,7 +218,6 @@
           "sql": "SELECT * FROM in_process WHERE `app_service` IN ('Total') AND `profile_language_type` IN ('eBPF') AND `profile_event_type` IN ('on-cpu') AND `auto_service` = '10.233.90.201' AND time>=1723443316 AND time<=1723444216 LIMIT 100"
         }
       ],
-      "title": "Panel Title",
       "type": "flamegraph"
     }
   ],
@@ -276,6 +388,6 @@
   "timezone": "",
   "title": "Continuous Profiling",
   "uid": "Continuous_Profiling",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
