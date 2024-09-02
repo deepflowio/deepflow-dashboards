@@ -373,8 +373,9 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Event",
-  "uid": "Event",
+  "title": "Resource Event",
+  "uid": "Resource_Event",
   "version": 11,
   "weekStart": ""
 }
+

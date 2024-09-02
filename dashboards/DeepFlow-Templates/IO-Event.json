@@ -1,0 +1,568 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 181,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "deepflowio-deepflow-datasource",
+          "uid": "$datasource"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "bars",
+              "fillOpacity": 100,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "stepBefore",
+              "lineWidth": 3,
+              "pointSize": 2,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "always",
+              "spanNulls": true,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "table",
+            "placement": "right",
+            "showLegend": true
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "datasource": {
+              "type": "deepflowio-deepflow-datasource",
+              "uid": "$datasource"
+            },
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"event\",\"sources\":\"\",\"from\":\"perf_event\",\"select\":[{\"key\":\"log_count\",\"func\":\"Sum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ee080049-0f6b-9ec4-032c-3ff7a44b80b7\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Sum\",\"params\":[]}}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"184f9b58-4891-b1e7-7657-dc41a308acc6\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"6e559ce2-cda9-3ff5-f70f-1f6fcb517e7c\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_group\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$workload\",\"value\":\"workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"5de8687e-ae77-6f86-487d-fcb434d8dfda\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$pod\",\"value\":\"pod\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a43d6b15-bbbf-39c5-5134-1ad541909235\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"chost\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$vm\",\"value\":\"vm\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"605631bd-84ce-8830-867f-640ca0a7c34a\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"efa24d71-f2b7-66fd-ff8d-2b5d5d9a08dc\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"event_type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"213ba73e-ff80-3134-5537-80f7b6c1e5e7\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"89ff5c0b-8259-e11f-8432-fdbdd4125d2d\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$__interval\",\"slimit\":\"\",\"limit\":\"10000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${Enum(event_type)}\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Sum(Log Count)",
+                "name": "Sum(Log Count)",
+                "type": 1,
+                "unit": ""
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "time_value",
+                "isResource": false,
+                "name": "`time_value`"
+              },
+              {
+                "displayName": "Event Type",
+                "isResource": false,
+                "name": "Enum(event_type)"
+              },
+              {
+                "displayName": "Event Type",
+                "isResource": false,
+                "name": "event_type"
+              }
+            ],
+            "sql": "SELECT Sum(`log_count`) AS `Sum(Log Count)`, time(time, $__interval) AS `time_value`, Enum(event_type), event_type FROM perf_event WHERE exist(pod_cluster_id) AND exist(pod_ns_id) AND exist(pod_group_id) AND exist(pod_id) AND time>=1725067070 AND time<=1725067970 GROUP BY `time_value`, event_type SLIMIT 20 LIMIT 10000"
+          }
+        ],
+        "title": "Trending",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "deepflowio-deepflow-datasource",
+          "uid": "$datasource"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "auto",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "filterable": false,
+              "inspect": false
+            },
+            "mappings": [],
+            "noValue": "--",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Bytes"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 256
+                },
+                {
+                  "id": "unit",
+                  "value": "decbytes"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Duration"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 139
+                },
+                {
+                  "id": "unit",
+                  "value": "µs"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Event Type"
+              },
+              "properties": [
+                {
+                  "id": "custom.cellOptions",
+                  "value": {
+                    "type": "color-text"
+                  }
+                },
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "Read": {
+                          "color": "blue",
+                          "index": 0
+                        },
+                        "Write": {
+                          "color": "purple",
+                          "index": 1
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.filterable",
+                  "value": true
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 17,
+          "w": 24,
+          "x": 0,
+          "y": 5
+        },
+        "id": 4,
+        "options": {
+          "cellHeight": "sm",
+          "footer": {
+            "countRows": false,
+            "enablePagination": false,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true,
+          "sortBy": [
+            {
+              "desc": true,
+              "displayName": "Duration"
+            }
+          ]
+        },
+        "pluginVersion": "10.4.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "deepflowio-deepflow-datasource",
+              "uid": "$datasource"
+            },
+            "debug": false,
+            "metaExtra": {},
+            "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"event\",\"sources\":\"\",\"from\":\"perf_event\",\"select\":[{\"key\":\"start_time\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ee080049-0f6b-9ec4-032c-3ff7a44b80b7\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"auto_instance\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"ae9f1213-e6ba-76d5-d8b3-a4f3a7f799d1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"app_instance\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"d5b5665d-cbba-a33a-3c05-9ca986aa5aa9\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"process_kname\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"dbc546d6-b4b1-a228-61fc-8aebf828f067\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"event_type\",\"func\":\"Enum\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6513fd62-b725-4937-ad36-322bc32ea60d\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"attribute.file_name\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"a1338bd0-f3be-82dc-da99-73f4b5a520f3\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"bytes\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"c87782bb-be13-25c7-4b0e-4b08f3fc1bd1\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"metric\",\"key\":\"duration\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"378cdab3-2628-7d2f-0a14-b5c9136ca16e\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"where\":[{\"key\":\"pod_cluster\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$cluster\",\"value\":\"cluster\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"87680039-69e5-f1bc-bdbf-df480fed57e2\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_ns\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$namespace\",\"value\":\"namespace\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"e4b0f135-a41a-e40b-c35e-921f658ac5d9\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod_group\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$workload\",\"value\":\"workload\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"a3b5157d-4973-fabd-8ee3-f116aef42b87\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"pod\",\"func\":\"\",\"op\":\"LIKE\",\"val\":[{\"label\":\"$pod\",\"value\":\"pod\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"7265108e-34b8-63f5-d871-7efd41558453\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":true,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"b37a6b44-3145-cc61-6caa-da445563308b\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"213ba73e-ff80-3134-5537-80f7b6c1e5e7\",\"type\":\"tag\"}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"89ff5c0b-8259-e11f-8432-fdbdd4125d2d\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"\",\"showMetrics\":-1,\"tracingId\":null}",
+            "refId": "A",
+            "returnMetrics": [
+              {
+                "displayName": "Bytes",
+                "name": "Bytes",
+                "type": 1,
+                "unit": "Byte"
+              },
+              {
+                "displayName": "Duration",
+                "name": "Duration",
+                "type": 3,
+                "unit": "us"
+              }
+            ],
+            "returnTags": [
+              {
+                "displayName": "start_time",
+                "isResource": false,
+                "name": "`start_time`"
+              },
+              {
+                "displayName": "Auto Instance Tag",
+                "isResource": false,
+                "name": "auto_instance"
+              },
+              {
+                "displayName": "Kernel Thread Name",
+                "isResource": false,
+                "name": "app_instance"
+              },
+              {
+                "displayName": "Event Message",
+                "isResource": false,
+                "name": "process_kname"
+              },
+              {
+                "displayName": "Event Type",
+                "isResource": false,
+                "name": "Enum(event_type)"
+              },
+              {
+                "displayName": "attribute.file_name",
+                "isResource": false,
+                "name": "attribute.file_name"
+              },
+              {
+                "displayName": "Auto Instance Tag",
+                "isResource": false,
+                "name": "auto_instance_id"
+              }
+            ],
+            "sql": "SELECT `bytes` AS `Bytes`, `duration` AS `Duration`, toString(start_time) AS `start_time`, auto_instance, app_instance, process_kname, Enum(event_type), `attribute.file_name`, auto_instance_id FROM perf_event WHERE exist(pod_cluster_id) AND exist(pod_ns_id) AND exist(pod_group_id) AND exist(pod_id) AND time>=1725064726 AND time<=1725068326 LIMIT 1000"
+          }
+        ],
+        "title": "Event Log",
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "auto_instance_id": true
+              },
+              "includeByName": {},
+              "indexByName": {
+                "Bytes": 6,
+                "Duration": 7,
+                "Enum(event_type)": 4,
+                "app_instance": 2,
+                "attribute.file_name": 5,
+                "auto_instance": 1,
+                "auto_instance_id": 8,
+                "process_kname": 3,
+                "start_time": 0
+              },
+              "renameByName": {
+                "Enum(auto_instance_type)": "Instance Type",
+                "Enum(event_type)": "Event Type",
+                "auto_instance": "Instance",
+                "event_desc": "Event Desc",
+                "time_str": "Time"
+              }
+            }
+          }
+        ],
+        "type": "table"
+      }
+    ],
+    "refresh": false,
+    "schemaVersion": 39,
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "value": "1"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "query": "deepflowio-deepflow-datasource",
+          "queryValue": "",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "type": "datasource"
+        },
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "text": [
+              "Any"
+            ],
+            "value": [
+              "__any"
+            ]
+          },
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `network.1m` WHERE `display_name` != '' AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useDisabled\":false,\"useAny\":true}",
+          "hide": 0,
+          "includeAll": false,
+          "multi": true,
+          "name": "cluster",
+          "options": [],
+          "query": {
+            "database": "flow_metrics",
+            "sql": "SELECT pod_cluster as `value`, pod_cluster as `display_name` FROM `network.1m` WHERE `display_name` != '' AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+            "useAny": true,
+            "useDisabled": false
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        },
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "text": [
+              "Any"
+            ],
+            "value": [
+              "__any"
+            ]
+          },
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_ns as value, pod_ns as display_name FROM `network.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":false}",
+          "hide": 0,
+          "includeAll": false,
+          "multi": true,
+          "name": "namespace",
+          "options": [],
+          "query": {
+            "database": "flow_metrics",
+            "sql": "SELECT pod_ns as value, pod_ns as display_name FROM `network.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+            "useAny": true,
+            "useDisabled": false
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        },
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "text": [
+              "Any"
+            ],
+            "value": [
+              "__any"
+            ]
+          },
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_group as `value`, pod_group as `display_name` FROM `network.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":false}",
+          "hide": 0,
+          "includeAll": false,
+          "multi": true,
+          "name": "workload",
+          "options": [],
+          "query": {
+            "database": "flow_metrics",
+            "sql": "SELECT pod_group as `value`, pod_group as `display_name` FROM `network.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+            "useAny": true,
+            "useDisabled": false
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        },
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "text": [
+              "Any"
+            ],
+            "value": [
+              "__any"
+            ]
+          },
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "definition": "{\"database\":\"event\",\"sql\":\"SELECT pod as `value`, pod as `display_name` FROM `network.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote}))  AND ('$workload' IN ('__any', '__disabled') OR pod_group IN (${workload:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":false}",
+          "hide": 0,
+          "includeAll": false,
+          "multi": true,
+          "name": "pod",
+          "options": [],
+          "query": {
+            "database": "flow_metrics",
+            "sql": "SELECT pod as `value`, pod as `display_name` FROM `network.1m` WHERE ('$cluster' IN ('__any', '__disabled') OR pod_cluster IN (${cluster:singlequote})) AND ('$namespace' IN ('__any', '__disabled') OR pod_ns IN (${namespace:singlequote}))  AND ('$workload' IN ('__any', '__disabled') OR pod_group IN (${workload:singlequote})) AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+            "useAny": true,
+            "useDisabled": false
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        },
+        {
+          "_comment": "Please DON'T modify this variable selection field.",
+          "current": {
+            "selected": true,
+            "text": [
+              "Disabled"
+            ],
+            "value": [
+              "__disabled"
+            ]
+          },
+          "datasource": {
+            "uid": "$datasource"
+          },
+          "definition": "{\"database\":\"event\",\"sql\":\"show tag chost values from event\",\"useAny\":true,\"useDisabled\":true}",
+          "hide": 0,
+          "includeAll": false,
+          "multi": true,
+          "name": "vm",
+          "options": [],
+          "query": {
+            "database": "event",
+            "sql": "show tag chost values from event",
+            "useAny": true,
+            "useDisabled": true
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "type": "query"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "IO Event",
+    "uid": "IO_Event",
+    "version": 2,
+    "weekStart": ""
+  }
