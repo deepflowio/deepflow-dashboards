@@ -65,7 +65,7 @@ jobs:
         with:
           registry: "${{ secrets.REGISTRY_ALIYUN_ADDR }}"
           username: "${{ secrets.REGISTRY_ALIYUN_USER }}"
-          password: "${{ secrets.REGISTRY_PASS }}"
+          password: "${{ secrets.ALIYUN_DF_CLOUD_REGISTRY_PASSWORD }}"
 
       - name: set env
         run: |
