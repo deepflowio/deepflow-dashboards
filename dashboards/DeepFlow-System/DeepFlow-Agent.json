@@ -4663,8 +4663,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -8118,7 +8117,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -8132,9 +8132,9 @@
           },
           "gridPos": {
             "h": 7,
-            "w": 24,
+            "w": 12,
             "x": 0,
-            "y": 14
+            "y": 16
           },
           "id": 58,
           "interval": "$interval",
@@ -8242,7 +8242,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -8257,8 +8258,8 @@
           "gridPos": {
             "h": 7,
             "w": 12,
-            "x": 0,
-            "y": 21
+            "x": 12,
+            "y": 16
           },
           "id": 57,
           "interval": "$interval",
@@ -8323,6 +8324,131 @@
             "type": "deepflowio-deepflow-datasource",
             "uid": "$datasource"
           },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 10,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "links": [],
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "percent"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 7,
+            "w": 12,
+            "x": 0,
+            "y": 23
+          },
+          "id": 499,
+          "interval": "$interval",
+          "options": {
+            "legend": {
+              "calcs": [
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "right",
+              "showLegend": true,
+              "sortBy": "Mean",
+              "sortDesc": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "pluginVersion": "10.4.0",
+          "targets": [
+            {
+              "_comment": "Please DON'T modify this variable selection field.",
+              "datasource": "$datasource",
+              "debug": false,
+              "metaExtra": {},
+              "queryText": "{\"appType\":\"trafficQuery\",\"db\":\"deepflow_tenant\",\"sources\":\"\",\"from\":\"deepflow_agent_collect_sender\",\"select\":[{\"key\":\"metrics.compression-ratio\",\"func\":\"Avg\",\"op\":\"\",\"val\":\"\",\"as\":\"compression_ratio\",\"params\":[],\"uuid\":\"e03fee99-8d04-9576-5f32-7c4996b22263\",\"type\":\"metric\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false,\"cache\":{\"func\":\"Avg\",\"params\":[],\"subFuncs\":[]}}],\"where\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"IN\",\"val\":[{\"label\":\"$host\",\"value\":\"host\",\"isVariable\":true,\"variableType\":\"query\"}],\"as\":\"\",\"params\":[],\"uuid\":\"c8fddada-5e4f-31ca-27bc-2f601285b30a\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"having\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"420d5c22-3f10-ec0e-58e1-7857cfc12495\",\"type\":\"metric\"}],\"groupBy\":[{\"key\":\"tag.host\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"6926cb7c-1457-ad5c-87e3-07719b2a0867\",\"type\":\"tag\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false},{\"type\":\"tag\",\"key\":\"tag.type\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"64232b5b-3a7d-bf12-ebd3-6caacaf39276\",\"subFuncs\":[],\"whereOnly\":false,\"isResourceType\":false,\"isIpType\":false}],\"orderBy\":[{\"key\":\"\",\"func\":\"\",\"op\":\"\",\"val\":\"\",\"as\":\"\",\"params\":[],\"uuid\":\"2c1ac79e-9491-141b-4662-b1f40b2bb079\",\"type\":\"metric\",\"sort\":\"asc\"}],\"interval\":\"$interval\",\"slimit\":\"\",\"limit\":\"1000\",\"offset\":\"\",\"formatAs\":\"timeSeries\",\"alias\":\"${tag.host}-${tag.type}\",\"showMetrics\":0,\"tracingId\":null}",
+              "refId": "B",
+              "returnMetrics": [
+                {
+                  "displayName": "compression_ratio",
+                  "name": "compression_ratio",
+                  "type": 1,
+                  "unit": ""
+                }
+              ],
+              "returnTags": [
+                {
+                  "displayName": "time_value",
+                  "isResource": false,
+                  "name": "`time_value`"
+                },
+                {
+                  "displayName": "tag.host",
+                  "isResource": false,
+                  "name": "tag.host"
+                },
+                {
+                  "displayName": "tag.type",
+                  "isResource": false,
+                  "name": "tag.type"
+                }
+              ],
+              "sql": "SELECT Avg(`metrics.compression-ratio`) AS `compression_ratio`, time(time, 60) AS `time_value`, `tag.host`, `tag.type` FROM deepflow_agent_collect_sender WHERE `tag.host` IN ('ubuntu-14-V7','ubuntu-16-V6','ubuntu-15-V5','node-dev-W5') AND time>=1737103091 AND time<=1737106691 GROUP BY `time_value`, `tag.host`, `tag.type` SLIMIT 20 LIMIT 1000"
+            }
+          ],
+          "title": "compression_ratio",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "deepflowio-deepflow-datasource",
+            "uid": "$datasource"
+          },
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -8367,7 +8493,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -8383,7 +8510,7 @@
             "h": 7,
             "w": 12,
             "x": 12,
-            "y": 21
+            "y": 23
           },
           "id": 22,
           "interval": "$interval",
@@ -8558,7 +8685,7 @@
             "h": 10,
             "w": 24,
             "x": 0,
-            "y": 15
+            "y": 17
           },
           "id": 479,
           "interval": "$interval",
@@ -8729,7 +8856,7 @@
             "h": 10,
             "w": 24,
             "x": 0,
-            "y": 25
+            "y": 27
           },
           "id": 481,
           "interval": "$interval",
@@ -8915,7 +9042,7 @@
             "h": 10,
             "w": 24,
             "x": 0,
-            "y": 35
+            "y": 37
           },
           "id": 399,
           "interval": "$interval",
