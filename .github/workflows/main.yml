@@ -9,6 +9,7 @@ on:
     branches:
       - main
       - 'feature-**'
+      - v7.[0-9].[0-9]
     tags:
       - '*'
   workflow_dispatch:
