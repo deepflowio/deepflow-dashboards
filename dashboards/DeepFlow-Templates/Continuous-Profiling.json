@@ -304,7 +304,7 @@
         "datasource": {
           "uid": "$datasource"
         },
-        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
+        "definition": "{\"database\":\"flow_metrics\",\"sql\":\"SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE exist(pod_ns) AND ('$cluster' IN ('__disabled') OR '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})) AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999\",\"useAny\":true,\"useDisabled\":true}",
         "hide": 0,
         "includeAll": false,
         "multi": false,
@@ -312,7 +312,7 @@
         "options": [],
         "query": {
           "database": "flow_metrics",
-          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE  ('$cluster' IN ('__disabled')  OR  '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote}))  AND  time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
+          "sql": "SELECT pod_ns as value, pod_ns as display_name FROM `application.1m` WHERE exist(pod_ns) AND ('$cluster' IN ('__disabled') OR '$cluster' IN ('__any')  OR pod_cluster IN (${cluster:singlequote})) AND time >= ${__from:date:seconds} AND time <= ${__to:date:seconds} GROUP BY `value` LIMIT 999999999999",
           "useAny": true,
           "useDisabled": true
         },
