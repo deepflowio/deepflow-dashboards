@@ -321,7 +321,9 @@
               "response_code": true,
               "response_exception": true,
               "span_id": true,
-              "capture_nic_type": false
+              "capture_nic_type": false,
+              "auto_instance_type_0": true,
+              "auto_instance_type_1": true
             },
             "indexByName": {
               "Enum(l7_protocol)": 7,
