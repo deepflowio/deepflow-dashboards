@@ -291,8 +291,8 @@
                 "unit": "Byte"
               },
               {
-                "displayName": "Duration",
-                "name": "Duration",
+                "displayName": "Total Duration",
+                "name": "Total Duration",
                 "type": 3,
                 "unit": "us"
               }
@@ -343,7 +343,8 @@
             "id": "organize",
             "options": {
               "excludeByName": {
-                "auto_instance_id": true
+                "auto_instance_id": true,
+                "auto_instance_type": true
               },
               "includeByName": {},
               "indexByName": {
