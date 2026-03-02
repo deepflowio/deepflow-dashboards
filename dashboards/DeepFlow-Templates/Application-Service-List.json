@@ -291,7 +291,8 @@
                 "auto_service_type": true,
                 "icon_id": true,
                 "node_type": true,
-                "signal_source": true
+                "signal_source": true,
+                "Enum(app_service)": true
               },
               "indexByName": {
                 "Client Error Ratio": 8,
