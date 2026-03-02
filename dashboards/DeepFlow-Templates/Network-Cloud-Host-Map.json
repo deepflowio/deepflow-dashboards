@@ -729,7 +729,8 @@
                   "server_resource_type": true,
                   "subnet_id_0": true,
                   "subnet_id_1": true,
-                  "tap_id": true
+                  "tap_id": true,
+                  "device_type_chost_1": true
                 },
                 "includeByName": {},
                 "indexByName": {
@@ -1503,7 +1504,8 @@
               "server_resource_type": true,
               "subnet_id_0": true,
               "subnet_id_1": true,
-              "tap_id": true
+              "tap_id": true,
+              "device_type_chost_0": true
             },
             "includeByName": {},
             "indexByName": {

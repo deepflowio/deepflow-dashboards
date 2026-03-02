@@ -672,7 +672,8 @@
               "node_type": true,
               "pod_id": true,
               "time_1": true,
-              "time_60": true
+              "time_60": true,
+              "device_type_chost": true
             },
             "includeByName": {},
             "indexByName": {

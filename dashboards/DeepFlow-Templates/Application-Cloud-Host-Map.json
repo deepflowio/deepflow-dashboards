@@ -639,7 +639,8 @@
                   "server_resource_id": true,
                   "server_resource_type": true,
                   "subnet_id_0": true,
-                  "time_60": true
+                  "time_60": true,
+                  "device_type_chost_1": true
                 },
                 "includeByName": {},
                 "indexByName": {
@@ -1307,7 +1308,8 @@
               "server_resource_type": true,
               "subnet_id_0": true,
               "subnet_id_1": true,
-              "time_60": true
+              "time_60": true,
+              "device_type_chost_0": true
             },
             "includeByName": {},
             "indexByName": {

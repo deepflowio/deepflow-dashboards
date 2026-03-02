@@ -641,7 +641,9 @@
           "options": {
             "excludeByName": {
               "auto_instance_id_0": true,
-              "auto_instance_id_1": true
+              "auto_instance_id_1": true,
+              "auto_instance_type_0": true,
+              "auto_instance_type_1": true
             },
             "indexByName": {
               "Avg Data Delay": 15,
