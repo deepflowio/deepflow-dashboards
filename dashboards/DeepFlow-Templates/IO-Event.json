@@ -195,7 +195,7 @@
             {
               "matcher": {
                 "id": "byName",
-                "options": "Duration"
+                "options": "Total Duration"
               },
               "properties": [
                 {
@@ -268,7 +268,7 @@
           "sortBy": [
             {
               "desc": true,
-              "displayName": "Duration"
+              "displayName": "Total Duration"
             }
           ]
         },
