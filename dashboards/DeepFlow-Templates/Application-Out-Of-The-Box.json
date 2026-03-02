@@ -2208,7 +2208,9 @@
             "excludeByName": {
               "_id": false,
               "auto_service_id_0": true,
-              "auto_service_id_1": true
+              "auto_service_id_1": true,
+              "auto_service_type_0": true,
+              "auto_service_type_1": true
             },
             "indexByName": {
               "Enum(l7_protocol)": 4,
