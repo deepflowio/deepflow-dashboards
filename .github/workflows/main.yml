@@ -84,6 +84,7 @@ jobs:
             "ghcr.io/${{ github.repository_owner }}/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}-${{ env.IMAGE_TAG }}"
             "ghcr.io/${{ github.repository_owner }}/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}"
             "deepflowce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}"
+          outputs: type=image
 
       - name: Log in to ALIYUN HongKong Docker Registry 
         uses: docker/login-action@v2
@@ -118,5 +119,6 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           tags: |
-            "registry.cn-beijing.aliyuncs.com/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}-${{ env.IMAGE_TAG }}"
-            "registry.cn-beijing.aliyuncs.com/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}"
+            "registry.cn-hongkong.aliyuncs.com/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}-${{ env.IMAGE_TAG }}"
+            "registry.cn-hongkong.aliyuncs.com/deepflow-ce/${{ env.IMAGE }}:${{ env.IMAGE_TAG_PREFIX }}"
+          outputs: type=image
